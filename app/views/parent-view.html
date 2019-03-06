@@ -5,6 +5,28 @@
   Parent View
 {% endblock %}
 
+{% block beforeContent %}
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Organisations",
+        href: "#"
+      },
+      {
+      text: "Ofsted",
+      href: "/"
+      },
+      {
+        text: "Parent View"
+      }
+    ]
+  }) }}
+{% endblock %}
+
 {% block content %}
 
   <div class="govuk-grid-row">
