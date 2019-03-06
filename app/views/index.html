@@ -1,18 +1,1522 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="lte-ie8" lang="en"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en">
+<!--<![endif]-->
 
-{% extends "layout.html" %}
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta property="og:description" content="Ofsted is the Office for Standards in Education, Children’s Services and Skills. We inspect and regulate services that care for children and young people, and services providing education and skills for learners of all ages. Ofsted is a non-ministerial department.">
+  <meta property="og:title" content="Ofsted">
+  <meta property="og:url" content="https://www.gov.uk/government/organisations/ofsted">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="GOV.UK">
+  <meta name="twitter:card" content="summary">
+  <meta name="govuk:taxon-slugs" content="corporate-information">
+  <meta name="govuk:taxon-slug" content="corporate-information">
+  <meta name="govuk:taxon-ids" content="a544d48b-1e9e-47fb-b427-7a987c658c14">
+  <meta name="govuk:taxon-id" content="a544d48b-1e9e-47fb-b427-7a987c658c14">
+  <meta name="govuk:themes" content="corporate-information">
+  <meta name="govuk:analytics:organisations" content="&lt;D106&gt;">
+  <meta name="govuk:content-id" content="ad5f6169-ac7b-4382-9eb6-e58af71a2f00">
+  <meta name="govuk:schema-name" content="organisation">
+  <meta name="govuk:publishing-application" content="whitehall">
+  <meta name="govuk:format" content="organisation">
+  <meta name="description" content="Ofsted is the Office for Standards in Education, Children’s Services and Skills. We inspect and regulate services that care for children and young people, and services providing education and skills for learners of all ages. Ofsted is a non-ministerial department.">
+  <meta name="csrf-token" content="5DRtph6ZO90TeMQbSwytQFz3D8JmdC4cQmn7nvGS2HJFfVTUddVkie59mwv66YhieXBzPrb2YFYbPexJKtpKKg==">
+  <meta name="csrf-param" content="authenticity_token">
+  <meta charset="utf-8">
+  <title>Ofsted - GOV.UK</title>
 
-{% block pageTitle %}
-  Parent View
-{% endblock %}
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/govuk-template-c0b8ba8b1652aacad298d74f24752260187f538b50c40c2484f7f333cbc3cf2b.css" crossorigin="anonymous" integrity="sha256-wLi6ixZSqsrSmNdPJHUiYBh/U4tQxAwkhPfzM8vDzys=">
+  <!--<![endif]-->
+  <!--[if IE 6]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/govuk-template-ie6-2c1bb089ee71d4d70a08ba94e4b363a99542c8feddf3aa979bc4f8962aed5e02.css" /><![endif]-->
+  <!--[if IE 7]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/govuk-template-ie7-062e553ef49a9f884a3a1f885c8a18e829b6557046b075e1384f6092a60151d1.css" /><![endif]-->
+  <!--[if IE 8]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/govuk-template-ie8-11027733d1abeac34c7bf14e37fea30366ad3a87cfd7f7a084de3a3b4b838412.css" /><![endif]-->
+  <link rel="stylesheet" media="print" href="https://assets.publishing.service.gov.uk/static/govuk-template-print-1076519521c2fffbbf75ab3b0d3b32ee2d96ac7e9778f1cdfac1771eefd1a1c0.css" crossorigin="anonymous" integrity="sha256-EHZRlSHC//u/das7DTsy7i2WrH6XePHN+sF3Hu/RocA=">
 
-{% block content %}
+  <link rel="stylesheet" media="all" href="https://assets.publishing.service.gov.uk/static/fonts-e9ec5a5f82e5c2a17927ce356e5a054cb28025ec1547ec5d00f5c98d2ec5e481.css" crossorigin="anonymous" integrity="sha256-6exaX4LlwqF5J841bloFTLKAJewVR+xdAPXJjS7F5IE=">
+  <!--[if lt IE 9]><script src="https://assets.publishing.service.gov.uk/static/ie-a4524544a53d57a7e259b4bb966b9c32557c98c920b77e52d09304642b68401a.js" crossorigin="anonymous" integrity="sha256-pFJFRKU9V6fiWbS7lmucMlV8mMkgt35S0JMEZCtoQBo="></script><![endif]-->
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">
-        Parent View
-      </h1>
+  <link rel="shortcut icon" href="https://assets.publishing.service.gov.uk/static/favicon-8d811b8c3badbc0b0e2f6e25d3660a96cc0cca7993e6f32e98785f205fc40907.ico" type="image/x-icon">
+  <link rel="mask-icon" href="https://assets.publishing.service.gov.uk/static/gov.uk_logotype_crown-de738c3fcce8ce2a91b67e89787090dc24a5cda0275ab6b75f6226c5b9619d3d.svg" color="#0b0c0c">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://assets.publishing.service.gov.uk/static/apple-touch-icon-180x180-ea1cbb1cbbeddfff275dfa6e8e46b84cd530892df79dc4882a8f99b802b49a90.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="https://assets.publishing.service.gov.uk/static/apple-touch-icon-167x167-181e404a50c572923285fb83f0fbd78da6b4e38e3ce52f8e6b8e29da8586450a.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://assets.publishing.service.gov.uk/static/apple-touch-icon-152x152-02457fcdcee8d309276305af2233d41bfb8fd055e855727d355e61bce7ffa9bb.png">
+  <link rel="apple-touch-icon" href="https://assets.publishing.service.gov.uk/static/apple-touch-icon-a318f305290c523aed80082456175b46c95350c0eeac93f42e78a71c7a55544e.png">
+
+  <meta name="theme-color" content="#0b0c0c">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/core-layout-320f60dee2a2d28afe3cd752be863a9de25d66721da470e146cecaeea572deb0.css" crossorigin="anonymous" integrity="sha256-Mg9g3uKi0or+PNdSvoY6neJdZnIdpHDhRs7K7qVy3rA=">
+  <!--<![endif]-->
+  <!--[if IE 6]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/core-layout-ie6-2f7d1d1d04dc3e8039655eb6f9c7b47b4b04fd080abbfa48c554f2f8f60cabd7.css" /><script>var ieVersion = 6;</script><![endif]-->
+  <!--[if IE 7]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/core-layout-ie7-288992c1d81c8894bbad87368286e1c37901edbc91a5d59bb8c47009f056ccc6.css" /><script>var ieVersion = 7;</script><![endif]-->
+  <!--[if IE 8]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/core-layout-ie8-0072e05b0357ecdd119896aa032313c82b56c3abc87e5ec7bf4023a21fbd4c21.css" /><script>var ieVersion = 8;</script><![endif]-->
+
+  <link rel="stylesheet" media="print" href="https://assets.publishing.service.gov.uk/static/core-layout-print-9a2de3ce1590c8ca478a6f7edf5a2e4bad0c6291b1dd4a6e7ca85f653d9591b4.css" crossorigin="anonymous" integrity="sha256-mi3jzhWQyMpHim9+31ouS60MYpGx3UpufKhfZT2VkbQ=">
+
+
+
+  <meta property="og:image" content="https://assets.publishing.service.gov.uk/static/opengraph-image-a1f7d89ffd0782738b1aeb0da37842d8bd0addbd724b8e58c3edbc7287cc11de.png">
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/collections/application-b75ad5197723f9a3db7a95bee91db3c8783531d9db0561b0bd0a27872a93a732.css">
+  <!--<![endif]-->
+  <link rel="alternate" type="application/json" title="Ofsted" href="https://www.gov.uk/api/organisations/ofsted">
+  <link rel="alternate" type="application/atom+xml" title="Ofsted" href="https://www.gov.uk/government/organisations/ofsted.atom">
+  <link rel="stylesheet" media="print" href="https://assets.publishing.service.gov.uk/collections/print-4ff1e6d290085c90bd2c611b3eb087790c2dc216be857773458bd860a6c714b9.css" crossorigin="anonymous" integrity="sha256-T/Hm0pAIXJC9LGEbPrCHeQwtwha+hXdzRYvYYKbHFLk=">
+  <link rel="canonical" href="https://www.gov.uk/government/organisations/ofsted">
+  <!--[if IE 6]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/collections/application-ie6-23a1ac22d7d77dffded9fba1e97fb54f32fc8fa5b4da4bba7e93afe44069af05.css" /><script>var ieVersion = 6;</script><![endif]-->
+  <!--[if IE 7]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/collections/application-ie7-53a376fbd9b1b3a8fc06dcaefc8ef57e730606937655592cca69ea44088a535c.css" /><script>var ieVersion = 7;</script><![endif]-->
+  <!--[if IE 8]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/collections/application-ie8-969b23d9f0f8e96f6c4c54f5b44b17835c815e18087b70dfc4bd4d3166ecd165.css" /><script>var ieVersion = 8;</script><![endif]-->
+  <meta name="govuk:rendering-application" content="collections">
+</head>
+
+<body>
+  <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+
+
+  <div id="skiplink-container">
+    <div>
+      <a href="#content" class="skiplink">Skip to main content</a>
     </div>
-</div>
+  </div>
 
-{% endblock %}
+  <header role="banner" id="global-header" class="">
+    <div class="header-wrapper">
+      <div class="header-global">
+        <div class="header-logo">
+          <a href="https://www.gov.uk" title="Go to the GOV.UK homepage" id="logo" class="content" data-module="track-click" data-track-category="homeLinkClicked" data-track-action="homeHeader">
+              <img src="https://assets.publishing.service.gov.uk/static/gov.uk_logotype_crown_invert_trans-203e1db49d3eff430d7dc450ce723c1002542fe1d2bce661b6d8571f14c1043c.png" width="36" height="32" alt=""> GOV.UK
+            </a>
+        </div>
+        <a href="#search" class="search-toggle js-header-toggle">Search</a>
+
+        <form id="search" class="site-search" action="/search" method="get" role="search">
+          <div class="content">
+            <label for="site-search-text">Search</label>
+            <input type="search" name="q" id="site-search-text" title="Search" class="js-search-focus">
+            <input class="submit" type="submit" value="Search">
+          </div>
+        </form>
+
+      </div>
+
+    </div>
+  </header>
+
+  <div id="user-satisfaction-survey-container"></div>
+
+
+  <div id="global-header-bar"></div>
+
+
+
+  <div class="wrapper" id="wrapper">
+
+
+
+    <div class="gem-c-breadcrumbs govuk-breadcrumbs " data-module="track-click">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item" aria-current="false">
+          <a data-track-category="homeLinkClicked" data-track-action="homeBreadcrumb" data-track-label="" data-track-options="{}" class="govuk-breadcrumbs__link" aria-current="false" href="/">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="false">
+          <a data-track-category="breadcrumbClicked" data-track-action="2" data-track-label="/government/organisations" data-track-options='{"dimension28":"3","dimension29":"Organisations"}' class="govuk-breadcrumbs__link" aria-current="false" href="/government/organisations">Organisations</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          <a data-track-category="breadcrumbClicked" data-track-action="3" data-track-label="#content" data-track-options='{"dimension28":"3","dimension29":"Ofsted"}' class="govuk-breadcrumbs__link" aria-current="page" href="#content">Ofsted</a>
+        </li>
+      </ol>
+    </div>
+
+
+
+
+    <main id="content" role="main" class="content ">
+
+
+
+      <h1 class="visually-hidden">Ofsted</h1>
+
+      <div class="grid-row">
+        <div class="column-one-third organisation__margin-bottom">
+          <div class="gem-c-organisation-logo brand--department-for-education">
+            <div class="gem-c-organisation-logo__container brand__border-color">
+              <img alt="Ofsted" class="gem-c-organisation-logo__image" src="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/organisation/logo/106/Ofsted-logo-gov.uk.png">
+    </div>
+            </div>
+
+
+          </div>
+
+          <div class="column-two-thirds organisation__margin-bottom">
+
+            <ol class="app-c-topic-list  brand--department-for-education ">
+              <li class="app-c-topic-list__item">
+                <a class="app-c-topic-list__link app-c-topic-list__link--no-underline brand__color" href="https://reports.beta.ofsted.gov.uk">Find an inspection report</a>
+              </li>
+              <li class="app-c-topic-list__item">
+                <a class="app-c-topic-list__link app-c-topic-list__link--no-underline brand__color" href="https://www.gov.uk/schools-colleges-childrens-services/inspections">Inspection guidance, handbooks and frameworks</a>
+              </li>
+              <li class="app-c-topic-list__item">
+                <a class="app-c-topic-list__link app-c-topic-list__link--no-underline brand__color" href="https://parentview.ofsted.gov.uk/">Parent View: what do you think about your child’s school?</a>
+              </li>
+              <li class="app-c-topic-list__item">
+                <a class="app-c-topic-list__link app-c-topic-list__link--no-underline brand__color" href="https://www.gov.uk/guidance/childminders-and-childcare-providers-register-with-ofsted">Become a childminder or childcare provider</a>
+              </li>
+              <li class="app-c-topic-list__item">
+                <a class="app-c-topic-list__link app-c-topic-list__link--no-underline brand__color" href="https://www.gov.uk/guidance/apply-for-registration-as-a-childrens-social-care-provider-or-manager">Become a children's social care provider or manager</a>
+              </li>
+              <li class="app-c-topic-list__item">
+                <a class="app-c-topic-list__link app-c-topic-list__link--no-underline brand__color" href="https://online.ofsted.gov.uk/OnlineOfsted/Default.aspx">Ofsted Online</a>
+              </li>
+            </ol>
+
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <section class="brand--department-for-education brand__border-color organisation__brand-border-top organisation__section-wrap organisation__margin-bottom" id="featured-documents">
+          <div class="grid-row">
+            <div class="column-two-thirds">
+              <h2 class="gem-c-heading  gem-c-heading--padding gem-c-heading--margin-bottom-2  ">Featured</h2>
+
+            </div>
+          </div>
+
+
+          <div class="grid-row">
+            <div class="column-one-third">
+              <div class="gem-c-image-card  brand--department-for-education">
+                <figure class="gem-c-image-card__image-wrapper"><img class="gem-c-image-card__image" alt="Child's hand writing" src="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/feature/image/68288/s465_1_school-pexels-consultation.jpg"></figure>
+
+                  <div class="gem-c-image-card__text-wrapper">
+                    <p class="gem-c-image-card__context"><time datetime="2019-01-16">16 January 2019</time><span aria-hidden="true"> — </span>Open consultation</p>
+
+                    <h3 class="gem-c-image-card__title">
+              <a class="gem-c-image-card__title-link brand__color" href="/government/consultations/education-inspection-framework-2019-inspecting-the-substance-of-education">Education inspection framework 2019: inspecting the substance of education</a>
+</h3>
+                    <div class="gem-c-image-card__description">
+                      <div class="govspeak">
+                        <p>Ofsted seeks your views on our proposals for changes to the education inspection framework from September 2019.</p>
+                      </div>
+                    </div>
+
+
+                  </div>
+              </div>
+
+            </div>
+            <div class="column-one-third">
+              <div class="gem-c-image-card  brand--department-for-education">
+                <figure class="gem-c-image-card__image-wrapper"><img class="gem-c-image-card__image" alt="Office files" src="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/feature/image/68289/s465_2_Draft-handbooks.jpg"></figure>
+
+                  <div class="gem-c-image-card__text-wrapper">
+                    <p class="gem-c-image-card__context"><time datetime="2019-01-16">16 January 2019</time><span aria-hidden="true"> — </span>Guidance</p>
+
+                    <h3 class="gem-c-image-card__title">
+              <a class="gem-c-image-card__title-link brand__color" href="/government/publications/ofsted-inspection-handbooks-drafts-for-consultation">Ofsted inspection handbooks: drafts for consultation</a>
+</h3>
+                    <div class="gem-c-image-card__description">
+                      <div class="govspeak">
+                        <p>Proposed inspection handbooks for early years, maintained schools and academies, non-association independent schools and further education and skills.</p>
+                      </div>
+                    </div>
+
+
+                  </div>
+              </div>
+
+            </div>
+            <div class="column-one-third">
+              <div class="gem-c-image-card  brand--department-for-education">
+                <figure class="gem-c-image-card__image-wrapper"><img class="gem-c-image-card__image" alt="Classroom" src="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/feature/image/68290/s465_3_secondary-classroom-Draft_framework.jpg"></figure>
+
+                  <div class="gem-c-image-card__text-wrapper">
+                    <p class="gem-c-image-card__context"><time datetime="2019-01-16">16 January 2019</time><span aria-hidden="true"> — </span>Guidance</p>
+
+                    <h3 class="gem-c-image-card__title">
+              <a class="gem-c-image-card__title-link brand__color" href="/government/publications/education-inspection-framework-draft-for-consultation">Education inspection framework: draft for consultation</a>
+</h3>
+                    <div class="gem-c-image-card__description">
+                      <div class="govspeak">
+                        <p>The draft education inspection framework for 2019 sets out how Ofsted proposes to inspect schools, further education and skills provision and registered early years settings.</p>
+                      </div>
+                    </div>
+
+
+                  </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="grid-row">
+            <div class="column-one-third">
+              <div class="gem-c-image-card  brand--department-for-education">
+                <figure class="gem-c-image-card__image-wrapper"><img class="gem-c-image-card__image" alt="Amanda Spielman, HMCI" src="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/feature/image/69206/s465_Amanda_Spielman_960x640.jpg"></figure>
+
+                  <div class="gem-c-image-card__text-wrapper">
+                    <p class="gem-c-image-card__context"><time datetime="2019-02-28">28 February 2019</time><span aria-hidden="true"> — </span>Speech</p>
+
+                    <h3 class="gem-c-image-card__title">
+              <a class="gem-c-image-card__title-link brand__color" href="/government/speeches/amanda-spielman-at-the-youth-sport-trust-2019-conference">Amanda Spielman at the Youth Sport Trust 2019 Conference</a>
+</h3>
+                    <div class="gem-c-image-card__description">
+                      <div class="govspeak">
+                        <p>Ofsted’s Chief Inspector discussed the new education inspection framework and what it means for physical education and sport.</p>
+                      </div>
+                    </div>
+
+
+                  </div>
+              </div>
+
+            </div>
+            <div class="column-one-third">
+              <div class="gem-c-image-card  brand--department-for-education">
+                <figure class="gem-c-image-card__image-wrapper"><img class="gem-c-image-card__image" alt="Yvette Stanley, Ofsted's National Director of Social Care" src="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/feature/image/69144/s465_Yvette_3_960x640.jpg"></figure>
+
+                  <div class="gem-c-image-card__text-wrapper">
+                    <p class="gem-c-image-card__context"><time datetime="2019-02-26">26 February 2019</time><span aria-hidden="true"> — </span>Speech</p>
+
+                    <h3 class="gem-c-image-card__title">
+              <a class="gem-c-image-card__title-link brand__color" href="/government/speeches/social-care-commentary-using-models-of-practice-successfully">Social care commentary: using models of practice successfully</a>
+</h3>
+                    <div class="gem-c-image-card__description">
+                      <div class="govspeak">
+                        <p>Yvette Stanley reflects on the success factors in different models of practice that local authorities use when working with children and families.</p>
+                      </div>
+                    </div>
+
+
+                  </div>
+              </div>
+
+            </div>
+            <div class="column-one-third">
+              <div class="gem-c-image-card  brand--department-for-education">
+                <figure class="gem-c-image-card__image-wrapper"><img class="gem-c-image-card__image" alt="Carer showing child something on a computer" src="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/feature/image/69231/s465_8045-Social_care_3-960x640.jpg"></figure>
+
+                  <div class="gem-c-image-card__text-wrapper">
+                    <p class="gem-c-image-card__context"><time datetime="2019-03-01"> 1 March 2019</time><span aria-hidden="true"> — </span>Research and analysis</p>
+
+                    <h3 class="gem-c-image-card__title">
+              <a class="gem-c-image-card__title-link brand__color" href="/government/publications/social-care-common-inspection-framework-implementation-review">Social care common inspection framework: implementation review</a>
+</h3>
+                    <div class="gem-c-image-card__description">
+                      <div class="govspeak">
+                        <p>An overview of Ofsted’s work to review the implementation of the social care common inspection framework (SCCIF).</p>
+                      </div>
+                    </div>
+
+
+                  </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <section class="brand--department-for-education brand__border-color organisation__brand-border-top organisation__margin-bottom" id="latest-documents">
+          <div class="grid-row">
+            <div class="column-two-thirds">
+              <h2 class="gem-c-heading  gem-c-heading--padding gem-c-heading--margin-bottom-2  ">Latest from Ofsted</h2>
+
+            </div>
+          </div>
+
+          <div class="grid-row">
+            <div class="column-two-thirds">
+              <ol class="gem-c-document-list">
+                <li class="gem-c-document-list__item brand--department-for-education">
+                  <a class="gem-c-document-list__item-title brand__color " href="/government/publications/using-ofsteds-inspection-dashboard-early-years-foundation-stage-profile-to-key-stage-4">Using Ofsted’s IDSR: early years foundation stage profile to key stage 4</a>
+
+
+
+                  <ul class="gem-c-document-list__item-metadata">
+                    <li class="gem-c-document-list__attribute">
+                      <time datetime="2019-03-06">
+                        6 March 2019
+                      </time>
+                    </li>
+                    <li class="gem-c-document-list__attribute">
+                      Guidance
+                    </li>
+                  </ul>
+                </li>
+                <li class="gem-c-document-list__item brand--department-for-education">
+                  <a class="gem-c-document-list__item-title brand__color " href="/government/publications/local-area-send-inspections-information-for-families">Local area SEND inspections: information for families</a>
+
+
+
+                  <ul class="gem-c-document-list__item-metadata">
+                    <li class="gem-c-document-list__attribute">
+                      <time datetime="2019-03-04">
+                        4 March 2019
+                      </time>
+                    </li>
+                    <li class="gem-c-document-list__attribute">
+                      Guidance
+                    </li>
+                  </ul>
+                </li>
+                <li class="gem-c-document-list__item brand--department-for-education">
+                  <a class="gem-c-document-list__item-title brand__color " href="/government/statistical-data-sets/quarterly-management-information-ofsteds-childrens-homes-inspection-outcomes">Children’s homes inspections and outcomes: management information</a>
+
+
+
+                  <ul class="gem-c-document-list__item-metadata">
+                    <li class="gem-c-document-list__attribute">
+                      <time datetime="2019-03-04">
+                        4 March 2019
+                      </time>
+                    </li>
+                    <li class="gem-c-document-list__attribute">
+                      Statistical data set
+                    </li>
+                  </ul>
+                </li>
+              </ol>
+
+
+              <p class="organisation__margin-bottom brand--department-for-education">
+                <a href="/government/organisations/latest?organisations%5B%5D=ofsted" class="brand__color">See all latest documents</a>
+              </p>
+
+              <section class="gem-c-subscription-links brand--department-for-education" data-module="gem-toggle">
+                <h2 class="gem-c-subscription-links__hidden-header visuallyhidden">Subscriptions</h2>
+                <ul class="gem-c-subscription-links__list">
+                  <li class="gem-c-subscription-links__list-item">
+                    <a class="gem-c-subscription-links__link gem-c-subscription-links__link--email-alerts brand__color" href="/government/email-signup/new?email_signup%5Bfeed%5D=https://www.gov.uk/government/organisations/ofsted.atom">Get email alerts</a>
+                  </li>
+
+                  <li class="gem-c-subscription-links__list-item">
+                    <a class="gem-c-subscription-links__link gem-c-subscription-links__link--feed brand__color" data-controls="feed-reader-a763" data-expanded="false" href="#">Subscribe to feed</a>
+                  </li>
+                </ul>
+
+                <div class="gem-c-subscription-links__feed-box js-hidden" id="feed-reader-a763">
+                  <p class="gem-c-subscription-links__feed-hidden-description visuallyhidden">Subscribe to feed</p>
+
+                  <div class="govuk-form-group">
+
+                    <label for="input-1f4df3c9" class="gem-c-label govuk-label">
+                      Copy and paste this URL into your feed reader
+                    </label>
+
+
+
+
+                    <input name="feed-reader-box" value="https://www.gov.uk/government/organisations/ofsted.atom" class="gem-c-input govuk-input" id="input-1f4df3c9" type="text">
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </section>
+
+
+        <section class="brand--department-for-education brand__border-color organisation__brand-border-top organisation__section-wrap organisation__margin-bottom" id="what-we-do">
+          <div class="grid-row">
+            <div class="column-two-thirds">
+              <h2 class="gem-c-heading  gem-c-heading--padding gem-c-heading--margin-bottom-2  ">What Ofsted does</h2>
+
+            </div>
+          </div>
+
+          <div class="grid-row">
+            <div class="column-two-thirds">
+
+              <div class="gem-c-govspeak govuk-govspeak " data-module="govspeak">
+
+                <p></p>
+                <div class="govspeak">
+                  <p>Ofsted is the Office for Standards in Education, Children’s Services and Skills. We inspect and regulate services that care for children and young people, and services providing education and skills for learners of all ages.</p>
+
+                  <p><abbr title="Ofsted">Ofsted</abbr> is a non-ministerial department.</p>
+                </div>
+
+                <p>
+                  <a href="/government/organisations/ofsted/about" class="brand__color">
+              Read more about what we do
+            </a>
+                </p>
+
+              </div>
+            </div>
+
+            <div class="column-one-third">
+              <h3 class="gem-c-heading  gem-c-heading--font-size-19 gem-c-heading--margin-bottom-2  ">Follow us</h3>
+
+              <div class="gem-c-share-links brand--department-for-education gem-c-share-links--stacked" data-module="track-click">
+
+                <ul class="gem-c-share-links__list">
+                  <li class="gem-c-share-links__list-item">
+                    <a target="_blank" rel="noopener noreferrer external" data-track-category="social media" data-track-action="twitter" class="gem-c-share-links__link brand__color" href="https://twitter.com/ofstednews">
+            <span class="gem-c-share-links__link-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+                  <path fill="currentColor" d="M31.007 0H.993A.999.999 0 0 0 0 .993v30.014c0 .55.452.993.993.993h30.014a.997.997 0 0 0 .993-.993V.993A.998.998 0 0 0 31.007 0z"></path>
+                  <path fill="#FFF" d="M8 21.027a9.286 9.286 0 0 0 5.032 1.475c6.038 0 9.34-5.002 9.34-9.339 0-.143-.004-.284-.012-.425a6.619 6.619 0 0 0 1.639-1.699c-.6.265-1.234.439-1.885.516a3.287 3.287 0 0 0 1.443-1.816 6.571 6.571 0 0 1-2.086.797 3.28 3.28 0 0 0-5.592 2.993 9.311 9.311 0 0 1-6.766-3.43 3.294 3.294 0 0 0-.443 1.651 3.28 3.28 0 0 0 1.46 2.732 3.278 3.278 0 0 1-1.488-.411v.041a3.288 3.288 0 0 0 2.633 3.22 3.28 3.28 0 0 1-1.481.055 3.285 3.285 0 0 0 3.065 2.281 6.59 6.59 0 0 1-4.076 1.404A6.76 6.76 0 0 1 8 21.027z"></path>
+                </svg>
+
+            </span>Ofsted on Twitter</a>
+                  </li>
+                  <li class="gem-c-share-links__list-item">
+                    <a target="_blank" rel="noopener noreferrer external" data-track-category="social media" data-track-action="facebook" class="gem-c-share-links__link brand__color" href="https://www.facebook.com/ChildcareRegistration/">
+            <span class="gem-c-share-links__link-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+                  <path fill="currentColor" d="M31.006 0H.993A.997.997 0 0 0 0 .993v30.014c0 .55.452.993.993.993h30.013a.998.998 0 0 0 .994-.993V.993A.999.999 0 0 0 31.006 0z"></path>
+                  <path fill="#FFF" d="M17.892 10.751h1.787V8.009L17.216 8c-2.73 0-3.352 2.045-3.352 3.353v1.828h-1.581v2.824h1.581V24h3.322v-7.995h2.242l.291-2.824h-2.533V11.52c.001-.623.415-.769.706-.769z"></path>
+                </svg>
+
+            </span>Childminder registration on Facebook</a>
+                  </li>
+                  <li class="gem-c-share-links__list-item">
+                    <a target="_blank" rel="noopener noreferrer external" data-track-category="social media" data-track-action="blog" class="gem-c-share-links__link brand__color" href="https://educationinspection.blog.gov.uk/">
+            <span class="gem-c-share-links__link-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="9 9 32 32"><path fill="currentColor" d="M9 9h32v32H9V9z"></path><path fill="#FFF" d="M12.84 14.12v19.2h5.76l5.76 5.76v-5.76h12.8v-19.2H12.84zm3.2 8.32H28.2V25H16.04v-2.56zm16 7.68h-16v-2.56h16v2.56zm1.92-10.24H16.04v-2.56h17.92v2.56z"></path></svg>
+
+            </span>Developments in education inspection blog</a>
+                  </li>
+                  <li class="gem-c-share-links__list-item">
+                    <a target="_blank" rel="noopener noreferrer external" data-track-category="social media" data-track-action="blog" class="gem-c-share-links__link brand__color" href="https://socialcareinspection.blog.gov.uk/">
+            <span class="gem-c-share-links__link-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="9 9 32 32"><path fill="currentColor" d="M9 9h32v32H9V9z"></path><path fill="#FFF" d="M12.84 14.12v19.2h5.76l5.76 5.76v-5.76h12.8v-19.2H12.84zm3.2 8.32H28.2V25H16.04v-2.56zm16 7.68h-16v-2.56h16v2.56zm1.92-10.24H16.04v-2.56h17.92v2.56z"></path></svg>
+
+            </span>Developments in social care inspection blog</a>
+                  </li>
+                  <li class="gem-c-share-links__list-item">
+                    <a target="_blank" rel="noopener noreferrer external" data-track-category="social media" data-track-action="other" class="gem-c-share-links__link brand__color" href="http://eepurl.com/iTrDn">
+            <span class="gem-c-share-links__link-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="9 9 32 32"><path fill="currentColor" d="M9 9h32v32H9V9z"></path><path fill="#FFF" d="M12.84 14.12v19.2h5.76l5.76 5.76v-5.76h12.8v-19.2H12.84zm3.2 8.32H28.2V25H16.04v-2.56zm16 7.68h-16v-2.56h16v2.56zm1.92-10.24H16.04v-2.56h17.92v2.56z"></path></svg>
+
+            </span> Ofsted newsletter</a>
+                  </li>
+                  <li class="gem-c-share-links__list-item">
+                    <a target="_blank" rel="noopener noreferrer external" data-track-category="social media" data-track-action="youtube" class="gem-c-share-links__link brand__color" href="http://www.youtube.com/user/Ofstednews">
+            <span class="gem-c-share-links__link-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="9 9 32 32"><path fill="currentColor" d="M9 9h32v32H9V9z"></path><path fill="#FFF" d="M19.88 33.32V16.68L33.32 25l-13.44 8.32z"></path></svg>
+
+            </span> Ofsted on YouTube</a>
+                  </li>
+                  <li class="gem-c-share-links__list-item">
+                    <a target="_blank" rel="noopener noreferrer external" data-track-category="social media" data-track-action="linkedin" class="gem-c-share-links__link brand__color" href="https://www.linkedin.com/company/ofsted">
+            <span class="gem-c-share-links__link-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewbox="9 9 32 32"><path fill="currentColor" d="M9 9h32v32H9V9z"></path><path fill="#FFF" d="M19.24 35.24V21.8h-4.48v13.44h4.48z"></path><defs><path d="M9 9h32v32H9z"></path></defs><clippath><use xlink:href="#a" overflow="visible"></use></clippath><path clip-path="url(#b)" fill="#FFF" d="M26.28 35.24V28.2c0-1.92.64-3.2 1.92-3.2h.64c1.28 0 1.92 1.28 1.92 4.48v5.76h4.48V28.2c0-4.48-1.28-6.4-4.48-6.4-3.84 0-4.479 1.92-4.479 1.92V21.8H21.8v13.44h4.48zm-6.72-17.92a2.56 2.56 0 1 1-5.12 0 2.56 2.56 0 0 1 5.12 0"></path></svg>
+
+            </span>Ofsted on LinkedIn</a>
+                  </li>
+                  <li class="gem-c-share-links__list-item">
+                    <a target="_blank" rel="noopener noreferrer external" data-track-category="social media" data-track-action="other" class="gem-c-share-links__link brand__color" href="http://www.slideshare.net/Ofstednews">
+            <span class="gem-c-share-links__link-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="9 9 32 32"><path fill="currentColor" d="M9 9h32v32H9V9z"></path><path fill="#FFF" d="M12.84 14.12v19.2h5.76l5.76 5.76v-5.76h12.8v-19.2H12.84zm3.2 8.32H28.2V25H16.04v-2.56zm16 7.68h-16v-2.56h16v2.56zm1.92-10.24H16.04v-2.56h17.92v2.56z"></path></svg>
+
+            </span>Ofsted on Slideshare</a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+
+
+        <section class="brand--department-for-education brand__border-color organisation__brand-border-top organisation__margin-bottom">
+          <div class="visually-hidden">
+            <h2 class="gem-c-heading  gem-c-heading--padding  ">Documents</h2>
+
+          </div>
+
+          <div class="grid-row">
+            <div class="column-half">
+              <h3 class="gem-c-heading  gem-c-heading--font-size-24 gem-c-heading--padding  ">News and communications</h3>
+
+              <ol class="gem-c-document-list">
+                <li class="gem-c-document-list__item brand--department-for-education">
+                  <a class="gem-c-document-list__item-title brand__color " href="/government/speeches/amanda-spielman-at-the-youth-sport-trust-2019-conference">Amanda Spielman at the Youth Sport Trust 2019 Conference</a>
+
+
+
+                  <ul class="gem-c-document-list__item-metadata">
+                    <li class="gem-c-document-list__attribute">
+                      <time datetime="2019-02-28">
+                        28 February 2019
+                      </time>
+                    </li>
+                    <li class="gem-c-document-list__attribute">
+                      Speech
+                    </li>
+                  </ul>
+                </li>
+                <li class="gem-c-document-list__item brand--department-for-education">
+                  <a class="gem-c-document-list__item-title brand__color " href="/government/speeches/social-care-commentary-using-models-of-practice-successfully">Social care commentary: using models of practice successfully</a>
+
+
+
+                  <ul class="gem-c-document-list__item-metadata">
+                    <li class="gem-c-document-list__attribute">
+                      <time datetime="2019-02-26">
+                        26 February 2019
+                      </time>
+                    </li>
+                    <li class="gem-c-document-list__attribute">
+                      Authored article
+                    </li>
+                  </ul>
+                </li>
+                <li class="gem-c-document-list__item brand--department-for-education">
+                  <a class="gem-c-document-list__item-title brand__color " href="/news-and-communications?organisations%5B%5D=ofsted&amp;parent=ofsted">See all news and communications</a>
+
+
+
+                </li>
+              </ol>
+
+            </div>
+            <div class="column-half">
+              <h3 class="gem-c-heading  gem-c-heading--font-size-24 gem-c-heading--padding  ">Consultations</h3>
+
+              <ol class="gem-c-document-list">
+                <li class="gem-c-document-list__item brand--department-for-education">
+                  <a class="gem-c-document-list__item-title brand__color " href="/government/consultations/changes-to-ofsteds-statistical-reporting-on-inspections-and-outcomes-for-childrens-homes-and-local-authority-childrens-services">Changes to Ofsted's statistical reporting on inspections and outcomes for children's homes and local authority children's services</a>
+
+
+
+                  <ul class="gem-c-document-list__item-metadata">
+                    <li class="gem-c-document-list__attribute">
+                      <time datetime="2019-02-25">
+                        25 February 2019
+                      </time>
+                    </li>
+                    <li class="gem-c-document-list__attribute">
+                      Open consultation
+                    </li>
+                  </ul>
+                </li>
+                <li class="gem-c-document-list__item brand--department-for-education">
+                  <a class="gem-c-document-list__item-title brand__color " href="/government/consultations/education-inspection-framework-2019-inspecting-the-substance-of-education">Education inspection framework 2019: inspecting the substance of education</a>
+
+
+
+                  <ul class="gem-c-document-list__item-metadata">
+                    <li class="gem-c-document-list__attribute">
+                      <time datetime="2019-01-16">
+                        16 January 2019
+                      </time>
+                    </li>
+                    <li class="gem-c-document-list__attribute">
+                      Open consultation
+                    </li>
+                  </ul>
+                </li>
+                <li class="gem-c-document-list__item brand--department-for-education">
+                  <a class="gem-c-document-list__item-title brand__color " href="/government/consultations?departments%5B%5D=ofsted">See all consultations</a>
+
+
+
+                </li>
+              </ol>
+
+            </div>
+          </div>
+          <div class="grid-row">
+            <div class="column-half">
+              <h3 class="gem-c-heading  gem-c-heading--font-size-24 gem-c-heading--padding  ">Publications</h3>
+
+              <ol class="gem-c-document-list">
+                <li class="gem-c-document-list__item brand--department-for-education">
+                  <a class="gem-c-document-list__item-title brand__color " href="/government/publications/using-ofsteds-inspection-dashboard-early-years-foundation-stage-profile-to-key-stage-4">Using Ofsted’s IDSR: early years foundation stage profile to key stage 4</a>
+
+
+
+                  <ul class="gem-c-document-list__item-metadata">
+                    <li class="gem-c-document-list__attribute">
+                      <time datetime="2019-03-06">
+                        6 March 2019
+                      </time>
+                    </li>
+                    <li class="gem-c-document-list__attribute">
+                      Guidance
+                    </li>
+                  </ul>
+                </li>
+                <li class="gem-c-document-list__item brand--department-for-education">
+                  <a class="gem-c-document-list__item-title brand__color " href="/government/publications/local-area-send-inspections-information-for-families">Local area SEND inspections: information for families</a>
+
+
+
+                  <ul class="gem-c-document-list__item-metadata">
+                    <li class="gem-c-document-list__attribute">
+                      <time datetime="2019-03-04">
+                        4 March 2019
+                      </time>
+                    </li>
+                    <li class="gem-c-document-list__attribute">
+                      Guidance
+                    </li>
+                  </ul>
+                </li>
+                <li class="gem-c-document-list__item brand--department-for-education">
+                  <a class="gem-c-document-list__item-title brand__color " href="/government/publications?departments%5B%5D=ofsted">See all publications</a>
+
+
+
+                </li>
+              </ol>
+
+            </div>
+            <div class="column-half">
+              <h3 class="gem-c-heading  gem-c-heading--font-size-24 gem-c-heading--padding  ">Statistics</h3>
+
+              <ol class="gem-c-document-list">
+                <li class="gem-c-document-list__item brand--department-for-education">
+                  <a class="gem-c-document-list__item-title brand__color " href="/government/statistical-data-sets/quarterly-management-information-ofsteds-childrens-homes-inspection-outcomes">Children’s homes inspections and outcomes: management information</a>
+
+
+
+                  <ul class="gem-c-document-list__item-metadata">
+                    <li class="gem-c-document-list__attribute">
+                      <time datetime="2019-03-04">
+                        4 March 2019
+                      </time>
+                    </li>
+                    <li class="gem-c-document-list__attribute">
+                      Statistical data set
+                    </li>
+                  </ul>
+                </li>
+                <li class="gem-c-document-list__item brand--department-for-education">
+                  <a class="gem-c-document-list__item-title brand__color " href="/government/statistical-data-sets/ofsted-parent-view-management-information">Ofsted Parent View: management information</a>
+
+
+
+                  <ul class="gem-c-document-list__item-metadata">
+                    <li class="gem-c-document-list__attribute">
+                      <time datetime="2019-02-28">
+                        28 February 2019
+                      </time>
+                    </li>
+                    <li class="gem-c-document-list__attribute">
+                      Statistical data set
+                    </li>
+                  </ul>
+                </li>
+                <li class="gem-c-document-list__item brand--department-for-education">
+                  <a class="gem-c-document-list__item-title brand__color " href="/government/statistics?departments%5B%5D=ofsted">See all statistics</a>
+
+
+
+                </li>
+              </ol>
+
+            </div>
+          </div>
+        </section>
+
+        <div id="people">
+
+
+          <section class="brand--department-for-education brand__border-color organisation__brand-border-top organisation__margin-bottom">
+            <div class="grid-row">
+              <div class="column-two-thirds">
+                <h2 class="gem-c-heading  gem-c-heading--padding gem-c-heading--margin-bottom-2  ">Our management</h2>
+
+              </div>
+            </div>
+
+            <div class="grid-row">
+              <div class="column-quarter">
+                <div class="gem-c-image-card  brand--department-for-education">
+                  <figure class="gem-c-image-card__image-wrapper"><img class="gem-c-image-card__image" alt="Amanda Spielman" src="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/2086/s465_Amanda_Spielman__1_.jpg"></figure>
+
+                    <div class="gem-c-image-card__text-wrapper">
+
+
+                      <span class="gem-c-image-card__title">
+              <a class="gem-c-image-card__title-link brand__color" href="/government/people/amanda-spiel-man">Amanda Spielman</a>
+</span>
+                      <div class="gem-c-image-card__description">Her Majesty’s Chief Inspector</div>
+
+
+                    </div>
+                </div>
+
+              </div>
+              <div class="column-quarter">
+                <div class="gem-c-image-card  brand--department-for-education">
+                  <figure class="gem-c-image-card__image-wrapper"><img class="gem-c-image-card__image" alt="Matthew Coffey" src="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/2020/s465_MatthewCoffey.jpg"></figure>
+
+                    <div class="gem-c-image-card__text-wrapper">
+
+
+                      <span class="gem-c-image-card__title">
+              <a class="gem-c-image-card__title-link brand__color" href="/government/people/matthew-coffey">Matthew Coffey</a>
+</span>
+                      <div class="gem-c-image-card__description">Chief Operating Officer</div>
+
+
+                    </div>
+                </div>
+
+              </div>
+              <div class="column-quarter">
+                <div class="gem-c-image-card  brand--department-for-education">
+                  <figure class="gem-c-image-card__image-wrapper"><img class="gem-c-image-card__image" alt="Paul  Brooker" src="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/2937/s465_PaulBrooker.jpg"></figure>
+
+                    <div class="gem-c-image-card__text-wrapper">
+
+
+                      <span class="gem-c-image-card__title">
+              <a class="gem-c-image-card__title-link brand__color" href="/government/people/paul-brooker">Paul  Brooker</a>
+</span>
+                      <div class="gem-c-image-card__description">Regional Director, East of England </div>
+
+
+                    </div>
+                </div>
+
+              </div>
+              <div class="column-quarter">
+                <div class="gem-c-image-card  brand--department-for-education">
+                  <figure class="gem-c-image-card__image-wrapper"><img class="gem-c-image-card__image" alt="Lorna Fitzjohn" src="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/2019/s465_LornaFitzjohn.jpg"></figure>
+
+                    <div class="gem-c-image-card__text-wrapper">
+
+
+                      <span class="gem-c-image-card__title">
+              <a class="gem-c-image-card__title-link brand__color" href="/government/people/lorna-fitzjohn">Lorna Fitzjohn</a>
+</span>
+                      <div class="gem-c-image-card__description">Regional Director, West Midlands</div>
+
+
+                    </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="grid-row">
+              <div class="column-quarter">
+                <div class="gem-c-image-card  brand--department-for-education">
+                  <figure class="gem-c-image-card__image-wrapper"><img class="gem-c-image-card__image" alt="Sean Harford" src="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/2025/s465_SeanHarford.jpg"></figure>
+
+                    <div class="gem-c-image-card__text-wrapper">
+
+
+                      <span class="gem-c-image-card__title">
+              <a class="gem-c-image-card__title-link brand__color" href="/government/people/sean-harford">Sean Harford</a>
+</span>
+                      <div class="gem-c-image-card__description">National Director, Education</div>
+
+
+                    </div>
+                </div>
+
+              </div>
+              <div class="column-quarter">
+                <div class="gem-c-image-card  brand--department-for-education">
+                  <figure class="gem-c-image-card__image-wrapper"><img class="gem-c-image-card__image" alt="Mike  Sheridan" src="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/2446/s465_MikeSheridan.jpg"></figure>
+
+                    <div class="gem-c-image-card__text-wrapper">
+
+
+                      <span class="gem-c-image-card__title">
+              <a class="gem-c-image-card__title-link brand__color" href="/government/people/mike-sheridan">Mike  Sheridan</a>
+</span>
+                      <div class="gem-c-image-card__description">Regional Director, London</div>
+
+
+                    </div>
+                </div>
+
+              </div>
+              <div class="column-quarter">
+                <div class="gem-c-image-card  brand--department-for-education">
+                  <figure class="gem-c-image-card__image-wrapper"><img class="gem-c-image-card__image" alt="Cathryn Kirby" src="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/2865/s465_cathykirby960640.jpg"></figure>
+
+                    <div class="gem-c-image-card__text-wrapper">
+
+
+                      <span class="gem-c-image-card__title">
+              <a class="gem-c-image-card__title-link brand__color" href="/government/people/cathryn-kirby">Cathryn Kirby</a>
+</span>
+                      <div class="gem-c-image-card__description">Regional Director, North East, Yorkshire and Humber</div>
+
+
+                    </div>
+                </div>
+
+              </div>
+              <div class="column-quarter">
+                <div class="gem-c-image-card  brand--department-for-education">
+                  <figure class="gem-c-image-card__image-wrapper"><img class="gem-c-image-card__image" alt="Andrew Cook" src="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/2116/s465_AndrewCook.jpg"></figure>
+
+                    <div class="gem-c-image-card__text-wrapper">
+
+
+                      <span class="gem-c-image-card__title">
+              <a class="gem-c-image-card__title-link brand__color" href="/government/people/andrew-cook">Andrew Cook</a>
+</span>
+                      <div class="gem-c-image-card__description">Regional Director, North West</div>
+
+
+                    </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="grid-row">
+              <div class="column-quarter">
+                <div class="gem-c-image-card  brand--department-for-education">
+                  <figure class="gem-c-image-card__image-wrapper"><img class="gem-c-image-card__image" alt="Yvette Stanley" src="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/3462/s465_Yvette_Stanley.jpg"></figure>
+
+                    <div class="gem-c-image-card__text-wrapper">
+
+
+                      <span class="gem-c-image-card__title">
+              <a class="gem-c-image-card__title-link brand__color" href="/government/people/yvette-stanley">Yvette Stanley</a>
+</span>
+                      <div class="gem-c-image-card__description">National Director, Social Care</div>
+
+
+                    </div>
+                </div>
+
+              </div>
+              <div class="column-quarter">
+                <div class="gem-c-image-card  brand--department-for-education">
+                  <figure class="gem-c-image-card__image-wrapper"><img class="gem-c-image-card__image" alt="Emma  Ing" src="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/3098/s465_Emma_Ing_final.jpg"></figure>
+
+                    <div class="gem-c-image-card__text-wrapper">
+
+
+                      <span class="gem-c-image-card__title">
+              <a class="gem-c-image-card__title-link brand__color" href="/government/people/emma-ing">Emma  Ing</a>
+</span>
+                      <div class="gem-c-image-card__description">Regional Director, East Midlands</div>
+
+
+                    </div>
+                </div>
+
+              </div>
+              <div class="column-quarter">
+                <div class="gem-c-image-card  brand--department-for-education">
+                  <figure class="gem-c-image-card__image-wrapper"><img class="gem-c-image-card__image" alt="Bradley Simmons" src="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/2014/s465_BradleySimmons.jpg"></figure>
+
+                    <div class="gem-c-image-card__text-wrapper">
+
+
+                      <span class="gem-c-image-card__title">
+              <a class="gem-c-image-card__title-link brand__color" href="/government/people/bradley-simmons">Bradley Simmons</a>
+</span>
+                      <div class="gem-c-image-card__description">Regional Director, South West</div>
+
+
+                    </div>
+                </div>
+
+              </div>
+              <div class="column-quarter">
+                <div class="gem-c-image-card  brand--department-for-education">
+                  <figure class="gem-c-image-card__image-wrapper"><img class="gem-c-image-card__image" alt="Chris Russell" src="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/2015/s465_ChrisRussell2017.jpg"></figure>
+
+                    <div class="gem-c-image-card__text-wrapper">
+
+
+                      <span class="gem-c-image-card__title">
+              <a class="gem-c-image-card__title-link brand__color" href="/government/people/chris-russell">Chris Russell</a>
+</span>
+                      <div class="gem-c-image-card__description">Regional Director, South East</div>
+
+
+                    </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="grid-row">
+              <div class="column-quarter">
+                <div class="gem-c-image-card  brand--department-for-education">
+                  <figure class="gem-c-image-card__image-wrapper"><img class="gem-c-image-card__image" alt="Neil Greenwood" src="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/3730/s465_Neil_Greenwood.jpg"></figure>
+
+                    <div class="gem-c-image-card__text-wrapper">
+
+
+                      <span class="gem-c-image-card__title">
+              <a class="gem-c-image-card__title-link brand__color" href="/government/people/neil-greenwood">Neil Greenwood</a>
+</span>
+                      <div class="gem-c-image-card__description">Director, Digital and Information</div>
+
+
+                    </div>
+                </div>
+
+              </div>
+              <div class="column-quarter">
+                <div class="gem-c-image-card  brand--department-for-education">
+                  <figure class="gem-c-image-card__image-wrapper"><img class="gem-c-image-card__image" alt="Karen Shepperson" src="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/3729/s465_Karen_Shepperson.jpg"></figure>
+
+                    <div class="gem-c-image-card__text-wrapper">
+
+
+                      <span class="gem-c-image-card__title">
+              <a class="gem-c-image-card__title-link brand__color" href="/government/people/karen-shepperson">Karen Shepperson</a>
+</span>
+                      <div class="gem-c-image-card__description">Director, People and Operations</div>
+
+
+                    </div>
+                </div>
+
+              </div>
+              <div class="column-quarter">
+                <div class="gem-c-image-card  brand--department-for-education">
+                  <figure class="gem-c-image-card__image-wrapper"><img class="gem-c-image-card__image" alt="Louise Grainger" src="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/3728/s465_Louise_Grainger.jpg"></figure>
+
+                    <div class="gem-c-image-card__text-wrapper">
+
+
+                      <span class="gem-c-image-card__title">
+              <a class="gem-c-image-card__title-link brand__color" href="/government/people/louise-grainger">Louise Grainger</a>
+</span>
+                      <div class="gem-c-image-card__description">Director, Finance, Planning and Commercial</div>
+
+
+                    </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+
+
+
+        </div>
+
+        <div class="grid-row">
+          <div class="column-two-thirds">
+            <section class="brand--department-for-education organisation__margin-bottom" id="org-contacts">
+              <h2 class="gem-c-heading  gem-c-heading--padding gem-c-heading--border-top-5 brand--department-for-education brand__border-color">Contact Ofsted</h2>
+
+
+              <div class="organisation__contact-section organisation__contact-section--border-top">
+                <h3 class="gem-c-heading  gem-c-heading--font-size-19 gem-c-heading--padding  ">Complaints about schools and childminders</h3>
+
+
+                <div class="grid-row">
+
+                  <div class="column-two-thirds">
+
+                    <div class="organisation__margin-bottom">
+                      <p><a class="brand__color" href="https://www.gov.uk/complain-about-school">Contact Form: Complaints about schools and childminders</a></p>
+                    </div>
+
+                    <div class="organisation__margin-bottom">
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+              <div class="organisation__contact-section organisation__contact-section--border-top">
+                <h3 class="gem-c-heading  gem-c-heading--font-size-19 gem-c-heading--padding  ">Complaints about other providers Ofsted inspects </h3>
+
+
+                <div class="grid-row">
+
+                  <div class="column-two-thirds">
+
+                    <div class="organisation__margin-bottom">
+                      <p><a class="brand__color" href="https://contact.ofsted.gov.uk/online-complaints">Contact Form: Complaints about other providers Ofsted inspects </a></p>
+                    </div>
+
+                    <div class="organisation__margin-bottom">
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+              <div class="organisation__contact-section organisation__contact-section--border-top">
+                <h3 class="gem-c-heading  gem-c-heading--font-size-19 gem-c-heading--padding  ">Contact Ofsted about concerns</h3>
+
+
+                <div class="grid-row">
+
+                  <div class="column-two-thirds">
+                    <div class="organisation__margin-bottom">
+                      <p>Email</p>
+                      <p><a class="brand__color" href="mailto:CIE@ofsted.gov.uk">CIE@ofsted.gov.uk</a></p>
+                    </div>
+
+
+                    <div class="organisation__margin-bottom">
+                      <p>Contact Ofsted about concerns</p>
+                      <p class="organisation__contact-number">0300 123 4666 </p>
+                    </div>
+
+                  </div>
+                </div>
+                <p>Please contact your local council or call local police on 101 if you're worried about a child who is at risk of being harmed. If the child is in immediate danger, call police on 999.</p>
+              </div>
+              <div class="organisation__contact-section organisation__contact-section--border-top">
+                <h3 class="gem-c-heading  gem-c-heading--font-size-19 gem-c-heading--padding  ">General enquiries</h3>
+
+
+                <div class="grid-row">
+
+                  <div class="column-two-thirds">
+                    <div class="organisation__margin-bottom">
+                      <p>Email</p>
+                      <p><a class="brand__color" href="mailto:enquiries@ofsted.gov.uk">enquiries@ofsted.gov.uk</a></p>
+                    </div>
+
+                    <div class="organisation__margin-bottom">
+                      <p><a class="brand__color" href="https://contact.ofsted.gov.uk/contact-form">Contact Form: General enquiries</a></p>
+                    </div>
+
+                    <div class="organisation__margin-bottom">
+                      <p>General enquiries</p>
+                      <p class="organisation__contact-number">0300 123 1231</p>
+                    </div>
+
+                  </div>
+                </div>
+                <p>Our helpline is open from 8am to 6pm (Monday to Friday).<br>If you have difficulties hearing or speaking on the phone, you can use the Next Generation Text Service.</p>
+              </div>
+              <div class="organisation__contact-section organisation__contact-section--border-top">
+                <h3 class="gem-c-heading  gem-c-heading--font-size-19 gem-c-heading--padding  ">Early years providers: tell Ofsted about an incident</h3>
+
+
+                <div class="grid-row">
+
+                  <div class="column-two-thirds">
+
+                    <div class="organisation__margin-bottom">
+                      <p><a class="brand__color" href="https://ofstedonline.ofsted.gov.uk/ofsted/Ofsted_Early_Years_Notification.ofml">Contact Form: Early years providers: tell Ofsted about an incident</a></p>
+                    </div>
+
+                    <div class="organisation__margin-bottom">
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+              <div class="organisation__contact-section organisation__contact-section--border-top">
+                <h3 class="gem-c-heading  gem-c-heading--font-size-19 gem-c-heading--padding  ">Social care providers: tell Ofsted about an incident</h3>
+
+
+                <div class="grid-row">
+
+                  <div class="column-two-thirds">
+
+                    <div class="organisation__margin-bottom">
+                      <p><a class="brand__color" href="https://ofstedonline.ofsted.gov.uk/outreach/Ofsted_Statutory_Notification.ofml">Contact Form: Social care providers: tell Ofsted about an incident</a></p>
+                    </div>
+
+                    <div class="organisation__margin-bottom">
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+              <div class="organisation__contact-section organisation__contact-section--border-top">
+                <h3 class="gem-c-heading  gem-c-heading--font-size-19 gem-c-heading--padding  ">Request an Ofsted speaker</h3>
+
+
+                <div class="grid-row">
+
+                  <div class="column-two-thirds">
+
+                    <div class="organisation__margin-bottom">
+                      <p><a class="brand__color" href="http://bit.ly/request-Ofsted-speaker">Contact Form: Request an Ofsted speaker</a></p>
+                    </div>
+
+                    <div class="organisation__margin-bottom">
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+
+            </section>
+
+
+            <section class="brand--department-for-education brand__border-color organisation__brand-border-top organisation__margin-bottom" id="freedom-of-information">
+              <h2 class="gem-c-heading  gem-c-heading--padding  ">Make an FOI request</h2>
+
+
+
+              <div class="gem-c-govspeak govuk-govspeak " data-module="govspeak">
+
+                <ol class="steps">
+                  <li>
+                    Read about the Freedom of Information (FOI) Act and <a href="https://www.gov.uk/make-a-freedom-of-information-request/the-freedom-of-information-act" class="brand__color">how to make a request</a>.
+                  </li>
+                  <li>
+                    Check <a href="/government/publications?departments%5B%5D=ofsted&amp;publication_type=foi-releases" class="brand__color">our previous releases</a> to see if we’ve already answered your question.
+                  </li>
+                  <li>Make a new request by contacting us using the details below.</li>
+                </ol>
+
+              </div>
+
+              <div class="organisation__contact-section ">
+                <h3 class="gem-c-heading  gem-c-heading--font-size-19 gem-c-heading--padding  ">FOI requests for Ofsted</h3>
+
+
+                <div class="grid-row">
+
+                  <div class="column-two-thirds">
+                    <div class="organisation__margin-bottom">
+                      <p>Email</p>
+                      <p><a class="brand__color" href="mailto:informationrequest@ofsted.gov.uk">informationrequest@ofsted.gov.uk</a></p>
+                    </div>
+
+
+                    <div class="organisation__margin-bottom">
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+
+            </section>
+
+
+          </div>
+          <div class="organisation__corporate-information" id="corporate-info">
+            <div class="column-one-third organisation__float-section">
+              <h2 class="gem-c-heading  gem-c-heading--padding gem-c-heading--border-top-5 brand--department-for-education brand__border-color">Corporate information</h2>
+
+              <div class="">
+                <ol class="app-c-topic-list  brand--department-for-education app-c-topic-list--margin-bottom">
+                  <li class="app-c-topic-list__item">
+                    <a class="app-c-topic-list__link app-c-topic-list__link--no-underline brand__color" href="/government/organisations/ofsted/about/research">Research at Ofsted</a>
+                  </li>
+                  <li class="app-c-topic-list__item">
+                    <a class="app-c-topic-list__link app-c-topic-list__link--no-underline brand__color" href="/government/organisations/ofsted/about/equality-and-diversity">Equality and diversity</a>
+                  </li>
+                  <li class="app-c-topic-list__item">
+                    <a class="app-c-topic-list__link app-c-topic-list__link--no-underline brand__color" href="/government/organisations/ofsted/about/complaints-procedure">Complaints procedure</a>
+                  </li>
+                  <li class="app-c-topic-list__item">
+                    <a class="app-c-topic-list__link app-c-topic-list__link--no-underline brand__color" href="/government/organisations/ofsted/about/our-governance">Our governance</a>
+                  </li>
+                  <li class="app-c-topic-list__item">
+                    <a class="app-c-topic-list__link app-c-topic-list__link--no-underline brand__color" href="/government/organisations/ofsted/about/statistics">Statistics at Ofsted</a>
+                  </li>
+                  <li class="app-c-topic-list__item">
+                    <a class="app-c-topic-list__link app-c-topic-list__link--no-underline brand__color" href="/government/organisations/ofsted/about/media-enquiries">Media enquiries</a>
+                  </li>
+                  <li class="app-c-topic-list__item">
+                    <a class="app-c-topic-list__link app-c-topic-list__link--no-underline brand__color" href="/government/publications?departments%5B%5D=ofsted&amp;publication_type=corporate-reports">Corporate reports</a>
+                  </li>
+                  <li class="app-c-topic-list__item">
+                    <a class="app-c-topic-list__link app-c-topic-list__link--no-underline brand__color" href="/government/publications?departments%5B%5D=ofsted&amp;publication_type=transparency-data">Transparency data</a>
+                  </li>
+                </ol>
+
+              </div>
+
+              <h3 class="gem-c-heading  gem-c-heading--font-size-24 gem-c-heading--margin-bottom-2  ">Jobs and contracts</h3>
+
+              <ol class="app-c-topic-list  brand--department-for-education app-c-topic-list--margin-bottom">
+                <li class="app-c-topic-list__item">
+                  <a class="app-c-topic-list__link app-c-topic-list__link--no-underline brand__color" href="/government/organisations/ofsted/about/recruitment">Working for Ofsted</a>
+                </li>
+                <li class="app-c-topic-list__item">
+                  <a class="app-c-topic-list__link app-c-topic-list__link--no-underline brand__color" href="https://www.civilservicejobs.service.gov.uk/csr">Jobs</a>
+                </li>
+              </ol>
+
+
+              <p class="organisation__secondary-corporate-information brand--department-for-education">
+                Read about the types of information we routinely publish in our <a class="brand__color" href="/government/organisations/ofsted/about/publication-scheme">Publication scheme</a>. Our <a class="brand__color" href="/government/organisations/ofsted/about/personal-information-charter">Personal information charter</a> explains how we treat your personal information. Read our policy on <a class="brand__color" href="/government/organisations/ofsted/about/social-media-use">Social media use</a>.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+    </main>
+
+
+    <div class="gem-c-feedback gem-c-feedback--top-margin" data-module="feedback">
+
+      <div class="gem-c-feedback__prompt gem-c-feedback__js-show js-prompt" tabindex="-1">
+        <div class="gem-c-feedback__js-prompt-questions js-prompt-questions">
+          <h2 class="gem-c-feedback__prompt-question">Is this page useful?</h2>
+
+          <a class="gem-c-feedback__prompt-link" data-track-category="yesNoFeedbackForm" data-track-action="ffMaybeClick" aria-expanded="false" role="button" style="display: none;" hidden="hidden" aria-hidden="true" href="/contact/govuk">
+      Maybe
+</a>
+          <a class="gem-c-feedback__prompt-link gem-c-feedback__prompt-link--useful js-page-is-useful" data-track-category="yesNoFeedbackForm" data-track-action="ffYesClick" aria-expanded="false" role="button" href="/contact/govuk">
+      Yes <span class="visually-hidden">this page is useful</span>
+</a>
+          <a class="gem-c-feedback__prompt-link js-toggle-form js-page-is-not-useful" data-track-category="yesNoFeedbackForm" data-track-action="ffNoClick" aria-controls="page-is-not-useful" aria-expanded="false" role="button" href="/contact/govuk">
+      No <span class="visually-hidden">this page is not useful</span>
+</a>
+          <a class="gem-c-feedback__prompt-link gem-c-feedback__prompt-link--wrong js-toggle-form js-something-is-wrong" data-track-category="Onsite Feedback" data-track-action="GOV.UK Open Form" aria-controls="something-is-wrong" aria-expanded="false" role="button" href="/contact/govuk">
+      Is there anything wrong with this page?
+</a> </div>
+
+        <div class="gem-c-feedback__prompt-success js-prompt-success js-hidden" tabindex="-1">
+          Thank you for your feedback
+        </div>
+      </div>
+
+      <form action="/contact/govuk/problem_reports" id="something-is-wrong" class="gem-c-feedback__form js-feedback-form js-hidden" data-track-category="Onsite Feedback" data-track-action="GOV.UK Send Form" method="post">
+        <a href="#" class="gem-c-feedback__close gem-c-feedback__js-show js-close-form" data-track-category="Onsite Feedback" data-track-action="GOV.UK Close Form" aria-controls="something-is-wrong" aria-expanded="true" role="button">Close</a>
+
+        <div class="gem-c-feedback__grid-row">
+          <div class="gem-c-feedback__column-two-thirds">
+            <div class="gem-c-feedback__error-summary gem-c-feedback__js-show js-hidden js-errors" tabindex="-1"></div>
+
+            <input type="hidden" name="url" value="https://www.gov.uk/government/organisations/ofsted">
+
+            <h3 class="gem-c-feedback__form-heading">Help us improve GOV.UK</h3>
+            <p id="feedback_explanation" class="gem-c-feedback__form-paragraph">Don’t include personal or financial information like your National Insurance number or credit card details.</p>
+
+
+            <div class="govuk-form-group">
+
+              <label for="input-0e3b3894" class="gem-c-label govuk-label">
+                What were you doing?
+              </label>
+
+
+
+
+              <input name="what_doing" class="gem-c-input govuk-input" id="input-0e3b3894" type="text" aria-describedby="feedback_explanation">
+            </div>
+
+
+            <div class="govuk-form-group">
+
+              <label for="input-39b718f9" class="gem-c-label govuk-label">
+                What went wrong?
+              </label>
+
+
+
+
+              <input name="what_wrong" class="gem-c-input govuk-input" id="input-39b718f9" type="text">
+            </div>
+
+
+            <button class="gem-c-button govuk-button" type="submit">Send</button>
+
+
+          </div>
+        </div>
+      </form>
+
+      <form action="/contact/govuk/email-survey-signup" id="page-is-not-useful" class="gem-c-feedback__form gem-c-feedback__form--email gem-c-feedback__js-show js-feedback-form js-hidden" data-track-category="yesNoFeedbackForm" data-track-action="Send Form" method="post">
+        <a href="#" class="gem-c-feedback__close js-close-form" data-track-category="yesNoFeedbackForm" data-track-action="ffFormClose" aria-controls="page-is-not-useful" aria-expanded="true" role="button">Close</a>
+
+        <div class="gem-c-feedback__grid-row">
+          <div class="gem-c-feedback__column-two-thirds">
+            <div class="gem-c-feedback__error-summary js-hidden js-errors" tabindex="-1"></div>
+
+            <input name="email_survey_signup[survey_id]" type="hidden" value="footer_satisfaction_survey">
+            <input name="email_survey_signup[survey_source]" type="hidden" value="/government/organisations/ofsted">
+            <input name="email_survey_signup[ga_client_id]" type="hidden" value="1627485790.1515403243">
+
+            <h3 class="gem-c-feedback__form-heading">Help us improve GOV.UK</h3>
+            <p id="survey_explanation" class="gem-c-feedback__form-paragraph">To help us improve GOV.UK, we’d like to know more about your visit today. We’ll send you a link to a feedback form. It will take only 2 minutes to fill in. Don’t worry we won’t send you spam or share your email address with anyone.</p>
+
+
+            <div class="govuk-form-group">
+
+              <label for="input-614c2080" class="gem-c-label govuk-label">
+                Email address
+              </label>
+
+
+
+
+              <input name="email_survey_signup[email_address]" class="gem-c-input govuk-input" id="input-614c2080" type="email" aria-describedby="survey_explanation">
+            </div>
+
+
+            <button class="gem-c-button govuk-button" type="submit">Send me the survey</button>
+
+
+            <a href="https://www.smartsurvey.co.uk/s/gov-uk-banner/?c=/government/organisations/ofsted&amp;gcl=1627485790.1515403243" class="gem-c-feedback__email-link govuk-link" id="take-survey" target="_blank" rel="noopener noreferrer">Don’t have an email address?</a>
+          </div>
+        </div>
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <footer class="group js-footer" id="footer" role="contentinfo">
+
+    <div class="footer-wrapper">
+      <div class="footer-categories">
+        <div class="footer-explore">
+          <h2>Prepare for EU Exit</h2>
+
+          <ul>
+            <li><a href="/business-uk-leaving-eu">Prepare your business for the UK leaving the EU</a></li>
+            <li><a href="/prepare-eu-exit">Prepare for EU Exit if you live in the UK</a></li>
+          </ul>
+          <ul>
+            <li><a href="/uk-nationals-living-eu">Living in Europe after the UK leaves the EU</a></li>
+            <li><a href="/staying-uk-eu-citizen">Continue to live in the UK after it leaves the EU</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-categories">
+        <div class="footer-explore">
+          <h2>Services and information</h2>
+
+          <ul>
+            <li><a href="/browse/benefits">Benefits</a></li>
+            <li><a href="/browse/births-deaths-marriages">Births, deaths, marriages and care</a></li>
+            <li><a href="/browse/business">Business and self-employed</a></li>
+            <li><a href="/browse/childcare-parenting">Childcare and parenting</a></li>
+            <li><a href="/browse/citizenship">Citizenship and living in the UK</a></li>
+            <li><a href="/browse/justice">Crime, justice and the law</a></li>
+            <li><a href="/browse/disabilities">Disabled people</a></li>
+            <li><a href="/browse/driving">Driving and transport</a></li>
+          </ul>
+          <ul>
+            <li><a href="/browse/education">Education and learning</a></li>
+            <li><a href="/browse/employing-people">Employing people</a></li>
+            <li><a href="/browse/environment-countryside">Environment and countryside</a></li>
+            <li><a href="/browse/housing-local-services">Housing and local services</a></li>
+            <li><a href="/browse/tax">Money and tax</a></li>
+            <li><a href="/browse/abroad">Passports, travel and living abroad</a></li>
+            <li><a href="/browse/visas-immigration">Visas and immigration</a></li>
+            <li><a href="/browse/working">Working, jobs and pensions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-inside-government">
+          <h2>Departments and policy</h2>
+
+          <ul>
+            <li><a href="/government/how-government-works">How government works</a></li>
+            <li><a href="/government/organisations">Departments</a></li>
+            <li><a href="/world">Worldwide</a></li>
+            <li><a href="/government/publications">Publications</a></li>
+            <li><a href="/news-and-communications">News and communications</a></li>
+          </ul>
+        </div>
+        <hr>
+      </div>
+
+
+      <div class="footer-meta">
+        <div class="footer-meta-inner">
+          <h2 class="visuallyhidden">Support links</h2>
+          <ul>
+            <li><a href="/help">Help</a></li>
+            <li><a href="/help/cookies">Cookies</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/help/terms-conditions">Terms and conditions</a></li>
+            <li><a href="/cymraeg" lang="cy" hreflang="cy">Rhestr o Wasanaethau Cymraeg</a></li>
+            <li>Built by the <a href="https://www.gov.uk/government/organisations/government-digital-service">Government Digital Service</a>
+            </li>
+          </ul>
+
+
+
+          <div class="open-government-licence">
+            <p class="logo"><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence</a></p>
+            <p>All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated</p>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <a href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/">© Crown copyright</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="global-app-error" class="app-error hidden"></div>
+
+  <script src="https://assets.publishing.service.gov.uk/static/govuk-template-ae4c5d21c0a7cb5bc8926a9f491de4e410244403f66c72997210c281efb92d4f.js" crossorigin="anonymous" integrity="sha256-rkxdIcCny1vIkmqfSR3k5BAkRAP2bHKZchDCge+5LU8="></script>
+
+  <script src="https://assets.publishing.service.gov.uk/static/libs/jquery/jquery-1.12.4-c731c20e2995c576b0509d3bd776f7ab64a66b95363a3b5fae9864299ee594ed.js" crossorigin="anonymous" integrity="sha256-xzHCDimVxXawUJ0713b3q2Sma5U2OjtfrphkKZ7llO0="></script>
+  <script src="https://assets.publishing.service.gov.uk/static/header-footer-only-7a5bda7312bf32b4853efba1e84a6f1d3b14733f3f3764f4c2417d404ffa98b6.js" crossorigin="anonymous" integrity="sha256-elvacxK/MrSFPvuh6EpvHTsUcz8/N2T0wkF9QE/6mLY="></script>
+  <script src="https://assets.publishing.service.gov.uk/static/surveys-aa62a918e4ca5556952181078873b85ecd52ca15c6e54f77afbb9712d098f7d0.js" crossorigin="anonymous" integrity="sha256-qmKpGOTKVVaVIYEHiHO4Xs1SyhXG5U93r7uXEtCY99A="></script>
+
+
+
+  <script>
+  if (typeof window.GOVUK === 'undefined') document.body.className = document.body.className.replace('js-enabled', '');
+  </script>
+  <script src="https://assets.publishing.service.gov.uk/collections/application-bd62369c13792ea2ae2a72729e112e5ccac4c6b6ad24924a05247240f267c174.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "name": "Home",
+        "@id": "https://www.gov.uk/"
+      }
+    }, {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "name": "Organisations",
+        "@id": "https://www.gov.uk/government/organisations"
+      }
+    }, {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "name": "Ofsted",
+        "@id": "https://www.gov.uk/government/organisations/ofsted"
+      }
+    }]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "GovernmentOrganization",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.gov.uk/government/organisations/ofsted"
+    },
+    "name": "Ofsted",
+    "description": "Ofsted is the Office for Standards in Education, Children’s Services and Skills. We inspect and regulate services that care for children and young people, and services providing education and skills for learners of all ages. Ofsted is a non-ministerial department.",
+    "parentOrganization": [{
+      "@context": "http://schema.org",
+      "@type": "GovernmentOrganization",
+      "sameAs": "https://www.gov.uk/government/organisations/department-for-education"
+    }]
+  }
+  </script>
+</body>
+
+</html>
