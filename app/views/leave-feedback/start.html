@@ -8,7 +8,13 @@ Parent View
 {% from "button/macro.njk" import govukButton %}
 
 {% block beforeContent %}
-{{ govukBreadcrumbs({
+  {{ govukPhaseBanner({
+    tag: {
+      text: "alpha"
+    },
+    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  }) }}
+  {{ govukBreadcrumbs({
     items: [
       {
       text: "Home",
@@ -44,7 +50,7 @@ Parent View
 
     {{ govukButton({
         text: "Start now",
-        href: "#",
+        href: "sign-in",
         classes: "govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"
       }) }}
 
