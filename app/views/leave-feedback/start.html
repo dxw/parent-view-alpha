@@ -38,19 +38,29 @@ Parent View
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">{{serviceName}}</h1>
+    <h1 class="govuk-heading-xl">Give feedback to schools</h1>
 
     <p class="govuk-body">Use this service to:</p>
 
     <ul class="govuk-list govuk-list--bullet">
-      <li>tell Ofsted what you think about your child’s school, from the quality of teaching to dealing with bullying and poor behaviour</li>
+      <li>tell Ofsted what you think about your child’s school</li>
     </ul>
+
+    <p class="govuk-body">By giving feedback you are helping schools to raise their standards plus parents and carers to make more informed choices about where to send their children.</p>
+
+    <p class="govuk-body">All feedback is anonymised and will be read by an Ofsted inspector to help them build a picture of the school.</p>
+
+    <p class="govuk-body">Ofsted also uses this information to make decisions about which schools to inspect and when.</p>
+
+    <p class="govuk-body">By giving feedback you consent to your responses being made available to Ofsted.</p>
+
+    <p class="govuk-body">This service is just for feedback about schools. There is a different service to <a href="https://www.gov.uk/complain-about-school">make a complaint about your school</a> or get in touch with the school directly if you have other concerns.</p>
 
     <p class="govuk-body">Completing the feedback survey should take around X minutes.</p>
 
     {{ govukButton({
         text: "Start now",
-        href: "sign-in",
+        href: "/leave-feedback/questions/1",
         classes: "govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"
       }) }}
 
@@ -92,7 +102,3 @@ Parent View
   </div>
 </div>
 {% endblock %}
-
-
-
-
