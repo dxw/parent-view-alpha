@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Parent View
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Organisations",
+        href: "#"
+      },
+      {
+      text: "Ofsted",
+      href: "/"
+      },
+      {
+        text: "Parent View"
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Give feedback for schools
+    </h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="todo">Some way of dealing with the issue of users wanting to report on more than one child.</div>
+  </div>
+</div>
+
+{% endblock %}
