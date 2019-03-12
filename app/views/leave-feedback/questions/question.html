@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% from "radios/macro.njk" import govukRadios %}
+{% from "button/macro.njk" import govukButton %}
+
+{% block pageTitle %}
+My child feels safe at this school — Give feedback to schools
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <span class="govuk-caption-xl">Give feedback to schools</span>
+
+    {{ govukRadios({
+      idPrefix: "my-child-feels-safe-at-this-school",
+      name: "my-child-feels-safe-at-this-school",
+      fieldset: {
+        legend: {
+        text: text,
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--xl"
+        }
+      },
+      hint: {
+        text: hintText
+      },
+      items: [
+        {
+          value: "strongly-agree",
+          text: "Strongly agree"
+        },
+        {
+          value: "agree",
+          text: "Agree"
+        },
+        {
+          value: "disagree",
+          text: "Disagree"
+        },
+        {
+          value: "strongly-disagree",
+          text: "Strongly disagree"
+        },
+        {
+        value: "dont-know",
+        text: "Don't know"
+        }
+      ]
+    }) }}
+
+    {{ govukButton({
+      text: "Continue",
+      href: nextQuestion
+    }) }}
+
+  </div>
+</div>
+
+
+{% endblock %}
+
