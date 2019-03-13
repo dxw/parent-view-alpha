@@ -11,7 +11,8 @@ router.get('/leave-feedback/questions/:questionId', function(req, res) {
     'question': question,
     'text': questions.data.find(obj => String(obj.id) === question).text,
     'hintText': questions.data.find(obj => String(obj.id) === question).hintText,
-    'nextQuestion': Number(question) + 1
+    'nextQuestion': Number(question) + 1,
+    'lastQuestion': Number(question) - 1
   });
 });
 
