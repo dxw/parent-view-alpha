@@ -40,24 +40,29 @@ My child feels safe at this school — Give feedback to schools
         },
         items: [
           {
-            value: "strongly-agree",
-            text: "Strongly agree"
+            value: "Strongly agree",
+            text: "Strongly agree",
+            checked: checked(sanitisedQuestionText, "Strongly agree")
           },
           {
-            value: "agree",
-            text: "Agree"
+            value: "Agree",
+            text: "Agree",
+            checked: checked(sanitisedQuestionText, "Agree")
           },
           {
-            value: "disagree",
-            text: "Disagree"
+            value: "Disagree",
+            text: "Disagree",
+            checked: checked(sanitisedQuestionText, "Disagree")
           },
           {
-            value: "strongly-disagree",
-            text: "Strongly disagree"
+            value: "Strongly disagree",
+            text: "Strongly disagree",
+            checked: checked(sanitisedQuestionText, "Strongly disagree")
           },
           {
-          value: "dont-know",
-          text: "Don't know"
+          value: "Don't know",
+          text: "Don't know",
+          checked: checked(sanitisedQuestionText, "Don't know")
           }
         ]
       }) }}
