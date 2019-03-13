@@ -12,13 +12,17 @@ router.get('/leave-feedback/questions/:questionId', function(req, res) {
   var nextQuestion = Number(question) + 1
   var lastQuestion = Number(question) - 1
   var sanitisedQuestionText = text.replace(/\s+/g, '-').replace(/[.’]/g, '').toLowerCase();
+  var questionCount = questions.data.length
+  var currentQuestion = Number(question)
   res.render('leave-feedback/questions/question', {
     'question': question,
     'text': text,
     'hintText': hintText,
     'nextQuestion': nextQuestion,
     'lastQuestion': lastQuestion,
-    'sanitisedQuestionText': sanitisedQuestionText
+    'sanitisedQuestionText': sanitisedQuestionText,
+    'questionCount': questionCount,
+    'currentQuestion': currentQuestion
   });
 });
 
