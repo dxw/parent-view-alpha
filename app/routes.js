@@ -3,6 +3,10 @@ const router = express.Router()
 
 var questions = require('./data/questions.json')
 
+function sanitiseText(text) {
+  return text.replace(/\s+/g, '-').replace(/[.’]/g, '').toLowerCase();
+}
+
 // Add your routes here - above the module.exports line
 
 router.get('/leave-feedback/questions/:questionId', function(req, res) {
@@ -11,7 +15,7 @@ router.get('/leave-feedback/questions/:questionId', function(req, res) {
   var hintText = questions.data.find(obj => String(obj.id) === question).hintText
   var nextQuestion = Number(question) + 1
   var lastQuestion = Number(question) - 1
-  var sanitisedQuestionText = text.replace(/\s+/g, '-').replace(/[.’]/g, '').toLowerCase();
+  var sanitisedQuestionText = sanitiseText(text)
   var questionCount = questions.data.length
   var currentQuestion = Number(question)
   res.render('leave-feedback/questions/question', {
