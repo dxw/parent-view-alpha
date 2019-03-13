@@ -18,6 +18,7 @@ router.get('/leave-feedback/questions/:questionId', function(req, res) {
   var sanitisedQuestionText = sanitiseText(text)
   var questionCount = questions.data.length
   var currentQuestion = Number(question)
+  var editing = req.query.edit
   res.render('leave-feedback/questions/question', {
     'question': question,
     'text': text,
@@ -26,7 +27,8 @@ router.get('/leave-feedback/questions/:questionId', function(req, res) {
     'lastQuestion': lastQuestion,
     'sanitisedQuestionText': sanitisedQuestionText,
     'questionCount': questionCount,
-    'currentQuestion': currentQuestion
+    'currentQuestion': currentQuestion,
+    'editing': editing
   });
 });
 

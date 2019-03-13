@@ -12,7 +12,9 @@ My child feels safe at this school — Give feedback to schools
 {% endblock %}
 
 {% macro surveyPager() %}
-{% if nextQuestion <= questionCount %}
+{% if editing %}
+  "/leave-feedback/check-your-answers"
+{% elseif nextQuestion <= questionCount %}
   {{nextQuestion}}
 {% else %}
   "/leave-feedback/check-your-answers"
