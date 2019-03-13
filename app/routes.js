@@ -11,12 +11,14 @@ router.get('/leave-feedback/questions/:questionId', function(req, res) {
   var hintText = questions.data.find(obj => String(obj.id) === question).hintText
   var nextQuestion = Number(question) + 1
   var lastQuestion = Number(question) - 1
+  var sanitisedQuestionText = text.replace(/\s+/g, '-').replace(/[.’]/g, '').toLowerCase();
   res.render('leave-feedback/questions/question', {
     'question': question,
     'text': text,
     'hintText': hintText,
     'nextQuestion': nextQuestion,
     'lastQuestion': lastQuestion,
+    'sanitisedQuestionText': sanitisedQuestionText
   });
 });
 

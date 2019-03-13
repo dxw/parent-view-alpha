@@ -23,47 +23,51 @@ My child feels safe at this school — Give feedback to schools
 
     <span class="govuk-caption-xl">Give feedback to schools</span>
 
-    {{ govukRadios({
-      idPrefix: "my-child-feels-safe-at-this-school",
-      name: "my-child-feels-safe-at-this-school",
-      fieldset: {
-        legend: {
-        text: text,
-          isPageHeading: true,
-          classes: "govuk-fieldset__legend--xl"
-        }
-      },
-      hint: {
-        text: hintText
-      },
-      items: [
-        {
-          value: "strongly-agree",
-          text: "Strongly agree"
-        },
-        {
-          value: "agree",
-          text: "Agree"
-        },
-        {
-          value: "disagree",
-          text: "Disagree"
-        },
-        {
-          value: "strongly-disagree",
-          text: "Strongly disagree"
-        },
-        {
-        value: "dont-know",
-        text: "Don't know"
-        }
-      ]
-    }) }}
+    <form action={{nextQuestion}} method="post" class="form">
 
-    {{ govukButton({
-      text: "Continue",
-      href: nextQuestion
-    }) }}
+      {{ govukRadios({
+        idPrefix: sanitisedQuestionText,
+        name: sanitisedQuestionText,
+        fieldset: {
+          legend: {
+          text: text,
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--xl"
+          }
+        },
+        hint: {
+          text: hintText
+        },
+        items: [
+          {
+            value: "strongly-agree",
+            text: "Strongly agree"
+          },
+          {
+            value: "agree",
+            text: "Agree"
+          },
+          {
+            value: "disagree",
+            text: "Disagree"
+          },
+          {
+            value: "strongly-disagree",
+            text: "Strongly disagree"
+          },
+          {
+          value: "dont-know",
+          text: "Don't know"
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+    </form>
+
 
   </div>
 </div>
