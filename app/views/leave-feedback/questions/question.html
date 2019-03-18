@@ -11,6 +11,9 @@ My child feels safe at this school — Give feedback to schools
 {% block beforeContent %}
 {% endblock %}
 
+{# surveyPager dictates the URL that the form POSTs to when the user clicks continue,
+i.e. the next question unless they're editing,
+in which case they're returned to the check your answers page #}
 {% macro surveyPager() %}
 {% if editing %}
   "/leave-feedback/check-your-answers"
