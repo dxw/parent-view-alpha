@@ -1,0 +1,63 @@
+{# <p>{{ data | dump }}</p> #}
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Example - Passing data
+{% endblock %}
+
+{% from "back-link/macro.njk" import govukBackLink %}
+{% from "summary-list/macro.njk" import govukSummaryList %}
+{% from "button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+
+    <h1 class="govuk-heading-xl">Check your answers before sending your feedback</h1>
+
+    <h2 class="govuk-heading-m">Your answers</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      {% for q in questions.data %}
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          {{ q.text }}
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data[sanitiseText(q.text)] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="/leave-feedback/questions/{{ loop.index }}?edit=true">
+            Change
+            <span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+      {% endfor %}
+    </dl>
+
+    <h2 class="govuk-heading-m">Now send your feedback</h2>
+
+    <p class="govuk-body todo">Need some text in here?</p>
+
+    <form action="/form-handler" method="post" novalidate>
+
+      <input type="hidden" name="answers-checked" value="true">
+
+      {{ govukButton({
+          text: "Accept and submit"
+        }) }}
+
+    </form>
+
+  </div>
+</div>
+{% endblock %}

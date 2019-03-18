@@ -19,3 +19,12 @@ $govuk-global-styles: true;
   background-color: govuk-colour("pink");
   color: govuk-colour("white");
 }
+
+.govuk-summary-list__key {
+  margin-bottom: govuk-spacing(1);
+  @include govuk-typography-weight-bold;
+
+  @include govuk-media-query($from: tablet) {
+    width: 80%;
+  }
+}

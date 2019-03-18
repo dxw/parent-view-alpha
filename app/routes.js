@@ -30,4 +30,11 @@ router.get('/leave-feedback/questions/:questionId', function(req, res) {
   });
 });
 
+router.get('/leave-feedback/check-your-answers', function(req, res) {
+  res.render('leave-feedback/check-your-answers', {
+    'questions': questions,
+    'sanitiseText': sanitiseText
+  });
+});
+
 module.exports = router
