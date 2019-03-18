@@ -19,6 +19,8 @@ in which case they're returned to the check your answers page #}
   "/leave-feedback/check-your-answers"
 {% elseif nextQuestion <= questionCount %}
   {{nextQuestion}}
+{% elseif isFinalQuestion %}
+  "/leave-feedback/additional-feedback"
 {% else %}
   "/leave-feedback/check-your-answers"
 {% endif %}

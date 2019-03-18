@@ -26,7 +26,9 @@ router.get('/leave-feedback/questions/:questionId', function(req, res) {
   var sanitisedQuestionText = sanitiseText(text)
   // gets the number of questions in questions.json
   var questionCount = questions.data.length
-  // checks for the 'edit' parameter in the URL query string
+  // returns true if the current question is the last in the questions.data array
+  var isFinalQuestion = question == questions.data.length ? true : false
+  // returns true if the 'edit' parameter is in the URL query string
   var editing = req.query.edit
   res.render('leave-feedback/questions/question', {
     'question': question,
@@ -36,7 +38,19 @@ router.get('/leave-feedback/questions/:questionId', function(req, res) {
     'lastQuestion': lastQuestion,
     'sanitisedQuestionText': sanitisedQuestionText,
     'questionCount': questionCount,
+    'isFinalQuestion': isFinalQuestion,
     'editing': editing
+  });
+});
+
+router.get('/leave-feedback/additional-feedback', function(req, res) {
+  // gets the last question in the questions.data array
+  var finalQuestionUrl = "questions/" + questions.data.length
+  // returns true if the 'edit' parameter is in the URL query string
+  var editing = req.query.edit
+  res.render('leave-feedback/additional-feedback', {
+    'editing': editing,
+    'finalQuestionUrl': finalQuestionUrl
   });
 });
 
