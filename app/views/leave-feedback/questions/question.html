@@ -41,7 +41,9 @@ in which case they're returned to the check your answers page #}
       }) }}
     {% endif %}
 
-    <span class="govuk-caption-xl">Give feedback to schools</span>
+    {# <span class="govuk-caption-xl">Give feedback to schools</span> #}
+
+    <span class="govuk-caption-xl">Question {{ question }} of {{ questionCount }}</span>
 
     <form action={{surveyPager()}} method="post" class="form">
 
