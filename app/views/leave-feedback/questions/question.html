@@ -29,10 +29,17 @@ in which case they're returned to the check your answers page #}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
 
-    {{ govukBackLink({
-      text: "Back",
-      href: lastQuestion
-    }) }}
+    {% if editing %}
+      {{ govukBackLink({
+        text: "Back to your answers",
+        href: "/leave-feedback/check-your-answers"
+      }) }}
+    {% else %}
+      {{ govukBackLink({
+        text: "Back",
+        href: lastQuestion
+      }) }}
+    {% endif %}
 
     <span class="govuk-caption-xl">Give feedback to schools</span>
 
