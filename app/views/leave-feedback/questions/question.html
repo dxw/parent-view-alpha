@@ -87,9 +87,15 @@ in which case they're returned to the check your answers page #}
         ]
       }) }}
 
+    {% if editing %}
+      {{ govukButton({
+        text: "Save your changes"
+      }) }}
+    {% else %}
       {{ govukButton({
         text: "Continue"
       }) }}
+    {% endif %}
 
     </form>
 
