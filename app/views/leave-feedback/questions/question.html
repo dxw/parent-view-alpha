@@ -43,63 +43,45 @@ in which case they're returned to the check your answers page #}
       }) }}
     {% endif %}
 
-    {# <span class="govuk-caption-xl">Give feedback to schools</span> #}
-
-    <span class="govuk-caption-xl">Question {{ question }} of {{ questionCount }}</span>
+    <span class="govuk-caption-xl">Question {{ questionId }} of {{ questionCount }}</span>
 
     <form action={{surveyPager()}} method="post" class="form">
 
-      {{ govukRadios({
-        idPrefix: sanitisedQuestionText,
-        name: sanitisedQuestionText,
-        fieldset: {
-          legend: {
-          text: text,
-            isPageHeading: true,
-            classes: "govuk-fieldset__legend--xl"
-          }
-        },
-        hint: {
-          text: hintText
-        },
-        items: [
-          {
-            value: "Strongly agree",
-            text: "Strongly agree",
-            checked: checked(sanitisedQuestionText, "Strongly agree")
-          },
-          {
-            value: "Agree",
-            text: "Agree",
-            checked: checked(sanitisedQuestionText, "Agree")
-          },
-          {
-            value: "Disagree",
-            text: "Disagree",
-            checked: checked(sanitisedQuestionText, "Disagree")
-          },
-          {
-            value: "Strongly disagree",
-            text: "Strongly disagree",
-            checked: checked(sanitisedQuestionText, "Strongly disagree")
-          },
-          {
-          value: "Don't know",
-          text: "Don't know",
-          checked: checked(sanitisedQuestionText, "Don't know")
-          }
-        ]
-      }) }}
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+              {{ question.text }}
+            </h1>
+            {% if question.hintText !== null %}
+              <span id="changed-name-hint" class="govuk-hint">
+                {{ question.hintText }}
+              </span>
+            {% endif %}
+          </legend>
 
-    {% if editing %}
-      {{ govukButton({
-        text: "Save your changes"
-      }) }}
-    {% else %}
-      {{ govukButton({
-        text: "Continue"
-      }) }}
-    {% endif %}
+          <div class="govuk-radios">
+            {% for answer in question.answers %}
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="{{ sanitise(question.text) + "-" + loop.index}}" name={{ sanitise(question.text) }} type="radio" value="{{ question.answers[loop.index0] }}" {{ checked(sanitise(question.text), question.answers[loop.index0]) }}>
+                <label class="govuk-label govuk-radios__label" for="{{ sanitise(question.text) + "-" + loop.index}}">
+                  {{ answer }}
+                </label>
+              </div>
+            {% endfor %}
+          </div>
+        </fieldset>
+      </div>
+
+      {% if editing %}
+        {{ govukButton({
+          text: "Save your changes"
+        }) }}
+      {% else %}
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      {% endif %}
 
     </form>
 

@@ -1,74 +1,116 @@
 {
   "data": [
     {
-      "id": "1",
+      "id": 1,
       "text": "My child is happy at this school",
-      "hintText": null
+      "hintText": null,
+      "answers": [
+        "Strongly agree", "Agree", "Disagree", "Strongly disagree", "Don‘t know"
+      ]
     },
     {
       "id": 2,
       "text": "My child feels safe at this school",
-      "hintText": null
+      "hintText": null,
+      "answers": [
+        "Strongly agree", "Agree", "Disagree", "Strongly disagree", "Don‘t know"
+      ]
     },
     {
       "id": 3,
       "text": "My child’s school does its best to ensure that they reach their potential",
-      "hintText": null
+      "hintText": null,
+      "answers": [
+        "Strongly agree", "Agree", "Disagree", "Strongly disagree", "Don‘t know"
+      ]
     },
     {
       "id": 4,
       "text": "My child has SEND, and I believe they are being helped to succeed at this school",
-      "hintText": null
+      "hintText": null,
+      "answers": [
+        "Strongly agree", "Agree", "Disagree", "Strongly disagree", "Don‘t know"
+      ]
     },
     {
       "id": 5,
       "text": "My child’s school has high expectations for all its pupils",
-      "hintText": null
+      "hintText": null,
+      "answers": [
+        "Strongly agree", "Agree", "Disagree", "Strongly disagree", "Don‘t know"
+      ]
     },
     {
       "id": 6,
       "text": "There have been a high number of staff changes at my child’s school over the last year",
-      "hintText": null
+      "hintText": null,
+      "answers": [
+        "Strongly agree", "Agree", "Disagree", "Strongly disagree", "Don‘t know"
+      ]
     },
     {
       "id": 7,
       "text": "My child has the opportunity to explore extracurricular interests at this school",
-      "hintText": "e.g.in preschool/lunchtime/afterschool clubs and societies"
+      "hintText": "e.g.in preschool/lunchtime/afterschool clubs and societies",
+      "answers": [
+        "Strongly agree", "Agree", "Disagree", "Strongly disagree", "Don‘t know"
+      ]
     },
     {
       "id": 8,
       "text": "My child’s school is helping them become a successful, rounded person",
-      "hintText": null
+      "hintText": null,
+      "answers": [
+        "Strongly agree", "Agree", "Disagree", "Strongly disagree", "Don‘t know"
+      ]
     },
     {
       "id": 9,
       "text": "My child’s school takes the need for good behaviour seriously",
-      "hintText": null
+      "hintText": null,
+      "answers": [
+        "Strongly agree", "Agree", "Disagree", "Strongly disagree", "Don‘t know"
+      ]
     },
     {
       "id": 10,
       "text": "I am confident that if my child was bullied, the school would stop it happening",
-      "hintText": null
+      "hintText": null,
+      "answers": [
+        "Strongly agree", "Agree", "Disagree", "Strongly disagree", "Don‘t know"
+      ]
     },
     {
       "id": 11,
       "text": "If I had a concern, the school would take it seriously",
-      "hintText": null
+      "hintText": null,
+      "answers": [
+        "Strongly agree", "Agree", "Disagree", "Strongly disagree", "Don‘t know"
+      ]
     },
     {
       "id": 12,
       "text": "The school updates me regularly about how my child is getting on",
-      "hintText": null
+      "hintText": null,
+      "answers": [
+        "Strongly agree", "Agree", "Disagree", "Strongly disagree", "Don‘t know"
+      ]
     },
     {
       "id": 13,
       "text": "My school makes me aware of what my child should be able to know and do at this stage",
-      "hintText": null
+      "hintText": null,
+      "answers": [
+        "Strongly agree", "Agree", "Disagree", "Strongly disagree", "Don‘t know"
+      ]
     },
     {
       "id": 14,
       "text": "I would recommend this school to another parent",
-      "hintText": null
+      "hintText": null,
+      "answers": [
+        "Strongly agree", "Agree", "Disagree", "Strongly disagree", "Don‘t know"
+      ]
     }
   ]
 }
