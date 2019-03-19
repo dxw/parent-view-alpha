@@ -6,7 +6,7 @@
 
 {% from "back-link/macro.njk" import govukBackLink %}
 {% from "button/macro.njk" import govukButton %}
-{% from "textarea/macro.njk" import govukTextarea %}
+{% from "character-count/macro.njk" import govukCharacterCount %}
 
 {% block beforeContent %}
   {{ govukPhaseBanner({
@@ -34,16 +34,16 @@
 
     <form action="check-your-answers" method="post" class="form">
 
-      {{ govukTextarea({
+      {{ govukCharacterCount({
         name: "additional-feedback",
         id: "additional-feedback",
+        maxlength: 250,
         label: {
           text: "Do you have any additional feedback?",
           isPageHeading: true,
           classes: "govuk-label--xl"
         },
         hint: {
-
           html: "<p class='govuk-hint'>You can add more detail to your answers or give feedback on any aspect of the school. It will be read by the Ofsted inspector and the school.</p> <p class='govuk-hint'>You can come back and edit your feedback at any time before you send it. There is a 250 character limit.</p> <p class='govuk-hint'>If you do not have any additional feedback, you can continue.</p>"
         },
         rows: 10,
