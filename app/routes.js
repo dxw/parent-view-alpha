@@ -1,6 +1,10 @@
 const express = require('express')
 const router = express.Router()
 
+// create an instance of the Notify client, and set to a variable
+var NotifyClient = require('notifications-node-client').NotifyClient,
+  notify = new NotifyClient(process.env.NOTIFYAPIKEY);
+
 // imports the contents of questions.json, sets to a variable
 var questions = require('./data/questions.json')
 
@@ -8,6 +12,14 @@ var questions = require('./data/questions.json')
 var utilities = require('./utilities');
 
 // Add your routes here - above the module.exports line
+
+router.get('/leave-feedback/sharing-information-consent', function(req, res) {
+  // returns true if the 'edit' parameter is in the URL query string, so we can make 'back' links work as expected when editing
+  var editing = req.query.edit
+  res.render('leave-feedback/sharing-information-consent', {
+    'editing': editing
+  });
+});
 
 router.get('/leave-feedback/questions/:questionId', function(req, res) {
   // get the question ID from the URL params hash
@@ -52,6 +64,25 @@ router.get('/leave-feedback/check-your-answers', function(req, res) {
     'questions': questions,
     'sanitise': utilities.sanitiseText
   });
+});
+
+// The URL we POST to when we want to send the confirmation email
+router.post('/leave-feedback/confirmation', function(req, res) {
+
+  // trigger Notify to send an email
+  notify.sendEmail(
+    // this long string is the template ID, copy it from the template
+    // page in GOV.UK Notify. It’s not a secret so it’s fine to put it
+    // in your code.
+    'f437f4a4-34c7-42b1-9072-acbe8fd729d5',
+    // get the given email address from the session
+    req.session.data['email']
+  );
+
+  // This is the URL the users will be redirected to once the email
+  // has been sent
+  res.redirect('/leave-feedback/confirmation');
+
 });
 
 module.exports = router

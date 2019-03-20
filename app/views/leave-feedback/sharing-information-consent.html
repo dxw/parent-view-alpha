@@ -11,6 +11,14 @@ Consent to using your answers — Give feedback to schools
 {% block beforeContent %}
 {% endblock %}
 
+{% macro surveyPager() %}
+{% if editing %}
+  "/leave-feedback/check-your-answers"
+{% else %}
+  "/leave-feedback/questions/1"
+{% endif %}
+{% endmacro %}
+
 {% block content %}
 
 <div class="govuk-grid-row">
@@ -28,7 +36,7 @@ Consent to using your answers — Give feedback to schools
       }) }}
     {% endif %}
 
-    <form action="/leave-feedback/questions/1" method="post" class="form">
+    <form action={{surveyPager()}} method="post" class="form">
 
 
       {{ govukInput({
@@ -43,6 +51,7 @@ Consent to using your answers — Give feedback to schools
         id: "email",
         name: "email",
         type: "email",
+        value: data["email"],
         autocomplete: "email",
         classes: "govuk-input--width-20",
         attributes: {

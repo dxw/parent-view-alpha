@@ -64,7 +64,7 @@
           {{ data["email"] }}
         </div>
         <div class="govuk-summary-list__actions">
-          <a class="govuk-link" href="additional-feedback?edit=true">
+          <a class="govuk-link" href="sharing-information-consent?edit=true">
             Change
             <span class="govuk-visually-hidden"> email address</span>
           </a>
@@ -79,13 +79,12 @@
 
     <p class="govuk-body">By giving feedback you give your consent to Ofsted seeing and using your responses in reports.</p>
 
-    <form action="#" method="post" novalidate>
+    <form action="/leave-feedback/confirmation" method="post" novalidate>
 
       <input type="hidden" name="answers-checked" value="true">
 
       {{ govukButton({
-        text: "Accept and send",
-        href: "confirmation"
+        text: "Accept and send"
       }) }}
 
     </form>
