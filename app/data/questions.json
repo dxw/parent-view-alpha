@@ -5,7 +5,22 @@
       "text": "My child is happy at this school",
       "hintText": null,
       "answers": [
-        "Strongly agree", "Agree", "Disagree", "Strongly disagree", "Don‘t know"
+        {
+          "text": "Strongly agree",
+          "value": "Strongly agree"
+        }, {
+          "text": "Agree",
+          "value": "Agree"
+        }, {
+          "text": "Disagree",
+          "value": "Disagree"
+        }, {
+          "text": "Strongly disagree",
+          "value": "Strongly disagree"
+        }, {
+          "text": "Don‘t know",
+          "value": "Don‘t know"
+        }
       ]
     },
     {
@@ -13,7 +28,22 @@
       "text": "My child feels safe at this school",
       "hintText": null,
       "answers": [
-        "Strongly agree", "Agree", "Disagree", "Strongly disagree", "Don‘t know"
+        {
+          "text": "Strongly agree",
+          "value": "Strongly agree"
+        }, {
+          "text": "Agree",
+          "value": "Agree"
+        }, {
+          "text": "Disagree",
+          "value": "Disagree"
+        }, {
+          "text": "Strongly disagree",
+          "value": "Strongly disagree"
+        }, {
+          "text": "Don‘t know",
+          "value": "Don‘t know"
+        }
       ]
     },
     {
@@ -21,15 +51,56 @@
       "text": "My child’s school does its best to ensure that they reach their potential",
       "hintText": null,
       "answers": [
-        "Strongly agree", "Agree", "Disagree", "Strongly disagree", "Don‘t know"
+        {
+          "text": "Strongly agree",
+          "value": "Strongly agree"
+        }, {
+          "text": "Agree",
+          "value": "Agree"
+        }, {
+          "text": "Disagree",
+          "value": "Disagree"
+        }, {
+          "text": "Strongly disagree",
+          "value": "Strongly disagree"
+        }, {
+          "text": "Don‘t know",
+          "value": "Don‘t know"
+        }
       ]
     },
     {
       "id": 4,
-      "text": "My child has SEND, and I believe they are being helped to succeed at this school",
+      "text": "My child has SEND (Special Educational Needs and Disabilities), and I believe they are being helped to succeed at this school",
       "hintText": null,
       "answers": [
-        "Strongly agree", "Agree", "Disagree", "Strongly disagree", "Don‘t know"
+        {
+          "text": "Strongly agree",
+          "value": "Strongly agree"
+        },
+        {
+          "text": "Agree",
+          "value": "Agree"
+        },
+        {
+          "text": "Disagree",
+          "value":  "Disagree"
+        },
+        {
+          "text": "Strongly disagree",
+          "value": "Strongly disagree"
+        },
+        {
+          "text": "Don‘t know",
+          "value": "Don‘t know"
+        },
+        {
+          "divider": "Or"
+        },
+        {
+          "text": "My child does not have SEND",
+          "value": "My child does not have SEND"
+        }
       ]
     },
     {
@@ -37,7 +108,22 @@
       "text": "My child’s school has high expectations for all its pupils",
       "hintText": null,
       "answers": [
-        "Strongly agree", "Agree", "Disagree", "Strongly disagree", "Don‘t know"
+        {
+          "text": "Strongly agree",
+          "value": "Strongly agree"
+        }, {
+          "text": "Agree",
+          "value": "Agree"
+        }, {
+          "text": "Disagree",
+          "value": "Disagree"
+        }, {
+          "text": "Strongly disagree",
+          "value": "Strongly disagree"
+        }, {
+          "text": "Don‘t know",
+          "value": "Don‘t know"
+        }
       ]
     },
     {
@@ -45,7 +131,22 @@
       "text": "There have been a high number of staff changes at my child’s school over the last year",
       "hintText": null,
       "answers": [
-        "Strongly agree", "Agree", "Disagree", "Strongly disagree", "Don‘t know"
+        {
+          "text": "Strongly agree",
+          "value": "Strongly agree"
+        }, {
+          "text": "Agree",
+          "value": "Agree"
+        }, {
+          "text": "Disagree",
+          "value": "Disagree"
+        }, {
+          "text": "Strongly disagree",
+          "value": "Strongly disagree"
+        }, {
+          "text": "Don‘t know",
+          "value": "Don‘t know"
+        }
       ]
     },
     {
@@ -53,7 +154,22 @@
       "text": "My child has the opportunity to explore extracurricular interests at this school",
       "hintText": "e.g.in preschool/lunchtime/afterschool clubs and societies",
       "answers": [
-        "Strongly agree", "Agree", "Disagree", "Strongly disagree", "Don‘t know"
+        {
+          "text": "Strongly agree",
+          "value": "Strongly agree"
+        }, {
+          "text": "Agree",
+          "value": "Agree"
+        }, {
+          "text": "Disagree",
+          "value": "Disagree"
+        }, {
+          "text": "Strongly disagree",
+          "value": "Strongly disagree"
+        }, {
+          "text": "Don‘t know",
+          "value": "Don‘t know"
+        }
       ]
     },
     {
@@ -61,7 +177,22 @@
       "text": "My child’s school is helping them become a successful, rounded person",
       "hintText": null,
       "answers": [
-        "Strongly agree", "Agree", "Disagree", "Strongly disagree", "Don‘t know"
+        {
+          "text": "Strongly agree",
+          "value": "Strongly agree"
+        }, {
+          "text": "Agree",
+          "value": "Agree"
+        }, {
+          "text": "Disagree",
+          "value": "Disagree"
+        }, {
+          "text": "Strongly disagree",
+          "value": "Strongly disagree"
+        }, {
+          "text": "Don‘t know",
+          "value": "Don‘t know"
+        }
       ]
     },
     {
@@ -69,7 +200,22 @@
       "text": "My child’s school takes the need for good behaviour seriously",
       "hintText": null,
       "answers": [
-        "Strongly agree", "Agree", "Disagree", "Strongly disagree", "Don‘t know"
+        {
+          "text": "Strongly agree",
+          "value": "Strongly agree"
+        }, {
+          "text": "Agree",
+          "value": "Agree"
+        }, {
+          "text": "Disagree",
+          "value": "Disagree"
+        }, {
+          "text": "Strongly disagree",
+          "value": "Strongly disagree"
+        }, {
+          "text": "Don‘t know",
+          "value": "Don‘t know"
+        }
       ]
     },
     {
@@ -77,7 +223,22 @@
       "text": "I am confident that if my child was bullied, the school would stop it happening",
       "hintText": null,
       "answers": [
-        "Strongly agree", "Agree", "Disagree", "Strongly disagree", "Don‘t know"
+        {
+          "text": "Strongly agree",
+          "value": "Strongly agree"
+        }, {
+          "text": "Agree",
+          "value": "Agree"
+        }, {
+          "text": "Disagree",
+          "value": "Disagree"
+        }, {
+          "text": "Strongly disagree",
+          "value": "Strongly disagree"
+        }, {
+          "text": "Don‘t know",
+          "value": "Don‘t know"
+        }
       ]
     },
     {
@@ -85,7 +246,22 @@
       "text": "If I had a concern, the school would take it seriously",
       "hintText": null,
       "answers": [
-        "Strongly agree", "Agree", "Disagree", "Strongly disagree", "Don‘t know"
+        {
+          "text": "Strongly agree",
+          "value": "Strongly agree"
+        }, {
+          "text": "Agree",
+          "value": "Agree"
+        }, {
+          "text": "Disagree",
+          "value": "Disagree"
+        }, {
+          "text": "Strongly disagree",
+          "value": "Strongly disagree"
+        }, {
+          "text": "Don‘t know",
+          "value": "Don‘t know"
+        }
       ]
     },
     {
@@ -93,7 +269,22 @@
       "text": "The school updates me regularly about how my child is getting on",
       "hintText": null,
       "answers": [
-        "Strongly agree", "Agree", "Disagree", "Strongly disagree", "Don‘t know"
+        {
+          "text": "Strongly agree",
+          "value": "Strongly agree"
+        }, {
+          "text": "Agree",
+          "value": "Agree"
+        }, {
+          "text": "Disagree",
+          "value": "Disagree"
+        }, {
+          "text": "Strongly disagree",
+          "value": "Strongly disagree"
+        }, {
+          "text": "Don‘t know",
+          "value": "Don‘t know"
+        }
       ]
     },
     {
@@ -101,7 +292,22 @@
       "text": "My school makes me aware of what my child should be able to know and do at this stage",
       "hintText": null,
       "answers": [
-        "Strongly agree", "Agree", "Disagree", "Strongly disagree", "Don‘t know"
+        {
+          "text": "Strongly agree",
+          "value": "Strongly agree"
+        }, {
+          "text": "Agree",
+          "value": "Agree"
+        }, {
+          "text": "Disagree",
+          "value": "Disagree"
+        }, {
+          "text": "Strongly disagree",
+          "value": "Strongly disagree"
+        }, {
+          "text": "Don‘t know",
+          "value": "Don‘t know"
+        }
       ]
     },
     {
@@ -109,7 +315,22 @@
       "text": "I would recommend this school to another parent",
       "hintText": null,
       "answers": [
-        "Strongly agree", "Agree", "Disagree", "Strongly disagree", "Don‘t know"
+        {
+          "text": "Strongly agree",
+          "value": "Strongly agree"
+        }, {
+          "text": "Agree",
+          "value": "Agree"
+        }, {
+          "text": "Disagree",
+          "value": "Disagree"
+        }, {
+          "text": "Strongly disagree",
+          "value": "Strongly disagree"
+        }, {
+          "text": "Don‘t know",
+          "value": "Don‘t know"
+        }
       ]
     }
   ]

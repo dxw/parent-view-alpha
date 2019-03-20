@@ -62,12 +62,16 @@ in which case they're returned to the check your answers page #}
 
           <div class="govuk-radios">
             {% for answer in question.answers %}
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="{{ sanitise(question.text) + "-" + loop.index}}" name={{ sanitise(question.text) }} type="radio" value="{{ question.answers[loop.index0] }}" {{ checked(sanitise(question.text), question.answers[loop.index0]) }}>
-                <label class="govuk-label govuk-radios__label" for="{{ sanitise(question.text) + "-" + loop.index}}">
-                  {{ answer }}
-                </label>
-              </div>
+              {% if answer["divider"] %}
+                <div class="govuk-radios__divider">or</div>
+              {% else %}
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="{{ sanitise(question.text) + "-" + loop.index}}" name={{ sanitise(question.text) }} type="radio" value="{{ question.answers[loop.index0].value }}" {{ checked(sanitise(question.text), question.answers[loop.index0].value) }}>
+                  <label class="govuk-label govuk-radios__label" for="{{ sanitise(question.text) + "-" + loop.index}}">
+                    {{ question.answers[loop.index0].text }}
+                  </label>
+                </div>
+              {% endif %}
             {% endfor %}
           </div>
         </fieldset>
