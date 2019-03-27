@@ -42,9 +42,16 @@
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
 
       <div class="govuk-summary-list__row">
+        {% if data["additional-feedback"] %}
         <div class="govuk-summary-list__value">
           {{ data["additional-feedback"] }}
         </div>
+        {% else %}
+        <div class="govuk-summary-list__value">
+          No feedback given
+        </div>
+        {% endif %}
+
         <div class="govuk-summary-list__actions">
           <a class="govuk-link" href="additional-feedback?edit=true">
             Change
@@ -54,6 +61,8 @@
       </div>
 
     </dl>
+
+    {% if data['email'] %}
 
     <h2 class="govuk-heading-m">Your email address</h2>
 
@@ -72,6 +81,8 @@
       </div>
 
     </dl>
+
+    {% endif %}
 
     <h2 class="govuk-heading-m">Send your feedback</h2>
 
