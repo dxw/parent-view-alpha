@@ -1,0 +1,110 @@
+{% extends "layout.html" %}
+
+{% from "radios/macro.njk" import govukRadios %}
+{% from "input/macro.njk" import govukInput %}
+{% from "button/macro.njk" import govukButton %}
+{% from "back-link/macro.njk" import govukBackLink %}
+
+{% block pageTitle %}
+Consent to using your answers — Give feedback to schools
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% macro surveyPager() %}
+{% if editing %}
+  "/leave-feedback/check-your-answers"
+{% else %}
+  "/leave-feedback/questions/1"
+{% endif %}
+{% endmacro %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {% if editing %}
+      {{ govukBackLink({
+        text: "Back to your answers",
+        href: "leave-feedback/check-your-answers"
+      }) }}
+    {% else %}
+      {{ govukBackLink({
+        text: "Back",
+        href: "start"
+      }) }}
+    {% endif %}
+
+    <h1 class="govuk-heading-l">What happens with your feedback</h1>
+
+    <p class="govuk-body">All feedback is anonymised and will be read by an Ofsted inspector to help them understand what a school is like. Ofsted also uses this information to make decisions about which schools to inspect and when.</p>
+
+    <p class="govuk-body">By giving feedback you give your consent to Ofsted seeing your responses.</p>
+
+    <form action={{surveyPager()}} method="post" class="form">
+
+      {% set emailHtml %}
+        {{ govukInput({
+          id: "email",
+          name: "email",
+          type: "email",
+          value: data["email"],
+          autocomplete: "email",
+          classes: "govuk-input--width-20",
+          label: {
+            text: "Email address"
+          },
+          attributes: {
+            spellcheck: "false"
+          }
+        }) }}
+    {% endset -%}
+
+    {{ govukRadios({
+      idPrefix: "get-email-conditional",
+      name: "get-email",
+      fieldset: {
+        legend: {
+          text: "Receive confirmation by email",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--m"
+        }
+      },
+      hint: {
+        text: "After you submit your answers you can choose to receive a confirmation email, and an email with your answers. "
+      },
+      items: [
+        {
+          value: "yes",
+          text: "Yes",
+          conditional: {
+            html: emailHtml
+          }
+        },
+        {
+          value: "no",
+          text: "No"
+        }
+      ]
+    }) }}
+
+      {% if editing %}
+        {{ govukButton({
+          text: "Save your changes"
+        }) }}
+      {% else %}
+        {{ govukButton({
+          text: "Continue to survey"
+        }) }}
+      {% endif %}
+
+    </form>
+
+
+  </div>
+</div>
+
+
+{% endblock %}
