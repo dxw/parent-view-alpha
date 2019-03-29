@@ -32,6 +32,8 @@ router.get('/leave-feedback/questions/:questionId', function(req, res) {
   var previousQuestion = Number(questionId) - 1
   // gets the number of questions in the questions.data array
   var questionCount = questions.data.length
+  // returns true if the current question is the first in the questions.data array
+  var isFirstQuestion = questionId == questions.data[0].id ? true : false
   // returns true if the current question is the last in the questions.data array
   var isFinalQuestion = questionId == questions.data.length ? true : false
   // returns true if the 'edit' parameter is in the URL query string, we use this in the view to make 'back' links work as expected when editing
@@ -44,6 +46,7 @@ router.get('/leave-feedback/questions/:questionId', function(req, res) {
     'sanitise': utilities.sanitiseText,
     'questionCount': questionCount,
     'isFinalQuestion': isFinalQuestion,
+    'isFirstQuestion': isFirstQuestion,
     'editing': editing
   });
 });

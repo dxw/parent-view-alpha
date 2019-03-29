@@ -28,7 +28,7 @@ What happens with your feedback — {{ serviceName }}
     {% if editing %}
       {{ govukBackLink({
         text: "Back to your answers",
-        href: "leave-feedback/check-your-answers"
+        href: "/leave-feedback/check-your-answers"
       }) }}
     {% else %}
       {{ govukBackLink({
@@ -81,11 +81,13 @@ What happens with your feedback — {{ serviceName }}
           text: "Yes",
           conditional: {
             html: emailHtml
-          }
+          },
+          checked: checked("get-email", "yes")
         },
         {
           value: "no",
-          text: "No"
+          text: "No",
+          checked: checked("get-email", "no")
         }
       ]
     }) }}

@@ -62,15 +62,13 @@ Check your answers before sending your feedback — {{ serviceName }}
 
     </dl>
 
-    {% if data['email'] %}
-
     <h2 class="govuk-heading-m">Your email address</h2>
 
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
 
       <div class="govuk-summary-list__row">
         <div class="govuk-summary-list__value">
-          {{ data["email"] }}
+          {{ data["email"] if data["email"] else "No email address given" }}
         </div>
         <div class="govuk-summary-list__actions">
           <a class="govuk-link" href="sharing-information-consent?edit=true">
@@ -82,7 +80,7 @@ Check your answers before sending your feedback — {{ serviceName }}
 
     </dl>
 
-    {% endif %}
+
 
     <h2 class="govuk-heading-m">Send your feedback</h2>
 

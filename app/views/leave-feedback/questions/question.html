@@ -37,10 +37,17 @@ in which case they're returned to the check your answers page #}
         href: "/leave-feedback/check-your-answers"
       }) }}
     {% else %}
-      {{ govukBackLink({
-        text: "Back",
-        href: previousQuestion
-      }) }}
+      {% if isFirstQuestion %}
+        {{ govukBackLink({
+          text: "Back",
+          href: "/leave-feedback/sharing-information-consent"
+        }) }}
+      {% else %}
+        {{ govukBackLink({
+          text: "Back",
+          href: previousQuestion
+        }) }}
+      {% endif %}
     {% endif %}
 
     <span class="govuk-caption-xl">Question {{ questionId }} of {{ questionCount }}</span>
