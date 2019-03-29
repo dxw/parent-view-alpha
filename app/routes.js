@@ -72,14 +72,46 @@ router.get('/leave-feedback/check-your-answers', function(req, res) {
 // The URL we POST to when we want to send the confirmation email
 router.post('/leave-feedback/confirmation', function(req, res) {
 
+  // make an empty array to hold the answers from the session
+  var allAnswers = []
+
+  // loop through questions.data to get the text for each question,
+  // use the sanitised version of it to get the matching answer from the session,
+  // push each to the allAnswers array
+  for (i = 0; i < questions.data.length; ++i) {
+    allAnswers.push(req.session.data[utilities.sanitiseText(questions.data[i].text)] || "No answer")
+  }
+
+  // create an object that gets each answer from allAnswers and assigns it to a key that matches those in the Notify template
+  var personalisation = {
+    'answer1': allAnswers[0],
+    'answer2': allAnswers[1],
+    'answer3': allAnswers[2],
+    'answer4': allAnswers[3],
+    'answer5': allAnswers[4],
+    'answer6': allAnswers[5],
+    'answer7': allAnswers[6],
+    'answer8': allAnswers[7],
+    'answer9': allAnswers[8],
+    'answer10': allAnswers[9],
+    'answer11': allAnswers[10],
+    'answer12': allAnswers[11],
+    'answer13': allAnswers[12],
+    'answer14': allAnswers[13],
+    'additional-feedback': req.session.data['additional-feedback']
+  }
+
   // trigger Notify to send an email
   notify.sendEmail(
     // this long string is the template ID, copy it from the template
     // page in GOV.UK Notify. It’s not a secret so it’s fine to put it
     // in your code.
-    'f437f4a4-34c7-42b1-9072-acbe8fd729d5',
+    'f026a570-1359-4e09-8767-7736a32f3aa0',
     // get the given email address from the session
-    req.session.data['email']
+    req.session.data['email'],
+    {
+      personalisation: personalisation
+    }
   );
 
   // This is the URL the users will be redirected to once the email
