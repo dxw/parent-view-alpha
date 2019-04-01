@@ -84,20 +84,20 @@ router.post('/leave-feedback/confirmation', function(req, res) {
 
   // create an object that gets each answer from allAnswers and assigns it to a key that matches those in the Notify template
   var personalisation = {
-    'answer1': allAnswers[0],
-    'answer2': allAnswers[1],
-    'answer3': allAnswers[2],
-    'answer4': allAnswers[3],
-    'answer5': allAnswers[4],
-    'answer6': allAnswers[5],
-    'answer7': allAnswers[6],
-    'answer8': allAnswers[7],
-    'answer9': allAnswers[8],
-    'answer10': allAnswers[9],
-    'answer11': allAnswers[10],
-    'answer12': allAnswers[11],
-    'answer13': allAnswers[12],
-    'answer14': allAnswers[13],
+    'answer1': questions.data[0].text + ": " + allAnswers[0],
+    'answer2': questions.data[1].text + ": " + allAnswers[1],
+    'answer3': questions.data[2].text + ": " + allAnswers[2],
+    'answer4': questions.data[3].text + ": " + allAnswers[3],
+    'answer5': questions.data[4].text + ": " + allAnswers[4],
+    'answer6': questions.data[5].text + ": " + allAnswers[5],
+    'answer7': questions.data[6].text + ": " + allAnswers[6],
+    'answer8': questions.data[7].text + ": " + allAnswers[7],
+    'answer9': questions.data[8].text + ": " + allAnswers[8],
+    'answer10': questions.data[9].text + ": " + allAnswers[9],
+    'answer11': questions.data[10].text + ": " + allAnswers[10],
+    'answer12': questions.data[11].text + ": " + allAnswers[11],
+    'answer13': questions.data[12].text + ": " + allAnswers[12],
+    'answer14': questions.data[13].text + ": " + allAnswers[13],
     'additional-feedback': req.session.data['additional-feedback']
   }
 
