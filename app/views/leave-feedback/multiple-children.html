@@ -1,44 +1,79 @@
 {% extends "layout.html" %}
 
+{% from "radios/macro.njk" import govukRadios %}
+
 {% block pageTitle %}
-  Parent View
+Do you want to answer for more than one child at this school? — {{ serviceName }}
 {% endblock %}
 
-{% block beforeContent %}
-{{ govukBreadcrumbs({
-    items: [
-      {
-        text: "Home",
-        href: "#"
-      },
-      {
-        text: "Organisations",
-        href: "#"
-      },
-      {
-      text: "Ofsted",
-      href: "/"
-      },
-      {
-        text: "Parent View"
-      }
-    ]
-  }) }}
-{% endblock %}
+
+{% macro surveyPager() %}
+{% if editing %}
+"/leave-feedback/check-your-answers"
+{% else %}
+"/leave-feedback/questions/1"
+{% endif %}
+{% endmacro %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">
-      Give feedback for schools
-    </h1>
-  </div>
-</div>
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <div class="todo">Some way of dealing with the issue of users wanting to report on more than one child.</div>
+    {% if editing %}
+    {{ govukBackLink({
+        text: "Back to your answers",
+        href: "/leave-feedback/check-your-answers"
+      }) }}
+    {% else %}
+    {{ govukBackLink({
+        text: "Back",
+        href: "/leave-feedback/sharing-information-consent"
+      }) }}
+    {% endif %}
+
+    <form action={{surveyPager()}} method="post" class="form">
+
+      {{ govukRadios({
+        classes: "govuk-radios--inline",
+        idPrefix: "multiple-children",
+        name: "multiple-children",
+        fieldset: {
+          legend: {
+            text: "Do you want to answer for more than one child at this school?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        hint: {
+          text: "You can choose to answer for another child at the end of these questions."
+        },
+        items: [
+          {
+            value: "yes",
+            text: "Yes",
+            checked: checked("multiple-children", "yes")
+          },
+          {
+            value: "no",
+            text: "No",
+            checked: checked("multiple-children", "no")
+          }
+        ]
+      }) }}
+
+      {% if editing %}
+        {{ govukButton({
+          text: "Save your changes"
+        }) }}
+      {% else %}
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      {% endif %}
+
+    </form>
+
   </div>
 </div>
 
