@@ -22,14 +22,14 @@ Feedback submitted — {{ serviceName }}
     <!-- if email -->
 
     {% if data['get-email'] == 'yes'  %}
-    <p class="govuk-body">You’ll receive an email confirmation to {{ data["email"] }} with a copy of your responses.</p>
+    <p class="govuk-body">You’ll receive an email confirmation at {{ data["email"] }} with a copy of your responses.</p>
     {% endif %}
 
-    <p class="govuk-body">You can view your school's overall feedback in <a href="#">'This school's feedback'</a></p>
+    <p class="govuk-body">You can see <a href="#">{{ schoolName }}'s feedback</a>.</p>
 
 
     <p class="govuk-body">
-      <a href="#" class="govuk-link">What did you think of this service?</a> (takes 30 seconds)
+      <a href="#" class="govuk-link">What did you think of this service</a>? (takes 30 seconds)
     </p>
   </div>
 </div>

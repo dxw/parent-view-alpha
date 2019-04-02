@@ -67,13 +67,13 @@ What happens with your feedback — {{ serviceName }}
       name: "get-email",
       fieldset: {
         legend: {
-          text: "Receive confirmation by email",
+          text: "Get a copy of your responses",
           isPageHeading: true,
           classes: "govuk-fieldset__legend--m"
         }
       },
       hint: {
-        text: "After you submit your answers you can choose to receive a confirmation email, and an email with your answers. "
+        text: "Provide your email address to receive a copy of what you said about Greenwood High School to Ofsted."
       },
       items: [
         {
@@ -98,7 +98,7 @@ What happens with your feedback — {{ serviceName }}
         }) }}
       {% else %}
         {{ govukButton({
-          text: "Continue to survey"
+          text: "Continue"
         }) }}
       {% endif %}
 
