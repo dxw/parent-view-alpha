@@ -1,0 +1,97 @@
+{% extends "layout.html" %}
+
+{% from "radios/macro.njk" import govukRadios %}
+{% from "button/macro.njk" import govukButton %}
+{% from "back-link/macro.njk" import govukBackLink %}
+
+{% set pageTitle = "Greenwood High School takes the need for good behaviour seriously" %}
+{% set questionNumber = "9" %}
+{% set questionText = "Greenwood High School takes the need for good behaviour seriously" %}
+{% set questionSanitised = "school-good-behaviour" %}
+{% set backLink = "my-child-successful-rounded" %}
+{% set nextPage = "my-child-bullied" %}
+
+{% block pageTitle %}
+{{ pageTitle }} — {{ serviceName }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    {% if editing %}
+      {{ govukBackLink({
+        text: "Back to your answers",
+        href: "/leave-feedback/check-your-answers"
+      }) }}
+    {% else %}
+      {{ govukBackLink({
+        text: "Back",
+        href: backLink
+      }) }}
+    {% endif %}
+
+    <span class="govuk-caption-xl">Question {{ questionNumber }} of 14</span>
+
+    <form action="{{ '/leave-feedback/check-your-answers' if editing else nextPage }}" method="post" class="form">
+
+      {{ govukRadios({
+        idPrefix: questionSanitised,
+        name: questionSanitised,
+        fieldset: {
+          legend: {
+            text: questionText,
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        items: [
+          {
+            text: "Strongly agree",
+            value: "Strongly agree",
+            checked: checked(questionSanitised, "Strongly agree")
+          },
+          {
+            text: "Agree",
+            value: "Agree",
+            checked: checked(questionSanitised, "Agree")
+          },
+          {
+            text: "Disagree",
+            value: "Disagree",
+            checked: checked(questionSanitised, "Disagree")
+          },
+          {
+            text: "Strongly disagree",
+            value: "Strongly disagree",
+            checked: checked(questionSanitised, "Strongly disagree")
+          },
+          {
+            text: "Don‘t know",
+            value: "Don‘t know",
+            checked: checked(questionSanitised, "Don‘t know")
+          }
+        ]
+      }) }}
+
+      {% if editing %}
+        {{ govukButton({
+          text: "Save your changes"
+        }) }}
+      {% else %}
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      {% endif %}
+
+
+    </form>
+
+
+  </div>
+</div>
+
+
+{% endblock %}
+

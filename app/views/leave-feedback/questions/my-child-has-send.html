@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+
+{% from "radios/macro.njk" import govukRadios %}
+{% from "button/macro.njk" import govukButton %}
+{% from "back-link/macro.njk" import govukBackLink %}
+
+{% set pageTitle = "My child has SEND (Special Educational Needs and Disabilities), and I believe they are being helped to succeed at Greenwood High School" %}
+{% set questionNumber = "4" %}
+{% set questionText = "My child has SEND (Special Educational Needs and Disabilities), and I believe they are being helped to succeed at Greenwood High School" %}
+{% set questionSanitised = "my-child-has-send" %}
+{% set backLink = "my-child-can-reach-potential" %}
+{% set nextPage = "school-has-high-expectations" %}
+
+{% block pageTitle %}
+{{ pageTitle }} — {{ serviceName }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    {% if editing %}
+      {{ govukBackLink({
+        text: "Back to your answers",
+        href: "/leave-feedback/check-your-answers"
+      }) }}
+    {% else %}
+      {{ govukBackLink({
+        text: "Back",
+        href: backLink
+      }) }}
+    {% endif %}
+
+    <span class="govuk-caption-xl">Question {{ questionNumber }} of 14</span>
+    <h1>{{ editing }}</h1>
+
+    <form action="{{ '/leave-feedback/check-your-answers' if editing else nextPage }}" method="post" class="form">
+
+      {{ govukRadios({
+        idPrefix: questionSanitised,
+        name: questionSanitised,
+        fieldset: {
+          legend: {
+            text: questionText,
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        items: [
+          {
+            text: "Strongly agree",
+            value: "Strongly agree",
+            checked: checked(questionSanitised, "Strongly agree")
+          },
+          {
+            text: "Agree",
+            value: "Agree",
+            checked: checked(questionSanitised, "Agree")
+          },
+          {
+            text: "Disagree",
+            value: "Disagree",
+            checked: checked(questionSanitised, "Disagree")
+          },
+          {
+            text: "Strongly disagree",
+            value: "Strongly disagree",
+            checked: checked(questionSanitised, "Strongly disagree")
+          },
+          {
+            text: "Don‘t know",
+            value: "Don‘t know",
+            checked: checked(questionSanitised, "Don‘t know")
+          },
+          {
+            divider: "Or"
+          },
+          {
+            text: "My child does not have SEND",
+            value: "My child does not have SEND",
+            checked: checked(questionSanitised, "My child does not have SEND")
+          }
+        ]
+      }) }}
+
+      {% if editing %}
+        {{ govukButton({
+          text: "Save your changes"
+        }) }}
+      {% else %}
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      {% endif %}
+
+
+    </form>
+
+
+  </div>
+</div>
+
+
+{% endblock %}
+

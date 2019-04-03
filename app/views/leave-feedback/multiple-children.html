@@ -6,15 +6,6 @@
 Do you want to answer for more than one child at this school? — {{ serviceName }}
 {% endblock %}
 
-
-{% macro surveyPager() %}
-{% if editing %}
-"/leave-feedback/check-your-answers"
-{% else %}
-"/leave-feedback/questions/1"
-{% endif %}
-{% endmacro %}
-
 {% block content %}
 
 <div class="govuk-grid-row">
@@ -32,7 +23,7 @@ Do you want to answer for more than one child at this school? — {{ serviceName
       }) }}
     {% endif %}
 
-    <form action={{surveyPager()}} method="post" class="form">
+    <form action="{{ '/leave-feedback/check-your-answers' if editing else '/leave-feedback/questions/my-child-is-happy' }}" method="post" class="form">
 
       {{ govukRadios({
         classes: "govuk-radios--inline",

@@ -21,33 +21,9 @@ router.get('/leave-feedback/sharing-information-consent', function(req, res) {
   });
 });
 
-router.get('/leave-feedback/questions/:questionId', function(req, res) {
-  // get the question ID from the URL params hash
-  var questionId = req.params.questionId
-  // get the question object, from the questions.data array, for the current ID
-  var question = questions.data.find(obj => String(obj.id) === questionId)
-  // the next question ID is the current one, plus 1
-  var nextQuestion = Number(questionId) + 1
-  // the previous question ID is the current one, minus 1
-  var previousQuestion = Number(questionId) - 1
-  // gets the number of questions in the questions.data array
-  var questionCount = questions.data.length
-  // returns true if the current question is the first in the questions.data array
-  var isFirstQuestion = questionId == questions.data[0].id ? true : false
-  // returns true if the current question is the last in the questions.data array
-  var isFinalQuestion = questionId == questions.data.length ? true : false
-  // returns true if the 'edit' parameter is in the URL query string, we use this in the view to make 'back' links work as expected when editing
-  var editing = req.query.edit
-  res.render('leave-feedback/questions/question', {
-    'questionId': questionId,
-    'question': question,
-    'nextQuestion': nextQuestion,
-    'previousQuestion': previousQuestion,
-    'sanitise': utilities.sanitiseText,
-    'questionCount': questionCount,
-    'isFinalQuestion': isFinalQuestion,
-    'isFirstQuestion': isFirstQuestion,
-    'editing': editing
+router.get('/leave-feedback/questions/:question', function(req, res) {
+  res.render('leave-feedback/questions/' + req.params.question, {
+    'editing': req.query.edit
   });
 });
 
@@ -64,41 +40,30 @@ router.get('/leave-feedback/additional-feedback', function(req, res) {
 
 router.get('/leave-feedback/check-your-answers', function(req, res) {
   res.render('leave-feedback/check-your-answers', {
-    'questions': questions,
-    'sanitise': utilities.sanitiseText
+    'questions': questions
   });
 });
 
 // The URL we POST to when we want to send the confirmation email
 router.post('/leave-feedback/confirmation', function(req, res) {
 
-  // make an empty array to hold the answers from the session
-  var allAnswers = []
-
-  // loop through questions.data to get the text for each question,
-  // use the sanitised version of it to get the matching answer from the session,
-  // push each to the allAnswers array
-  for (i = 0; i < questions.data.length; ++i) {
-    allAnswers.push(req.session.data[utilities.sanitiseText(questions.data[i].text)] || "No answer")
-  }
-
   // create an object that gets each answer from allAnswers and assigns it to a key that matches those in the Notify template
   var personalisation = {
-    'answer1': questions.data[0].text + ": " + allAnswers[0],
-    'answer2': questions.data[1].text + ": " + allAnswers[1],
-    'answer3': questions.data[2].text + ": " + allAnswers[2],
-    'answer4': questions.data[3].text + ": " + allAnswers[3],
-    'answer5': questions.data[4].text + ": " + allAnswers[4],
-    'answer6': questions.data[5].text + ": " + allAnswers[5],
-    'answer7': questions.data[6].text + ": " + allAnswers[6],
-    'answer8': questions.data[7].text + ": " + allAnswers[7],
-    'answer9': questions.data[8].text + ": " + allAnswers[8],
-    'answer10': questions.data[9].text + ": " + allAnswers[9],
-    'answer11': questions.data[10].text + ": " + allAnswers[10],
-    'answer12': questions.data[11].text + ": " + allAnswers[11],
-    'answer13': questions.data[12].text + ": " + allAnswers[12],
-    'answer14': questions.data[13].text + ": " + allAnswers[13],
-    'additional-feedback': req.session.data['additional-feedback']
+    'answer1': questions.data[0].text + ": " + req.session.data["my-child-is-happy"],
+    'answer2': questions.data[1].text + ": " + req.session.data["my-child-feels-safe"],
+    'answer3': questions.data[2].text + ": " + req.session.data["my-child-can-reach-potential"],
+    'answer4': questions.data[3].text + ": " + req.session.data["my-child-has-send"],
+    'answer5': questions.data[4].text + ": " + req.session.data["school-has-high-expectations"],
+    'answer6': questions.data[5].text + ": " + req.session.data["school-staff-changes"],
+    'answer7': questions.data[6].text + ": " + req.session.data["school-extracurricular-interests"],
+    'answer8': questions.data[7].text + ": " + req.session.data["my-child-successful-rounded"],
+    'answer9': questions.data[8].text + ": " + req.session.data["school-good-behaviour"],
+    'answer10': questions.data[9].text + ": " + req.session.data["my-child-bullied"],
+    'answer11': questions.data[10].text + ": " + req.session.data["school-my-concerns"],
+    'answer12': questions.data[11].text + ": " + req.session.data["school-updates-me"],
+    'answer13': questions.data[12].text + ": " + req.session.data["school-makes-me-aware"],
+    'answer14': questions.data[13].text + ": " + req.session.data["school-i-would-recommend"],
+    'additional-feedback': req.session.data['additional-feedback'] || "No additional feedback"
   }
 
   // trigger Notify to send an email

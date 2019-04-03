@@ -2,336 +2,59 @@
   "data": [
     {
       "id": 1,
-      "text": "My child is happy at Greenwood High School",
-      "hintText": null,
-      "answers": [
-        {
-          "text": "Strongly agree",
-          "value": "Strongly agree"
-        }, {
-          "text": "Agree",
-          "value": "Agree"
-        }, {
-          "text": "Disagree",
-          "value": "Disagree"
-        }, {
-          "text": "Strongly disagree",
-          "value": "Strongly disagree"
-        }, {
-          "text": "Don‘t know",
-          "value": "Don‘t know"
-        }
-      ]
+      "text": "My child is happy at Greenwood High School"
     },
     {
       "id": 2,
-      "text": "My child feels safe at Greenwood High School",
-      "hintText": null,
-      "answers": [
-        {
-          "text": "Strongly agree",
-          "value": "Strongly agree"
-        }, {
-          "text": "Agree",
-          "value": "Agree"
-        }, {
-          "text": "Disagree",
-          "value": "Disagree"
-        }, {
-          "text": "Strongly disagree",
-          "value": "Strongly disagree"
-        }, {
-          "text": "Don‘t know",
-          "value": "Don‘t know"
-        }
-      ]
+      "text": "My child feels safe at Greenwood High School"
     },
     {
       "id": 3,
-      "text": "Greenwood High School does its best to ensure that they reach their potential",
-      "hintText": null,
-      "answers": [
-        {
-          "text": "Strongly agree",
-          "value": "Strongly agree"
-        }, {
-          "text": "Agree",
-          "value": "Agree"
-        }, {
-          "text": "Disagree",
-          "value": "Disagree"
-        }, {
-          "text": "Strongly disagree",
-          "value": "Strongly disagree"
-        }, {
-          "text": "Don‘t know",
-          "value": "Don‘t know"
-        }
-      ]
+      "text": "Greenwood High School does its best to ensure that they reach their potential"
     },
     {
       "id": 4,
-      "text": "My child has SEND (Special Educational Needs and Disabilities), and I believe they are being helped to succeed at Greenwood High School",
-      "hintText": null,
-      "answers": [
-        {
-          "text": "Strongly agree",
-          "value": "Strongly agree"
-        },
-        {
-          "text": "Agree",
-          "value": "Agree"
-        },
-        {
-          "text": "Disagree",
-          "value":  "Disagree"
-        },
-        {
-          "text": "Strongly disagree",
-          "value": "Strongly disagree"
-        },
-        {
-          "text": "Don‘t know",
-          "value": "Don‘t know"
-        },
-        {
-          "divider": "Or"
-        },
-        {
-          "text": "My child does not have SEND",
-          "value": "My child does not have SEND"
-        }
-      ]
+      "text": "My child has SEND (Special Educational Needs and Disabilities), and I believe they are being helped to succeed at Greenwood High School"
     },
     {
       "id": 5,
-      "text": "Greenwood High School has high expectations for all its pupils",
-      "hintText": null,
-      "answers": [
-        {
-          "text": "Strongly agree",
-          "value": "Strongly agree"
-        }, {
-          "text": "Agree",
-          "value": "Agree"
-        }, {
-          "text": "Disagree",
-          "value": "Disagree"
-        }, {
-          "text": "Strongly disagree",
-          "value": "Strongly disagree"
-        }, {
-          "text": "Don‘t know",
-          "value": "Don‘t know"
-        }
-      ]
+      "text": "Greenwood High School has high expectations for all its pupils"
     },
     {
       "id": 6,
-      "text": "There have been a high number of staff changes at Greenwood High School over the last year",
-      "hintText": null,
-      "answers": [
-        {
-          "text": "Strongly agree",
-          "value": "Strongly agree"
-        }, {
-          "text": "Agree",
-          "value": "Agree"
-        }, {
-          "text": "Disagree",
-          "value": "Disagree"
-        }, {
-          "text": "Strongly disagree",
-          "value": "Strongly disagree"
-        }, {
-          "text": "Don‘t know",
-          "value": "Don‘t know"
-        }
-      ]
+      "text": "There have been a high number of staff changes at Greenwood High School over the last year"
     },
     {
       "id": 7,
-      "text": "My child has the opportunity to explore extracurricular interests at Greenwood High School",
-      "hintText": "e.g. in preschool/lunchtime/afterschool clubs and societies",
-      "answers": [
-        {
-          "text": "Strongly agree",
-          "value": "Strongly agree"
-        }, {
-          "text": "Agree",
-          "value": "Agree"
-        }, {
-          "text": "Disagree",
-          "value": "Disagree"
-        }, {
-          "text": "Strongly disagree",
-          "value": "Strongly disagree"
-        }, {
-          "text": "Don‘t know",
-          "value": "Don‘t know"
-        }
-      ]
+      "text": "My child has the opportunity to explore extracurricular interests at Greenwood High School"
     },
     {
       "id": 8,
-      "text": "Greenwood High School is helping my child to become a successful, rounded person",
-      "hintText": null,
-      "answers": [
-        {
-          "text": "Strongly agree",
-          "value": "Strongly agree"
-        }, {
-          "text": "Agree",
-          "value": "Agree"
-        }, {
-          "text": "Disagree",
-          "value": "Disagree"
-        }, {
-          "text": "Strongly disagree",
-          "value": "Strongly disagree"
-        }, {
-          "text": "Don‘t know",
-          "value": "Don‘t know"
-        }
-      ]
+      "text": "Greenwood High School is helping my child to become a successful, rounded person"
     },
     {
       "id": 9,
-      "text": "Greenwood High School takes the need for good behaviour seriously",
-      "hintText": null,
-      "answers": [
-        {
-          "text": "Strongly agree",
-          "value": "Strongly agree"
-        }, {
-          "text": "Agree",
-          "value": "Agree"
-        }, {
-          "text": "Disagree",
-          "value": "Disagree"
-        }, {
-          "text": "Strongly disagree",
-          "value": "Strongly disagree"
-        }, {
-          "text": "Don‘t know",
-          "value": "Don‘t know"
-        }
-      ]
+      "text": "Greenwood High School takes the need for good behaviour seriously"
     },
     {
       "id": 10,
-      "text": "I am confident that if my child was bullied, Greenwood High School would stop it happening",
-      "hintText": null,
-      "answers": [
-        {
-          "text": "Strongly agree",
-          "value": "Strongly agree"
-        }, {
-          "text": "Agree",
-          "value": "Agree"
-        }, {
-          "text": "Disagree",
-          "value": "Disagree"
-        }, {
-          "text": "Strongly disagree",
-          "value": "Strongly disagree"
-        }, {
-          "text": "Don‘t know",
-          "value": "Don‘t know"
-        }
-      ]
+      "text": "I am confident that if my child was bullied, Greenwood High School would stop it happening"
     },
     {
       "id": 11,
-      "text": "If I had a concern, Greenwood High School would take it seriously",
-      "hintText": null,
-      "answers": [
-        {
-          "text": "Strongly agree",
-          "value": "Strongly agree"
-        }, {
-          "text": "Agree",
-          "value": "Agree"
-        }, {
-          "text": "Disagree",
-          "value": "Disagree"
-        }, {
-          "text": "Strongly disagree",
-          "value": "Strongly disagree"
-        }, {
-          "text": "Don‘t know",
-          "value": "Don‘t know"
-        }
-      ]
+      "text": "If I had a concern, Greenwood High School would take it seriously"
     },
     {
       "id": 12,
-      "text": "Greenwood High School updates me regularly about how my child is getting on",
-      "hintText": null,
-      "answers": [
-        {
-          "text": "Strongly agree",
-          "value": "Strongly agree"
-        }, {
-          "text": "Agree",
-          "value": "Agree"
-        }, {
-          "text": "Disagree",
-          "value": "Disagree"
-        }, {
-          "text": "Strongly disagree",
-          "value": "Strongly disagree"
-        }, {
-          "text": "Don‘t know",
-          "value": "Don‘t know"
-        }
-      ]
+      "text": "Greenwood High School updates me regularly about how my child is getting on"
     },
     {
       "id": 13,
-      "text": "Greenwood High School makes me aware of what my child should be able to know and do at this stage",
-      "hintText": null,
-      "answers": [
-        {
-          "text": "Strongly agree",
-          "value": "Strongly agree"
-        }, {
-          "text": "Agree",
-          "value": "Agree"
-        }, {
-          "text": "Disagree",
-          "value": "Disagree"
-        }, {
-          "text": "Strongly disagree",
-          "value": "Strongly disagree"
-        }, {
-          "text": "Don‘t know",
-          "value": "Don‘t know"
-        }
-      ]
+      "text": "Greenwood High School makes me aware of what my child should be able to know and do at this stage"
     },
     {
       "id": 14,
-      "text": "I would recommend Greenwood High School to another parent",
-      "hintText": null,
-      "answers": [
-        {
-          "text": "Strongly agree",
-          "value": "Strongly agree"
-        }, {
-          "text": "Agree",
-          "value": "Agree"
-        }, {
-          "text": "Disagree",
-          "value": "Disagree"
-        }, {
-          "text": "Strongly disagree",
-          "value": "Strongly disagree"
-        }, {
-          "text": "Don‘t know",
-          "value": "Don‘t know"
-        }
-      ]
+      "text": "I would recommend Greenwood High School to another parent"
     }
   ]
 }

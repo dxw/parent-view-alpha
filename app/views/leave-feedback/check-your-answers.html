@@ -18,29 +18,254 @@ Check your answers before sending your feedback — {{ serviceName }}
 
     <h2 class="govuk-heading-m">Your answers</h2>
 
-    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-      {% for question in questions.data %}
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          {{ question.text }}
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data[sanitise(question.text)] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="/leave-feedback/questions/{{ loop.index }}?edit=true">
-            Change
-            <span class="govuk-visually-hidden"> name</span>
-          </a>
-        </dd>
-      </div>
-      {% endfor %}
-    </dl>
+    {{ govukSummaryList({
+      classes: 'govuk-!-margin-bottom-9',
+      rows: [
+        {
+          key: {
+            text: questions.data[0].text
+          },
+          value: {
+            text: data["my-child-is-happy"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/my-child-is-happy?edit=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[1].text
+          },
+          value: {
+            text: data["my-child-feels-safe"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/my-child-feels-safe?edit=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[2].text
+          },
+          value: {
+            text: data["my-child-can-reach-potential"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/my-child-can-reach-potential?edit=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[3].text
+          },
+          value: {
+            text: data["my-child-has-send"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/my-child-has-send?edit=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[4].text
+          },
+          value: {
+            text: data["school-has-high-expectations"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/school-has-high-expectations?edit=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[5].text
+          },
+          value: {
+            text: data["school-staff-changes"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/school-staff-changes?edit=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[6].text
+          },
+          value: {
+            text: data["school-extracurricular-interests"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/school-extracurricular-interests?edit=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[7].text
+          },
+          value: {
+            text: data["my-child-successful-rounded"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/my-child-successful-rounded?edit=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[8].text
+          },
+          value: {
+            text: data["school-good-behaviour"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/school-good-behaviour?edit=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[9].text
+          },
+          value: {
+            text: data["my-child-bullied"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/my-child-bullied?edit=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[10].text
+          },
+          value: {
+            text: data["school-my-concerns"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/school-my-concerns?edit=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[11].text
+          },
+          value: {
+            text: data["school-updates-me"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/school-updates-me?edit=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[12].text
+          },
+          value: {
+            text: data["school-makes-me-aware"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/school-makes-me-aware?edit=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[13].text
+          },
+          value: {
+            text: data["school-i-would-recommend"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/school-i-would-recommend?edit=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        }
+
+      ]
+    }) }}
 
     <h2 class="govuk-heading-m">Your additional feedback</h2>
 
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-
       <div class="govuk-summary-list__row">
         {% if data["additional-feedback"] %}
         <div class="govuk-summary-list__value">
@@ -51,21 +276,18 @@ Check your answers before sending your feedback — {{ serviceName }}
           No feedback given
         </div>
         {% endif %}
-
         <div class="govuk-summary-list__actions">
-          <a class="govuk-link" href="additional-feedback?edit=true">
+          <a class="govuk-link" href="/leave-feedback/questions/additional-feedback?edit=true">
             Change
             <span class="govuk-visually-hidden"> addditional feedback</span>
           </a>
         </div>
       </div>
-
     </dl>
 
     <h2 class="govuk-heading-m">Your email address</h2>
 
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-
       <div class="govuk-summary-list__row">
         <div class="govuk-summary-list__value">
           {{ data["email"] if data["email"] else "No email address given" }}
@@ -77,10 +299,7 @@ Check your answers before sending your feedback — {{ serviceName }}
           </a>
         </div>
       </div>
-
     </dl>
-
-
 
     <h2 class="govuk-heading-m">Send your feedback</h2>
 
