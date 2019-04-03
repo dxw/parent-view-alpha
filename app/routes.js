@@ -38,6 +38,20 @@ router.get('/leave-feedback/additional-feedback', function(req, res) {
   });
 });
 
+router.post('/leave-feedback/add-child', function(req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  let addChild = req.session.data['add-child']
+
+  if (addChild === 'yes') {
+    res.redirect('/leave-feedback/questions/my-child-is-happy')
+  } else {
+    res.redirect('/leave-feedback/check-your-answers')
+  }
+})
+
 router.get('/leave-feedback/check-your-answers', function(req, res) {
   res.render('leave-feedback/check-your-answers', {
     'questions': questions
