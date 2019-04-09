@@ -4,12 +4,12 @@
 {% from "button/macro.njk" import govukButton %}
 {% from "back-link/macro.njk" import govukBackLink %}
 
-{% set pageTitle = "My child has SEND (Special Educational Needs and Disabilities), and I believe they are being helped to succeed at Greenwood High School" %}
-{% set questionNumber = "4" %}
-{% set questionText = "My child has SEND (Special Educational Needs and Disabilities), and I believe they are being helped to succeed at Greenwood High School" %}
-{% set questionSanitised = "my-child-has-send" %}
-{% set backLink = "my-child-can-reach-potential" %}
-{% set nextPage = "school-has-high-expectations" %}
+{% set pageTitle = "If I had a concern, Greenwood High School would take it seriously" %}
+{% set questionNumber = "11" %}
+{% set questionText = "If I had a concern, Greenwood High School would take it seriously" %}
+{% set questionSanitised = "school-my-concerns-2" %}
+{% set backLink = "my-child-bullied-2" %}
+{% set nextPage = "school-updates-me-2" %}
 
 {% block pageTitle %}
 {{ pageTitle }} — {{ serviceName }}
@@ -23,7 +23,7 @@
     {% if editing %}
       {{ govukBackLink({
         text: "Back to your answers",
-        href: "/leave-feedback/check-your-answers"
+        href: "/leave-feedback/check-your-answers-2"
       }) }}
     {% else %}
       {{ govukBackLink({
@@ -34,7 +34,7 @@
 
     <span class="govuk-caption-xl">Question {{ questionNumber }} of 14</span>
 
-    <form action="{{ '/leave-feedback/check-your-answers' if editing else nextPage }}" method="post" class="form">
+    <form action="{{ '/leave-feedback/check-your-answers-2' if editing else nextPage }}" method="post" class="form">
 
       {{ govukRadios({
         idPrefix: questionSanitised,
@@ -71,14 +71,6 @@
             text: "Don‘t know",
             value: "Don‘t know",
             checked: checked(questionSanitised, "Don‘t know")
-          },
-          {
-            divider: "Or"
-          },
-          {
-            text: "My child does not have SEND",
-            value: "My child does not have SEND",
-            checked: checked(questionSanitised, "My child does not have SEND")
           }
         ]
       }) }}

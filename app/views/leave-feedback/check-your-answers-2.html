@@ -1,0 +1,592 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Check your answers before sending your feedback — {{ serviceName }}
+{% endblock %}
+
+{% from "summary-list/macro.njk" import govukSummaryList %}
+{% from "button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+
+    <h1 class="govuk-heading-xl">Check your answers before sending your feedback</h1>
+
+    <h2 class="govuk-heading-m">Your answers for child 1</h2>
+
+    {{ govukSummaryList({
+      classes: 'govuk-!-margin-bottom-9',
+      rows: [
+        {
+          key: {
+            text: questions.data[0].text
+          },
+          value: {
+            text: data["my-child-is-happy"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/my-child-is-happy?edit=true&multiple=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[1].text
+          },
+          value: {
+            text: data["my-child-feels-safe"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/my-child-feels-safe?edit=true&multiple=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[2].text
+          },
+          value: {
+            text: data["my-child-can-reach-potential"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/my-child-can-reach-potential?edit=true&multiple=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[3].text
+          },
+          value: {
+            text: data["my-child-has-send"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/my-child-has-send?edit=true&multiple=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[4].text
+          },
+          value: {
+            text: data["school-has-high-expectations"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/school-has-high-expectations?edit=true&multiple=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[5].text
+          },
+          value: {
+            text: data["school-staff-changes"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/school-staff-changes?edit=true&multiple=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[6].text
+          },
+          value: {
+            text: data["school-extracurricular-interests"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/school-extracurricular-interests?edit=true&multiple=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[7].text
+          },
+          value: {
+            text: data["my-child-successful-rounded"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/my-child-successful-rounded?edit=true&multiple=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[8].text
+          },
+          value: {
+            text: data["school-good-behaviour"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/school-good-behaviour?edit=true&multiple=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[9].text
+          },
+          value: {
+            text: data["my-child-bullied"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/my-child-bullied?edit=true&multiple=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[10].text
+          },
+          value: {
+            text: data["school-my-concerns"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/school-my-concerns?edit=true&multiple=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[11].text
+          },
+          value: {
+            text: data["school-updates-me"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/school-updates-me?edit=true&multiple=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[12].text
+          },
+          value: {
+            text: data["school-makes-me-aware"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/school-makes-me-aware?edit=true&multiple=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[13].text
+          },
+          value: {
+            text: data["school-i-would-recommend"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/school-i-would-recommend?edit=true&multiple=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        }
+
+      ]
+    }) }}
+
+    <h2 class="govuk-heading-m">Your additional feedback for child 1</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        {% if data["additional-feedback"] %}
+        <div class="govuk-summary-list__value">
+          {{ data["additional-feedback"] }}
+        </div>
+        {% else %}
+        <div class="govuk-summary-list__value">
+          No feedback given
+        </div>
+        {% endif %}
+        <div class="govuk-summary-list__actions">
+          <a class="govuk-link" href="/leave-feedback/questions/additional-feedback?edit=true&multiple=true">
+        Change
+        <span class="govuk-visually-hidden"> additional feedback</span>
+      </a>
+        </div>
+      </div>
+    </dl>
+
+
+    <h2 class="govuk-heading-m">Your answers for child 2</h2>
+
+    {{ govukSummaryList({
+      classes: 'govuk-!-margin-bottom-9',
+      rows: [
+        {
+          key: {
+            text: questions.data[0].text
+          },
+          value: {
+            text: data["my-child-is-happy-2"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/my-child-is-happy-2?edit=true&multiple=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[1].text
+          },
+          value: {
+            text: data["my-child-feels-safe-2"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/my-child-feels-safe-2?edit=true&multiple=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[2].text
+          },
+          value: {
+            text: data["my-child-can-reach-potential-2"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/my-child-can-reach-potential-2?edit=true&multiple=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[3].text
+          },
+          value: {
+            text: data["my-child-has-send-2"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/my-child-has-send-2?edit=true&multiple=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[4].text
+          },
+          value: {
+            text: data["school-has-high-expectations-2"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/school-has-high-expectations-2?edit=true&multiple=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[5].text
+          },
+          value: {
+            text: data["school-staff-changes-2"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/school-staff-changes-2?edit=true&multiple=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[6].text
+          },
+          value: {
+            text: data["school-extracurricular-interests-2"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/school-extracurricular-interests-2?edit=true&multiple=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[7].text
+          },
+          value: {
+            text: data["my-child-successful-rounded-2"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/my-child-successful-rounded-2?edit=true&multiple=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[8].text
+          },
+          value: {
+            text: data["school-good-behaviour-2"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/school-good-behaviour-2?edit=true&multiple=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[9].text
+          },
+          value: {
+            text: data["my-child-bullied-2"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/my-child-bullied-2?edit=true&multiple=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[10].text
+          },
+          value: {
+            text: data["school-my-concerns-2"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/school-my-concerns-2?edit=true&multiple=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[11].text
+          },
+          value: {
+            text: data["school-updates-me-2"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/school-updates-me-2?edit=true&multiple=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[12].text
+          },
+          value: {
+            text: data["school-makes-me-aware-2"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/school-makes-me-aware-2?edit=true&multiple=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: questions.data[13].text
+          },
+          value: {
+            text: data["school-i-would-recommend-2"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/school-i-would-recommend-2?edit=true&multiple=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        }
+
+      ]
+    }) }}
+
+    <h2 class="govuk-heading-m">Your additional feedback for child 2</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        {% if data["additional-feedback-2"] %}
+        <div class="govuk-summary-list__value">
+          {{ data["additional-feedback-2"] }}
+        </div>
+        {% else %}
+        <div class="govuk-summary-list__value">
+          No feedback given
+        </div>
+        {% endif %}
+        <div class="govuk-summary-list__actions">
+          <a class="govuk-link" href="/leave-feedback/questions/additional-feedback?edit=true&multiple=true">
+            Change
+            <span class="govuk-visually-hidden"> additional feedback</span>
+          </a>
+        </div>
+      </div>
+    </dl>
+
+    <h2 class="govuk-heading-m">Your email address</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <div class="govuk-summary-list__value">
+          {{ data["email"] if data["email"] else "No email address given" }}
+        </div>
+        <div class="govuk-summary-list__actions">
+          <a class="govuk-link" href="sharing-information-consent?edit=true&multiple=true">
+            Change
+            <span class="govuk-visually-hidden"> email address</span>
+          </a>
+        </div>
+      </div>
+    </dl>
+
+    <h2 class="govuk-heading-m">Send your feedback</h2>
+
+    <p class="govuk-body">Your feedback and comments will be made anonymous and sent to Ofsted and {{ schoolName }}.</p>
+
+    <p class="govuk-body">By giving feedback you give your consent to Ofsted seeing your responses.</p>
+
+    <form action="/leave-feedback/confirmation" method="post" novalidate>
+
+      <input type="hidden" name="answers-checked" value="true">
+
+      {{ govukButton({
+        text: "Accept and send"
+      }) }}
+
+    </form>
+
+  </div>
+</div>
+{% endblock %}
