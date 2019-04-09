@@ -73,8 +73,25 @@ Check your answers before sending your feedback — {{ serviceName }}
           }
         },
         {
+        key: {
+          text: questions.data[3].text
+        },
+        value: {
+          text: data["school-makes-me-aware"]
+        },
+        actions: {
+          items: [
+            {
+              href: "/leave-feedback/questions/school-makes-me-aware?edit=true&multiple=true",
+              text: "Change",
+              visuallyHiddenText: "name"
+            }
+          ]
+        }
+        },
+        {
           key: {
-            text: questions.data[3].text
+            text: questions.data[4].text
           },
           value: {
             text: data["my-child-has-send"]
@@ -83,23 +100,6 @@ Check your answers before sending your feedback — {{ serviceName }}
             items: [
               {
                 href: "/leave-feedback/questions/my-child-has-send?edit=true&multiple=true",
-                text: "Change",
-                visuallyHiddenText: "name"
-              }
-            ]
-          }
-        },
-        {
-          key: {
-            text: questions.data[4].text
-          },
-          value: {
-            text: data["school-has-high-expectations"]
-          },
-          actions: {
-            items: [
-              {
-                href: "/leave-feedback/questions/school-has-high-expectations?edit=true&multiple=true",
                 text: "Change",
                 visuallyHiddenText: "name"
               }
@@ -145,12 +145,12 @@ Check your answers before sending your feedback — {{ serviceName }}
             text: questions.data[7].text
           },
           value: {
-            text: data["my-child-successful-rounded"]
+            text: data["my-child-life-skills"]
           },
           actions: {
             items: [
               {
-                href: "/leave-feedback/questions/my-child-successful-rounded?edit=true&multiple=true",
+                href: "/leave-feedback/questions/my-child-life-skills?edit=true&multiple=true",
                 text: "Change",
                 visuallyHiddenText: "name"
               }
@@ -230,12 +230,12 @@ Check your answers before sending your feedback — {{ serviceName }}
             text: questions.data[12].text
           },
           value: {
-            text: data["school-makes-me-aware"]
+            text: data["my-child-at-boarding-school"]
           },
           actions: {
             items: [
               {
-                href: "/leave-feedback/questions/school-makes-me-aware?edit=true&multiple=true",
+                href: "/leave-feedback/questions/my-child-at-boarding-school?edit=true&multiple=true",
                 text: "Change",
                 visuallyHiddenText: "name"
               }
@@ -343,8 +343,25 @@ Check your answers before sending your feedback — {{ serviceName }}
           }
         },
         {
+        key: {
+          text: questions.data[3].text
+        },
+        value: {
+          text: data["school-makes-me-aware-2"]
+        },
+        actions: {
+          items: [
+            {
+              href: "/leave-feedback/questions/school-makes-me-aware-2?edit=true&multiple=true",
+              text: "Change",
+              visuallyHiddenText: "name"
+            }
+          ]
+        }
+        },
+        {
           key: {
-            text: questions.data[3].text
+            text: questions.data[4].text
           },
           value: {
             text: data["my-child-has-send-2"]
@@ -353,23 +370,6 @@ Check your answers before sending your feedback — {{ serviceName }}
             items: [
               {
                 href: "/leave-feedback/questions/my-child-has-send-2?edit=true&multiple=true",
-                text: "Change",
-                visuallyHiddenText: "name"
-              }
-            ]
-          }
-        },
-        {
-          key: {
-            text: questions.data[4].text
-          },
-          value: {
-            text: data["school-has-high-expectations-2"]
-          },
-          actions: {
-            items: [
-              {
-                href: "/leave-feedback/questions/school-has-high-expectations-2?edit=true&multiple=true",
                 text: "Change",
                 visuallyHiddenText: "name"
               }
@@ -415,12 +415,12 @@ Check your answers before sending your feedback — {{ serviceName }}
             text: questions.data[7].text
           },
           value: {
-            text: data["my-child-successful-rounded-2"]
+            text: data["my-child-life-skills-2"]
           },
           actions: {
             items: [
               {
-                href: "/leave-feedback/questions/my-child-successful-rounded-2?edit=true&multiple=true",
+                href: "/leave-feedback/questions/my-child-life-skills-2?edit=true&multiple=true",
                 text: "Change",
                 visuallyHiddenText: "name"
               }
@@ -500,12 +500,12 @@ Check your answers before sending your feedback — {{ serviceName }}
             text: questions.data[12].text
           },
           value: {
-            text: data["school-makes-me-aware-2"]
+            text: data["my-child-at-boarding-school-2"]
           },
           actions: {
             items: [
               {
-                href: "/leave-feedback/questions/school-makes-me-aware-2?edit=true&multiple=true",
+                href: "/leave-feedback/questions/my-child-at-boarding-school-2?edit=true&multiple=true",
                 text: "Change",
                 visuallyHiddenText: "name"
               }
@@ -577,7 +577,7 @@ Check your answers before sending your feedback — {{ serviceName }}
 
     <p class="govuk-body">By giving feedback you give your consent to Ofsted seeing your responses.</p>
 
-    <form action="/leave-feedback/confirmation" method="post" novalidate>
+    <form action="/leave-feedback/confirmation-2" method="post" novalidate>
 
       <input type="hidden" name="answers-checked" value="true">
 

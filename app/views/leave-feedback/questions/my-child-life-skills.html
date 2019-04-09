@@ -4,12 +4,12 @@
 {% from "button/macro.njk" import govukButton %}
 {% from "back-link/macro.njk" import govukBackLink %}
 
-{% set pageTitle = "Greenwood High School is helping my child to become a successful, rounded person" %}
+{% set pageTitle = "Greenwood High School is also helping them learn life skills, such as responsibility" %}
 {% set questionNumber = "8" %}
-{% set questionText = "Greenwood High School is helping my child to become a successful, rounded person" %}
-{% set questionSanitised = "my-child-successful-rounded-2" %}
-{% set backLink = "school-extracurricular-interests-2" %}
-{% set nextPage = "school-good-behaviour-2" %}
+{% set questionText = "Greenwood High School is also helping them learn life skills, such as responsibility" %}
+{% set questionSanitised = "my-child-life-skills" %}
+{% set backLink = "school-extracurricular-interests" %}
+{% set nextPage = "school-good-behaviour" %}
 
 {% block pageTitle %}
 {{ pageTitle }} — {{ serviceName }}
@@ -23,7 +23,7 @@
     {% if editing %}
       {{ govukBackLink({
         text: "Back to your answers",
-        href: "/leave-feedback/check-your-answers-2"
+        href: "/leave-feedback/check-your-answers"
       }) }}
     {% else %}
       {{ govukBackLink({
@@ -34,7 +34,7 @@
 
     <span class="govuk-caption-xl">Question {{ questionNumber }} of 14</span>
 
-    <form action="{{ '/leave-feedback/check-your-answers-2' if editing else nextPage }}" method="post" class="form">
+    <form action="{{ '/leave-feedback/check-your-answers' if editing else nextPage }}" method="post" class="form">
 
       {{ govukRadios({
         idPrefix: questionSanitised,

@@ -83,16 +83,16 @@ router.post('/leave-feedback/confirmation', function(req, res) {
     'answer1': questions.data[0].text + ": " + req.session.data["my-child-is-happy"],
     'answer2': questions.data[1].text + ": " + req.session.data["my-child-feels-safe"],
     'answer3': questions.data[2].text + ": " + req.session.data["my-child-can-reach-potential"],
-    'answer4': questions.data[3].text + ": " + req.session.data["my-child-has-send"],
-    'answer5': questions.data[4].text + ": " + req.session.data["school-has-high-expectations"],
+    'answer4': questions.data[3].text + ": " + req.session.data["school-makes-me-aware"],
+    'answer5': questions.data[4].text + ": " + req.session.data["my-child-has-send"],
     'answer6': questions.data[5].text + ": " + req.session.data["school-staff-changes"],
     'answer7': questions.data[6].text + ": " + req.session.data["school-extracurricular-interests"],
-    'answer8': questions.data[7].text + ": " + req.session.data["my-child-successful-rounded"],
+    'answer8': questions.data[7].text + ": " + req.session.data["my-child-life-skills"],
     'answer9': questions.data[8].text + ": " + req.session.data["school-good-behaviour"],
     'answer10': questions.data[9].text + ": " + req.session.data["my-child-bullied"],
     'answer11': questions.data[10].text + ": " + req.session.data["school-my-concerns"],
     'answer12': questions.data[11].text + ": " + req.session.data["school-updates-me"],
-    'answer13': questions.data[12].text + ": " + req.session.data["school-makes-me-aware"],
+    'answer13': questions.data[12].text + ": " + req.session.data["my-child-at-boarding-school"],
     'answer14': questions.data[13].text + ": " + req.session.data["school-i-would-recommend"],
     'additional-feedback': req.session.data['additional-feedback'] || "No additional feedback"
   }
@@ -116,37 +116,37 @@ router.post('/leave-feedback/confirmation', function(req, res) {
 
 });
 
-router.post('/leave-feedback/confirmation', function(req, res) {
+router.post('/leave-feedback/confirmation-2', function(req, res) {
 
   var personalisation = {
     'answer1': questions.data[0].text + ": " + req.session.data["my-child-is-happy"],
     'answer2': questions.data[1].text + ": " + req.session.data["my-child-feels-safe"],
     'answer3': questions.data[2].text + ": " + req.session.data["my-child-can-reach-potential"],
-    'answer4': questions.data[3].text + ": " + req.session.data["my-child-has-send"],
-    'answer5': questions.data[4].text + ": " + req.session.data["school-has-high-expectations"],
+    'answer4': questions.data[3].text + ": " + req.session.data["school-makes-me-aware"],
+    'answer5': questions.data[4].text + ": " + req.session.data["my-child-has-send"],
     'answer6': questions.data[5].text + ": " + req.session.data["school-staff-changes"],
     'answer7': questions.data[6].text + ": " + req.session.data["school-extracurricular-interests"],
-    'answer8': questions.data[7].text + ": " + req.session.data["my-child-successful-rounded"],
+    'answer8': questions.data[7].text + ": " + req.session.data["my-child-life-skills"],
     'answer9': questions.data[8].text + ": " + req.session.data["school-good-behaviour"],
     'answer10': questions.data[9].text + ": " + req.session.data["my-child-bullied"],
     'answer11': questions.data[10].text + ": " + req.session.data["school-my-concerns"],
     'answer12': questions.data[11].text + ": " + req.session.data["school-updates-me"],
-    'answer13': questions.data[12].text + ": " + req.session.data["school-makes-me-aware"],
+    'answer13': questions.data[12].text + ": " + req.session.data["my-child-at-boarding-school"],
     'answer14': questions.data[13].text + ": " + req.session.data["school-i-would-recommend"],
     'additional-feedback': req.session.data['additional-feedback'] || "No additional feedback",
     'answer1-2': questions.data[0].text + ": " + req.session.data["my-child-is-happy-2"],
     'answer2-2': questions.data[1].text + ": " + req.session.data["my-child-feels-safe-2"],
     'answer3-2': questions.data[2].text + ": " + req.session.data["my-child-can-reach-potential-2"],
-    'answer4-2': questions.data[3].text + ": " + req.session.data["my-child-has-send-2"],
-    'answer5-2': questions.data[4].text + ": " + req.session.data["school-has-high-expectations-2"],
+    'answer4-2': questions.data[3].text + ": " + req.session.data["school-makes-me-aware-2"],
+    'answer5-2': questions.data[4].text + ": " + req.session.data["my-child-has-send-2"],
     'answer6-2': questions.data[5].text + ": " + req.session.data["school-staff-changes-2"],
     'answer7-2': questions.data[6].text + ": " + req.session.data["school-extracurricular-interests-2"],
-    'answer8-2': questions.data[7].text + ": " + req.session.data["my-child-successful-rounded-2"],
+    'answer8-2': questions.data[7].text + ": " + req.session.data["my-child-life-skills-2"],
     'answer9-2': questions.data[8].text + ": " + req.session.data["school-good-behaviour-2"],
     'answer10-2': questions.data[9].text + ": " + req.session.data["my-child-bullied-2"],
     'answer11-2': questions.data[10].text + ": " + req.session.data["school-my-concerns-2"],
     'answer12-2': questions.data[11].text + ": " + req.session.data["school-updates-me-2"],
-    'answer13-2': questions.data[12].text + ": " + req.session.data["school-makes-me-aware-2"],
+    'answer13-2': questions.data[12].text + ": " + req.session.data["my-child-at-boarding-school-2"],
     'answer14-2': questions.data[13].text + ": " + req.session.data["school-i-would-recommend-2"],
     'additional-feedback-2': req.session.data['additional-feedback-2'] || "No additional feedback"
   }

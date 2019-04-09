@@ -47,12 +47,12 @@
       "text": "Greenwood High School offers clubs and activities during lunchtime, before or after school",
       "page-url": "school-extracurricular-interests",
       "backLink": "school-staff-changes",
-      "next": "my-child-successful-rounded"
+      "next": "my-child-life-skills"
     },
     {
       "id": 8,
       "text": "Greenwood High School is also helping them learn life skills, such as responsibility",
-      "page-url": "my-child-successful-rounded",
+      "page-url": "my-child-life-skills",
       "backLink": "school-extracurricular-interests",
       "next": "school-good-behaviour"
     },
@@ -60,7 +60,7 @@
       "id": 9,
       "text": "Greenwood High School is consistent in its approach to good behaviour",
       "page-url": "school-good-behaviour",
-      "backLink": "my-child-successful-rounded",
+      "backLink": "my-child-life-skills",
       "next": "my-child-bullied"
     },
     {
