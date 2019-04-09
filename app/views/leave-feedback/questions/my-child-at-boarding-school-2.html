@@ -4,12 +4,12 @@
 {% from "button/macro.njk" import govukButton %}
 {% from "back-link/macro.njk" import govukBackLink %}
 
-{% set pageTitle = "Greenwood High School has high expectations for all its pupils" %}
-{% set questionNumber = "5" %}
-{% set questionText = "Greenwood High School has high expectations for all its pupils" %}
-{% set questionSanitised = "school-has-high-expectations-2" %}
-{% set backLink = "my-child-has-send-2" %}
-{% set nextPage = "school-staff-changes-2" %}
+{% set pageTitle = "My child is at boarding school and I am happy with how it looks after the eating and sleeping arrangements for my child" %}
+{% set questionNumber = "13" %}
+{% set questionText = "My child is at boarding school and I am happy with how it looks after the eating and sleeping arrangements for my child." %}
+{% set questionSanitised = "my-child-at-boarding-school-2" %}
+{% set backLink = "school-updates-me-2" %}
+{% set nextPage = "school-i-would-recommend-2" %}
 
 {% block pageTitle %}
 {{ pageTitle }} — {{ serviceName }}
@@ -23,7 +23,7 @@
     {% if editing %}
       {{ govukBackLink({
         text: "Back to your answers",
-        href: "/leave-feedback/check-your-answers-2"
+        href: "/leave-feedback/check-your-answers"
       }) }}
     {% else %}
       {{ govukBackLink({
@@ -34,7 +34,7 @@
 
     <span class="govuk-caption-xl">Question {{ questionNumber }} of 14</span>
 
-    <form action="{{ '/leave-feedback/check-your-answers-2' if editing else nextPage }}" method="post" class="form">
+    <form action="{{ '/leave-feedback/check-your-answers' if editing else nextPage }}" method="post" class="form">
 
       {{ govukRadios({
         idPrefix: questionSanitised,
@@ -71,6 +71,14 @@
             text: "Don‘t know",
             value: "Don‘t know",
             checked: checked(questionSanitised, "Don‘t know")
+          },
+          {
+            divider: "Or"
+          },
+          {
+            text: "My child is not at a boarding school",
+            value: "My child is not at a boarding school",
+            checked: checked(questionSanitised, "My child is not at a boarding school")
           }
         ]
       }) }}
@@ -94,4 +102,3 @@
 
 
 {% endblock %}
-
