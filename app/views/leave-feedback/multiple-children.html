@@ -31,24 +31,25 @@ Do you want to answer for more than one child at this school? — {{ serviceName
         name: "multiple-children",
         fieldset: {
           legend: {
-            text: "Do you want to answer for more than one child at this school?",
+            text: "Do you have more than one child at Greenwood High School?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
         },
-        hint: {
-          text: "You can choose to answer for another child at the end of these questions."
-        },
+
         items: [
-          {
-            value: "yes",
-            text: "Yes",
-            checked: checked("multiple-children", "yes")
-          },
           {
             value: "no",
             text: "No",
             checked: checked("multiple-children", "no")
+          },
+          {
+            value: "yes",
+            text: "Yes",
+            checked: checked("multiple-children", "yes"),
+            hint: {
+              text: "You can take the survey answering for all your children once, or you can take it again answering for each child you have."
+            }
           }
         ]
       }) }}
