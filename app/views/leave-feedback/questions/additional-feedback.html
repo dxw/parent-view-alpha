@@ -32,6 +32,8 @@ Do you have any additional feedback? — {{ serviceName }}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds-from-desktop">
 
+    <span class="govuk-caption-xl"><strong>Child 1</strong></span>
+
     <form action="{{ '/leave-feedback/check-your-answers' if editing else '/leave-feedback/add-another-child' }}" method="post" class="form">
 
       {{ govukCharacterCount({
