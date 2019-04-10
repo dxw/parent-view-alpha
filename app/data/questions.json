@@ -16,14 +16,14 @@
     },
     {
       "id": 3,
-      "text": "Greenwood High School does its best to ensure that my child reaches their potential",
+      "text": "The school does its best to ensure that my child reaches their potential",
       "page-url": "my-child-can-reach-potential",
       "backLink": "my-child-feels-safe",
       "next": "school-makes-me-aware"
     },
     {
       "id": 4,
-      "text": "Greenwood High School tells me what my child will be learning in the forthcoming term or year",
+      "text": "The school tells me what my child will be learning in the forthcoming term or year",
       "page-url": "school-makes-me-aware",
       "backLink": "my-child-can-reach-potential",
       "next": "my-child-has-send"
@@ -37,49 +37,49 @@
     },
     {
       "id": 6,
-      "text": "There have been a high number of teaching staff changes at Greenwood High School over the last year",
+      "text": "There have been a high number of teaching staff changes at the school over the last year",
       "page-url": "school-staff-changes",
       "backLink": "my-child-has-send",
       "next": "school-extracurricular-interests"
     },
     {
       "id": 7,
-      "text": "Greenwood High School offers clubs and activities during lunchtime, before or after school",
+      "text": "The school offers clubs and activities during lunchtime, before or after school",
       "page-url": "school-extracurricular-interests",
       "backLink": "school-staff-changes",
       "next": "my-child-life-skills"
     },
     {
       "id": 8,
-      "text": "Greenwood High School is also helping them learn life skills, such as responsibility",
+      "text": "The school is also helping them learn life skills, such as responsibility",
       "page-url": "my-child-life-skills",
       "backLink": "school-extracurricular-interests",
       "next": "school-good-behaviour"
     },
     {
       "id": 9,
-      "text": "Greenwood High School is consistent in its approach to good behaviour",
+      "text": "The school is consistent in its approach to good behaviour",
       "page-url": "school-good-behaviour",
       "backLink": "my-child-life-skills",
       "next": "my-child-bullied"
     },
     {
       "id": 10,
-      "text": "I am confident that if my child was bullied, Greenwood High School would stop it happening",
+      "text": "I am confident that if my child was bullied, the school would stop it happening",
       "page-url": "my-child-bullied",
       "backLink": "school-good-behaviour",
       "next": "school-my-concerns"
     },
     {
       "id": 11,
-      "text": "Greenwood High School makes it easy for me to talk to them if I have a concern",
+      "text": "The school makes it easy for me to talk to them if I have a concern",
       "page-url": "school-my-concerns",
       "backLink": "my-child-bullied",
       "next": "school-updates-me"
     },
     {
       "id": 12,
-      "text": "Greenwood High School updates me regularly about how my child is getting on",
+      "text": "The school updates me regularly about how my child is getting on",
       "page-url": "school-updates-me",
       "backLink": "school-my-concerns",
       "next": "my-child-at-boarding-school"
