@@ -28,13 +28,21 @@ Do you have any additional feedback? — {{ serviceName }}
   {% endif %}
 {% endblock %}
 
+{% macro addChildRoute() %}
+  {% if data['multiple-children'] == 'yes' %}
+    /leave-feedback/add-another-child
+  {% else %}
+    /leave-feedback/check-your-answers
+  {% endif %}
+{% endmacro %}
+
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds-from-desktop">
 
     <span class="govuk-caption-xl"><strong>Child 1</strong></span>
 
-    <form action="{{ '/leave-feedback/check-your-answers' if editing else '/leave-feedback/add-another-child' }}" method="post" class="form">
+    <form action="{{ '/leave-feedback/check-your-answers' if editing else addChildRoute() }}" method="post" class="form">
 
       {{ govukCharacterCount({
         name: "additional-feedback",

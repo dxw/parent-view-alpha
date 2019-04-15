@@ -48,7 +48,7 @@ router.post('/leave-feedback/add-child', function(req, res) {
 
   if (addChild) {
     res.redirect('/leave-feedback/questions/my-child-is-happy-2')
-  } else if (multipleChildren) {
+  } else if (multipleChildren && addChild) {
     res.redirect('/leave-feedback/check-your-answers-2')
   } else {
     res.redirect('/leave-feedback/check-your-answers')
