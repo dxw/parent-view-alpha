@@ -17,6 +17,11 @@ What happens with your feedback — {{ serviceName }}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
+    {{ govukBackLink({
+        text: "Back",
+        href: 'survey-code'
+      }) }}
+
     <h1 class="govuk-heading-l">What happens with your feedback</h1>
 
     <p class="govuk-body">All feedback is anonymised and will be read by an Ofsted inspector to help them understand what {{ schoolName }} is like. Ofsted also uses this information to make decisions about which schools to inspect and when.</p>

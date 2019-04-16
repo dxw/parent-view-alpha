@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% from "input/macro.njk" import govukInput %}
+{% from "button/macro.njk" import govukButton %}
+{% from "back-link/macro.njk" import govukBackLink %}
+
+{% block pageTitle %}
+Enter your survey code — {{ serviceName }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {{ govukBackLink({
+        text: "Back",
+        href: 'start'
+      }) }}
+
+    <form action="survey-code" method="post" class="form">
+
+      {% set surveyCode %}
+        {{ govukInput({
+          id: "survey-code",
+          name: "survey-code",
+          type: "survey-code",
+          value: data["survey-code"],
+          autocomplete: "survey-code",
+          classes: "govuk-input--width-5",
+          label: {
+            text: "Enter code"
+          },
+          attributes: {
+            spellcheck: "false"
+          }
+        }) }}
+    {% endset -%}
+
+    {{ govukRadios({
+      idPrefix: "get-survey-code-conditional",
+      name: "get-survey-code",
+      fieldset: {
+        legend: {
+          text: "Do you have a code given to you by the school?",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--l"
+        }
+      },
+      hint: {
+        text: "This is used to identify which school you’re giving feedback on."
+      },
+      items: [
+        {
+          value: "yes",
+          text: "Yes",
+          conditional: {
+            html: surveyCode
+          },
+          checked: checked("get-survey-code", "yes")
+        },
+        {
+          value: "no",
+          text: "No",
+          conditional: {
+            html: "<p class='govuk-hint'>If you don’t have a code we will take you to a different service so you can find your school.</p>"
+          },
+          checked: checked("get-survey-code", "no")
+        }
+      ]
+    }) }}
+
+      {% if editing %}
+        {{ govukButton({
+          text: "Save your changes"
+        }) }}
+      {% else %}
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      {% endif %}
+
+    </form>
+
+
+  </div>
+</div>
+
+
+{% endblock %}

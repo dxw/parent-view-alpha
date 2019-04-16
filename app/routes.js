@@ -21,6 +21,15 @@ router.get('/leave-feedback/sharing-information-consent', function(req, res) {
   });
 });
 
+router.post('/leave-feedback/survey-code', function(req, res) {
+  let hasSurveyCode = req.session.data['get-survey-code'] == "yes"
+  if (hasSurveyCode) {
+    res.redirect('/leave-feedback/sharing-information-consent');
+  } else {
+    res.redirect('https://get-information-schools.service.gov.uk/');
+  }
+});
+
 router.get('/leave-feedback/questions/:question', function(req, res) {
   res.render('leave-feedback/questions/' + req.params.question, {
     'editing': req.query.edit
