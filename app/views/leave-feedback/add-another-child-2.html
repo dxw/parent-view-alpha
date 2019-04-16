@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% from "radios/macro.njk" import govukRadios %}
+
+{% block pageTitle %}
+Do you want to add answers for another child? — {{ serviceName }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {{ govukBackLink({
+      text: "Back",
+      href: "/leave-feedback/questions/additional-feedback"
+    }) }}
+
+    <form action="/leave-feedback/check-your-answers-2" method="post" class="form">
+
+      {{ govukRadios({
+        classes: "govuk-radios--inline",
+        idPrefix: "add-child",
+        name: "add-child",
+        fieldset: {
+          legend: {
+            text: "Do you want to give feedback for another child at the Greenwood High School?
+",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        items: [
+          {
+            value: "yes",
+            text: "Yes",
+            checked: checked("add-child", "yes")
+          },
+          {
+            value: "no",
+            text: "No",
+            checked: checked("add-child", "no")
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}
