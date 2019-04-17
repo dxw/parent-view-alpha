@@ -15,15 +15,16 @@ Feedback submitted — {{ serviceName }}
         titleText: "Feedback submitted"
       }) }}
 
-    {# <p class="govuk-body">We have sent you a confirmation email.</p> #}
-
     <h2 class="govuk-heading-m">What happens next</h2>
 
-    <!-- if email -->
-
     {% if data['get-email'] == 'yes'  %}
-    <p class="govuk-body">You’ll receive an email confirmation at {{ data["email"] }} with a copy of your responses.</p>
+    <p class="govuk-body">You’ll receive an email confirmation at {{ data["email"] }} with a copy of your responses and a link you can click to confirm your email address.</p>
     {% endif %}
+
+    {{ govukWarningText({
+      text: "Your answers may not be counted if you don't click the link in the email to confirm your email address.",
+      iconFallbackText: "Warning"
+    }) }}
 
     <p class="govuk-body">You can see <a href="#">{{ schoolName }}'s feedback</a>.</p>
 

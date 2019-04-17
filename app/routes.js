@@ -102,7 +102,8 @@ router.post('/leave-feedback/confirmation', function(req, res) {
     'answer11': questions.data[10].text + ": " + req.session.data["school-my-concerns"],
     'answer12': questions.data[11].text + ": " + req.session.data["school-updates-me"],
     'answer13': questions.data[12].text + ": " + req.session.data["school-i-would-recommend"],
-    'additional-feedback': req.session.data['additional-feedback'] || "No additional feedback"
+    'additional-feedback': req.session.data['additional-feedback'] || "No additional feedback",
+    'email-confirmed': req.protocol + '://' + req.get('host') + '/leave-feedback/email-confirmed'
   }
 
   // trigger Notify to send an email
@@ -154,7 +155,8 @@ router.post('/leave-feedback/confirmation-2', function(req, res) {
     'answer11-2': questions.data[10].text + ": " + req.session.data["school-my-concerns-2"],
     'answer12-2': questions.data[11].text + ": " + req.session.data["school-updates-me-2"],
     'answer13-2': questions.data[12].text + ": " + req.session.data["school-i-would-recommend-2"],
-    'additional-feedback-2': req.session.data['additional-feedback-2'] || "No additional feedback"
+    'additional-feedback-2': req.session.data['additional-feedback-2'] || "No additional feedback",
+    'email-confirmed': req.protocol + '://' + req.get('host') + '/leave-feedback/email-confirmed'
   }
 
   notify.sendEmail(
