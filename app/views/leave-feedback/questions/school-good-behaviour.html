@@ -75,6 +75,24 @@
         ]
       }) }}
 
+      {{ govukCharacterCount({
+        name: "school-behaviour-explain",
+        id: "school-behaviour-explain",
+        classes: "govuk-!-width-two-thirds",
+        maxlength: 250,
+
+        label: {
+          text: "Explain my answer",
+          classes: "govuk-label--m"
+        },
+        hint: {
+          html: "<p class='govuk-hint'>This is optional if you want to add more context to your answer. Do not include any names or personal information.</p>",
+          classes: "govuk-!-width-two-thirds"
+        },
+        rows: 3,
+        value: data["school-behaviour-explain"]
+      }) }}
+
       {% if editing %}
         {{ govukButton({
           text: "Save your changes"

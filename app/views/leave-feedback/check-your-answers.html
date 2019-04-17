@@ -18,6 +18,16 @@ Check your answers before sending your feedback — {{ serviceName }}
 
     <h2 class="govuk-heading-m">Your answers</h2>
 
+    {% macro explainedAnswer(explanation, answer) %}
+
+      {% if explanation %}
+        {{ answer }}: {{ explanation }}
+      {% else %}
+        {{ answer }}
+      {% endif %}
+
+    {% endmacro %}
+
     {{ govukSummaryList({
       classes: 'govuk-!-margin-bottom-9',
       rows: [
@@ -162,7 +172,7 @@ Check your answers before sending your feedback — {{ serviceName }}
             text: questions.data[8].text
           },
           value: {
-            text: data["school-good-behaviour"]
+            text: explainedAnswer(data["school-behaviour-explain"], data["school-good-behaviour"])
           },
           actions: {
             items: [
@@ -179,7 +189,7 @@ Check your answers before sending your feedback — {{ serviceName }}
             text: questions.data[9].text
           },
           value: {
-            text: data["my-child-bullied"]
+            text: explainedAnswer(data["bullying-explain"], data["my-child-bullied"])
           },
           actions: {
             items: [
@@ -213,7 +223,7 @@ Check your answers before sending your feedback — {{ serviceName }}
             text: questions.data[11].text
           },
           value: {
-            text: data["school-updates-me"]
+            text: explainedAnswer(data["school-updates-explain"], data["school-updates-me"])
           },
           actions: {
             items: [
