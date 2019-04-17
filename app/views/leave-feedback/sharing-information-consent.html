@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
 
 {% from "radios/macro.njk" import govukRadios %}
+{% from "checkboxes/macro.njk" import govukCheckboxes %}
 {% from "input/macro.njk" import govukInput %}
 {% from "button/macro.njk" import govukButton %}
 {% from "back-link/macro.njk" import govukBackLink %}
@@ -24,9 +25,9 @@ What happens with your feedback — {{ serviceName }}
 
     <h1 class="govuk-heading-l">What happens with your feedback</h1>
 
-    <p class="govuk-body">All feedback is anonymised and will be read by an Ofsted inspector to help them understand what {{ schoolName }} is like. Ofsted also uses this information to make decisions about which schools to inspect and when.</p>
+    <p class="govuk-body">All feedback is anonymised and will be read by an Ofsted inspector to help them understand what {{ schoolName }} is like. They may also share feedback with the school. Ofsted also uses this information to make decisions about which schools to inspect and when.</p>
 
-    <p class="govuk-body">By giving feedback you give your consent to Ofsted seeing your responses.</p>
+    <p class="govuk-body">By giving feedback you give your consent to Ofsted and the school seeing your responses.</p>
 
     <form action="{{ '/leave-feedback/check-your-answers' if editing else '/leave-feedback/multiple-children' }}" method="post" class="form">
 
@@ -45,34 +46,52 @@ What happens with your feedback — {{ serviceName }}
             spellcheck: "false"
           }
         }) }}
-    {% endset -%}
+      {% endset -%}
 
-    {{ govukRadios({
-      idPrefix: "get-email-conditional",
-      name: "get-email",
-      fieldset: {
-        legend: {
-          text: "Do you want your feedback emailed to you?",
-          isPageHeading: true,
-          classes: "govuk-fieldset__legend--m"
-        }
-      },
-      items: [
-        {
-          value: "yes",
-          text: "Yes",
-          conditional: {
-            html: emailHtml
-          },
-          checked: checked("get-email", "yes")
+      {{ govukRadios({
+        idPrefix: "get-email-conditional",
+        name: "get-email",
+        fieldset: {
+          legend: {
+            text: "Do you want your feedback emailed to you?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--m"
+          }
         },
-        {
-          value: "no",
-          text: "No",
-          checked: checked("get-email", "no")
-        }
-      ]
-    }) }}
+        items: [
+          {
+            value: "yes",
+            text: "Yes",
+            conditional: {
+              html: emailHtml
+            },
+            checked: checked("get-email", "yes")
+          },
+          {
+            value: "no",
+            text: "No",
+            checked: checked("get-email", "no")
+          }
+        ]
+      }) }}
+
+      {{ govukCheckboxes({
+        idPrefix: "confirm-parent",
+        name: "confirm-parent",
+        fieldset: {
+          legend: {
+            text: "Confirm you are a parent or carer of a child at this school",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--m"
+          }
+        },
+        items: [
+          {
+            value: "confirm-parent",
+            text: "I have a child at this school"
+          }
+        ]
+      }) }}
 
       {% if editing %}
         {{ govukButton({
