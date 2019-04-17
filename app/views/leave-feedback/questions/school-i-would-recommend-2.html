@@ -5,10 +5,10 @@
 {% from "back-link/macro.njk" import govukBackLink %}
 
 {% set pageTitle = "I would recommend Greenwood High School to another parent" %}
-{% set questionNumber = "14" %}
+{% set questionNumber = "13" %}
 {% set questionText = "I would recommend Greenwood High School to another parent" %}
 {% set questionSanitised = "school-i-would-recommend-2" %}
-{% set backLink = "my-child-at-boarding-school-2" %}
+{% set backLink = "school-updates-me-2" %}
 {% set nextPage = "additional-feedback-2" %}
 
 {% block pageTitle %}
@@ -32,7 +32,7 @@
       }) }}
     {% endif %}
 
-    <span class="govuk-caption-xl"><strong>Child 2:</strong> Question {{ questionNumber }} of 14</span>
+    <span class="govuk-caption-xl"><strong>Child 2:</strong> Question {{ questionNumber }} of 13</span>
 
     <form action="{{ '/leave-feedback/check-your-answers-2' if editing else nextPage }}" method="post" class="form">
 

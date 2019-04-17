@@ -82,20 +82,13 @@
       "text": "The school updates me regularly about how my child is getting on",
       "page-url": "school-updates-me",
       "backLink": "school-my-concerns",
-      "next": "my-child-at-boarding-school"
-    },
-    {
-      "id": 13,
-      "text": "My child is at boarding school and I am happy with how it looks after the eating and sleeping arrangements for my child.",
-      "page-url": "my-child-at-boarding-school",
-      "backLink": "school-updates-me",
       "next": "school-i-would-recommend"
     },
     {
-      "id": 14,
+      "id": 13,
       "text": "I would recommend Greenwood High School to another parent",
       "page-url": "school-i-would-recommend",
-      "backLink": "my-child-at-boarding-school",
+      "backLink": "school-updates-me",
       "next": "additional-feedback"
     }
   ]

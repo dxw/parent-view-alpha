@@ -101,8 +101,7 @@ router.post('/leave-feedback/confirmation', function(req, res) {
     'answer10': questions.data[9].text + ": " + req.session.data["my-child-bullied"],
     'answer11': questions.data[10].text + ": " + req.session.data["school-my-concerns"],
     'answer12': questions.data[11].text + ": " + req.session.data["school-updates-me"],
-    'answer13': questions.data[12].text + ": " + req.session.data["my-child-at-boarding-school"],
-    'answer14': questions.data[13].text + ": " + req.session.data["school-i-would-recommend"],
+    'answer13': questions.data[12].text + ": " + req.session.data["school-i-would-recommend"],
     'additional-feedback': req.session.data['additional-feedback'] || "No additional feedback"
   }
 
@@ -140,8 +139,7 @@ router.post('/leave-feedback/confirmation-2', function(req, res) {
     'answer10': questions.data[9].text + ": " + req.session.data["my-child-bullied"],
     'answer11': questions.data[10].text + ": " + req.session.data["school-my-concerns"],
     'answer12': questions.data[11].text + ": " + req.session.data["school-updates-me"],
-    'answer13': questions.data[12].text + ": " + req.session.data["my-child-at-boarding-school"],
-    'answer14': questions.data[13].text + ": " + req.session.data["school-i-would-recommend"],
+    'answer13': questions.data[12].text + ": " + req.session.data["school-i-would-recommend"],
     'additional-feedback': req.session.data['additional-feedback'] || "No additional feedback",
     'answer1-2': questions.data[0].text + ": " + req.session.data["my-child-is-happy-2"],
     'answer2-2': questions.data[1].text + ": " + req.session.data["my-child-feels-safe-2"],
@@ -155,8 +153,7 @@ router.post('/leave-feedback/confirmation-2', function(req, res) {
     'answer10-2': questions.data[9].text + ": " + req.session.data["my-child-bullied-2"],
     'answer11-2': questions.data[10].text + ": " + req.session.data["school-my-concerns-2"],
     'answer12-2': questions.data[11].text + ": " + req.session.data["school-updates-me-2"],
-    'answer13-2': questions.data[12].text + ": " + req.session.data["my-child-at-boarding-school-2"],
-    'answer14-2': questions.data[13].text + ": " + req.session.data["school-i-would-recommend-2"],
+    'answer13-2': questions.data[12].text + ": " + req.session.data["school-i-would-recommend-2"],
     'additional-feedback-2': req.session.data['additional-feedback-2'] || "No additional feedback"
   }
 
