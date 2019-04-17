@@ -32,7 +32,7 @@ What happens with your feedback — {{ serviceName }}
 
     <form action="{{ '/leave-feedback/check-your-answers' if editing else '/leave-feedback/multiple-children' }}" method="post" class="form">
 
-      {% set emailHtml %}
+      {# {% set emailHtml %}
         {{ govukInput({
           id: "email",
           name: "email",
@@ -74,6 +74,24 @@ What happens with your feedback — {{ serviceName }}
             checked: checked("get-email", "no")
           }
         ]
+      }) }} #}
+
+      {{ govukInput({
+        label: {
+          text: "Email address",
+          classes: "govuk-label--m"
+        },
+        hint: {
+          text: "We’ll only use this to send you an email with a copy of your feedback and a link to confirm your email address."
+        },
+        id: "email",
+        name: "email",
+        type: "email",
+        classes: "govuk-!-width-three-quarters",
+        autocomplete: "email",
+        attributes: {
+          spellcheck: "false"
+        }
       }) }}
 
       {{ govukCheckboxes({
@@ -82,7 +100,7 @@ What happens with your feedback — {{ serviceName }}
         fieldset: {
           legend: {
             text: "Confirm you are a parent or carer of a child at this school",
-            isPageHeading: true,
+            isPageHeading: false,
             classes: "govuk-fieldset__legend--m"
           }
         },
