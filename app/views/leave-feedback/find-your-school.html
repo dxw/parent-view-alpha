@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% from "input/macro.njk" import govukInput %}
+{% from "button/macro.njk" import govukButton %}
+
+{% block pageTitle %}
+  Find your school — {{ serviceName }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+    {{ govukBackLink({
+      text: "Back",
+      href: "survey-code"
+    }) }}
+
+    <h1 class="govuk-heading-xl">Find your school</h1>
+
+    <form action="search-results" method="post" class="form">
+
+      {{ govukInput({
+        label: {
+          text: "School name"
+        },
+        hint: {
+          text: "Tell us the name of the school you want to give feedback about."
+        },
+        id: "school-name-search",
+        name: "school-name-search"
+      }) }}
+
+      {{ govukButton({
+        text: "Find school"
+      }) }}
+
+    </form>
+
+    </div>
+  </div>
+
+{% endblock %}

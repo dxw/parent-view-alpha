@@ -1,0 +1,131 @@
+{% extends "layout.html" %}
+
+<!-- {% from "input/macro.njk" import govukInput %} -->
+<!-- {% from "button/macro.njk" import govukButton %} -->
+
+{% block pageTitle %}
+  Search results — {{ serviceName }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+    {{ govukBackLink({
+      text: "Back",
+      href: "find-your-school"
+    }) }}
+
+    <h1 class="govuk-heading-xl">Search results</h1>
+
+    <ul class="schools-list">
+      <li>
+        <h3><a class="bold-small" href="school">Greenwood High School</a></h3>
+
+        <dl>
+          <dt>Address:</dt>
+          <dd>Cavendish Road, Bournemouth, Dorset, BH1 1QY</dd>
+          <dt>Phase / type:</dt>
+          <dd>
+            Secondary,
+            Academy converter
+          </dd>
+          <dt>Status:</dt>
+          <dd>Open</dd>
+          <dt>Local authority name:</dt>
+          <dd>Dorset</dd>
+        </dl>
+      </li>
+      <li>
+        <h3><a class="bold-small" href="school">Arreton Greenwood Church of England Controlled Primary School</a></h3>
+
+        <dl>
+          <dt>Address:</dt>
+          <dd>School Lane, Main Road, Arreton, Newport, Isle of Wight, PO30 3AD</dd>
+          <dt>Phase / type:</dt>
+          <dd>
+            Primary,
+            Voluntary aided school
+          </dd>
+          <dt>Status:</dt>
+          <dd>Open</dd>
+          <dt>Local authority name:</dt>
+          <dd>Isle of Wight</dd>
+        </dl>
+      </li>
+      <li>
+        <h3><a class="bold-small" href="school">Atherton Greenwood CofE Primary School</a></h3>
+
+        <dl>
+          <dt>Address:</dt>
+          <dd>Derby Street, Atherton, Manchester, Not recorded, M46 0HJ</dd>
+          <dt>Phase / type:</dt>
+          <dd>
+            Primary,
+            Academy converter
+          </dd>
+          <dt>Status:</dt>
+          <dd>Open</dd>
+          <dt>Local authority name:</dt>
+          <dd>Wigan</dd>
+        </dl>
+      </li>
+      <li>
+        <h3><a class="bold-small" href="school">East Crompton Greenwood CofE School</a></h3>
+
+        <dl>
+          <dt>Address:</dt>
+          <dd>George Street, Shaw, Oldham, Not recorded, OL2 8AX</dd>
+          <dt>Phase / type:</dt>
+          <dd>
+            Primary,
+            Academy converter
+          </dd>
+          <dt>Status:</dt>
+          <dd>Open</dd>
+          <dt>Local authority name:</dt>
+          <dd>Oldham</dd>
+        </dl>
+      </li>
+      <li>
+        <h3><a class="bold-small" href="school">Freezywater Greenwood CofE VA Primary School</a></h3>
+
+        <dl>
+          <dt>Address:</dt>
+          <dd>Hertford Road, ENFIELD, Not recorded, EN3 6NR</dd>
+          <dt>Phase / type:</dt>
+          <dd>
+            Primary,
+            Voluntary aided school
+          </dd>
+          <dt>Status:</dt>
+          <dd>Open</dd>
+          <dt>Local authority name:</dt>
+          <dd>Enfield</dd>
+        </dl>
+      </li>
+      <li>
+        <h3><a class="bold-small" href="school">Greenwood Church of England School</a></h3>
+
+        <dl>
+          <dt>Address:</dt>
+          <dd>West Street, Hinton St George, Somerset, TA17 8SA</dd>
+          <dt>Phase / type:</dt>
+          <dd>
+            Primary,
+            Voluntary controlled school
+          </dd>
+          <dt>Status:</dt>
+          <dd>Open</dd>
+          <dt>Local authority name:</dt>
+          <dd>Somerset</dd>
+        </dl>
+      </li>
+    </ul>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

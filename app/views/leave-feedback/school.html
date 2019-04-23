@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+<!-- {% from "input/macro.njk" import govukInput %} -->
+{% from "button/macro.njk" import govukButton %}
+
+{% block pageTitle %}
+  Greenwood High School — {{ serviceName }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "search-results"
+      }) }}
+
+      <h1 class="govuk-heading-xl">Greenwood High School</h1>
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+
+      <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Address:</h2>
+      <p class="govuk-!-margin-bottom-1">
+        Cavendish Road,<br/>
+        Bournemouth,<br />
+        Dorset, <br />
+        BH1 1QY
+      </p>
+      <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Phase / type:</h2>
+      <p class="govuk-!-margin-bottom-1">
+        Secondary, <br />
+        Academy converter
+      </p>
+      <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Status:</h2>
+      <p class="govuk-!-margin-bottom-1">
+        Open
+      </p>
+      <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Local authority name:</h2>
+      <p class="govuk-!-margin-bottom-4">
+        Dorset
+      </p>
+
+      {{ govukButton({
+        text: "Confirm school",
+        href: "sharing-information-consent"
+      }) }}
+
+    </div>
+
+
+    <div class="govuk-grid-column-one-half">
+
+      <div id="google-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2525.5724077106825!2d-1.8708955840861536!3d50.727871479514626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4873a1e7728aa9c3%3A0x42f287710ef8740!2sCavendish+Rd%2C+Bournemouth+BH1+1QY!5e0!3m2!1sen!2suk!4v1556018345397!5m2!1sen!2suk" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

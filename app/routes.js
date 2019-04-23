@@ -30,7 +30,7 @@ router.post('/leave-feedback/survey-code', function(req, res) {
   if (hasSurveyCode) {
     res.redirect('/leave-feedback/sharing-information-consent');
   } else {
-    res.redirect('https://get-information-schools.service.gov.uk/');
+    res.redirect('/leave-feedback/find-your-school');
   }
 });
 
