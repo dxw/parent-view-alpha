@@ -23,63 +23,19 @@ What happens with your feedback — {{ serviceName }}
 
     <h1 class="govuk-heading-l">What happens with your feedback</h1>
 
-    <p class="govuk-body">All feedback is anonymised and will be read by an Ofsted inspector to help them understand what {{ schoolName }} is like. They may also share feedback with the school. Ofsted also uses this information to make decisions about which schools to inspect and when.</p>
+    <p class="govuk-body">All feedback submitted during an inspection will be read by an Ofsted inspector to help them understand what your school is like. Ofsted will not publish any information in the report that identifies a child. More information is available in Ofsted’s privacy policy.</p>
 
-    <p class="govuk-body">By giving feedback you give your consent to Ofsted and the school seeing your responses.</p>
+    <p class="govuk-body">By using this service you give your consent to Ofsted and the school having access to your email address and responses.</p>
 
     <form action="{{ '/leave-feedback/check-your-answers' if editing else '/leave-feedback/multiple-children' }}" method="post" class="form">
 
-      {# {% set emailHtml %}
-        {{ govukInput({
-          id: "email",
-          name: "email",
-          type: "email",
-          value: data["email"],
-          autocomplete: "email",
-          classes: "govuk-input--width-20",
-          label: {
-            text: "Email address"
-          },
-          attributes: {
-            spellcheck: "false"
-          }
-        }) }}
-      {% endset -%}
-
-      {{ govukRadios({
-        idPrefix: "get-email-conditional",
-        name: "get-email",
-        fieldset: {
-          legend: {
-            text: "Do you want your feedback emailed to you?",
-            isPageHeading: true,
-            classes: "govuk-fieldset__legend--m"
-          }
-        },
-        items: [
-          {
-            value: "yes",
-            text: "Yes",
-            conditional: {
-              html: emailHtml
-            },
-            checked: checked("get-email", "yes")
-          },
-          {
-            value: "no",
-            text: "No",
-            checked: checked("get-email", "no")
-          }
-        ]
-      }) }} #}
-
       {{ govukInput({
         label: {
-          text: "Email address",
+          text: "Your email address",
           classes: "govuk-label--m"
         },
         hint: {
-          text: "We’ll only use this to send you an email with a copy of your feedback and a link to confirm your email address."
+          text: "We’ll ask you to verify this address by clicking a link in an email and also to send you a copy of your feedback."
         },
         id: "email",
         name: "email",
@@ -104,7 +60,7 @@ What happens with your feedback — {{ serviceName }}
         items: [
           {
             value: "confirm-parent",
-            text: "I have a child at this school"
+            text: "I currently have a child at this school"
           }
         ]
       }) }}
