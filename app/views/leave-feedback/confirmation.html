@@ -11,18 +11,15 @@ Feedback submitted — {{ serviceName }}
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    {{ govukPanel({
-        titleText: "Feedback submitted"
-      }) }}
 
-    <h2 class="govuk-heading-m">What happens next</h2>
+    <h1 class="govuk-heading-xl">One more step…</h1>
 
-    {% if data['get-email'] == 'yes'  %}
-    <p class="govuk-body">You’ll receive an email confirmation at {{ data["email"] }} with a copy of your responses and a link you can click to confirm your email address.</p>
-    {% endif %}
+    <h2 class="govuk-heading-m">Confirm your email address</h2>
+
+    <p class="govuk-body">You’ll receive an email at {{ data["email"] }} asking you to confirm your email address.</p>
 
     {{ govukWarningText({
-      text: "Your answers may not be counted if you don't click the link in the email to confirm your email address.",
+      text: "Your feedback may not be considered if you don’t confirm your email address.",
       iconFallbackText: "Warning"
     }) }}
 
