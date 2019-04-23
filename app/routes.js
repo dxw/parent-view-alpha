@@ -13,6 +13,10 @@ var utilities = require('./utilities');
 
 // Add your routes here - above the module.exports line
 
+router.get('/', function(req, res) {
+  res.render('leave-feedback/start');
+});
+
 router.get('/leave-feedback/sharing-information-consent', function(req, res) {
   // returns true if the 'edit' parameter is in the URL query string, so we can make 'back' links work as expected when editing
   var editing = req.query.edit
