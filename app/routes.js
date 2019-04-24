@@ -68,16 +68,10 @@ router.post('/leave-feedback/add-child', function(req, res) {
   }
 })
 
-router.post('/leave-feedback/check-your-answers', function(req, res) {
-  if (req.query.multiple) {
-    res.render('leave-feedback/check-your-answers-2', {
-      'questions': questions
-    });
-  } else {
-    res.render('leave-feedback/check-your-answers', {
-      'questions': questions
-    });
-  }
+router.get('/leave-feedback/check-your-answers', function (req, res) {
+  res.render('leave-feedback/check-your-answers', {
+    'questions': questions
+  })
 });
 
 router.get('/leave-feedback/check-your-answers-2', function(req, res) {
