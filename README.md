@@ -1,13 +1,15 @@
-# Ofsted Parent View Alpha
+# Ofsted Parent View Alpha ("Give feedback to Ofsted about your child's school")
 
-## Deploy master to staging
-`git push staging master`
+A service prototype built using the [GOV.UK Prototype Kit](https://govuk-prototype-kit.herokuapp.com/docs).
 
-## Deploy master to testing
-`git push testing master`
+## Setup
 
-## Deploy [branch-name] to staging
-`git push staging [branch-name]:master`
+1. `$ git clone git@github.com:dxw/parent-view-alpha.git`
+2. `$ cd parent-view-alpha`
+3. `$ npm install`
+4. `$ cp .env.example .env`
+5. `$ npm start`
 
-## Deploy [branch-name] to testing
-`git push testing [branch-name]:master`
+## Dependencies
+
+To send emails from this prototype, you'll need a [GOV.UK Notify account and API key](https://www.notifications.service.gov.uk/). Add the API key to the `.env` file created in step 4 of the setup procedure above.
