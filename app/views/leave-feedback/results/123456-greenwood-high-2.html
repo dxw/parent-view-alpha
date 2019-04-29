@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="https://reports.ofsted.gov.uk/css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Ofsted</title>
+
+  <style>
+    .timeline .event.result .publication-link::before {
+      background: none;
+      content: "🔗";
+      padding-left: 0;
+      margin-right: 1px;
+      color: #000;
+    }
+
+    #results-graph {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    #results-graph .question {
+      margin-bottom: 30px;
+    }
+
+    #results-graph .question h4 {
+      margin-bottom: 2px;
+    }
+
+    #results-graph .question h5 {
+      font-size: 13px;
+      font-weight: normal;
+      margin: 6px 0;
+    }
+
+    #results-graph .graph-block {
+      display: block;
+      /* height: 10px; */
+      background-color: #dee0e2;
+    }
+
+    #results-graph .graph-block .figure {
+      display: block;
+      /* float: left; */
+    }
+
+    #results-graph .graph-block .bar {
+      display: block;
+      /* float: left; */
+      height: 10px;
+    }
+
+    #results-graph .graph-block .bar-1 {
+      width: 75%;
+      background-color: #44687d;
+    }
+
+    #results-graph .graph-block .bar-2 {
+      width: 38%;
+      background-color: #44687d;
+    }
+
+    #results-graph .graph-block .bar-3 {
+      width: 45%;
+      background-color: #44687d;
+    }
+
+    #results-graph .graph-block .bar-4 {
+      width: 8%;
+      background-color: #44687d;
+    }
+
+    #results-graph .graph-block .bar-5 {
+      width: 8%;
+      background-color: #44687d;
+    }
+
+    #results-graph .graph-block .bar-6 {
+      width: 1%;
+      background-color: #44687d;
+    }
+
+    /* #results-graph .graph-block-1 {
+      background-color: #dee0e2;
+    }
+
+    #results-graph .graph-block-1 span {
+      display: block;
+      width: 75%;
+      background-color: #44687d;
+      color: #fff;
+      font-weight: bold;
+    } */
+
+  </style>
+</head>
+
+<body>
+  <script>
+  document.body.className = document.body.className + ' js-enabled';
+  </script>
+
+  <div class="container">
+    <a class="skip-link" href="#main">Skip to main content</a>
+  </div>
+  <div class="main-content">
+    <div class="cookie-banner">
+      <div class="container">
+        <p class="cookie-banner__message">Ofsted uses cookies to make the site simpler. <a href="#">Find out more about cookies</a></p>
+        <button class="cookie-banner__close">Close</button>
+      </div>
+    </div>
+    <header class="header">
+      <div class="container">
+        <a class="header__home-link" href="#">
+                    <span class="nonvisual">Ofsted homepage</span>
+                    <img class="header__logo" src="https://reports.ofsted.gov.uk/images/logo.svg" alt="Ofsted Logo" />
+                </a>
+      </div>
+      <div class="banners">
+        <div class="container">
+        </div>
+      </div>
+      <div class="phase-beta">
+        <div class="container">
+          <p>
+            <strong class="phase-beta__tag">Feedback</strong>
+            <span>Your <a href="#">feedback</a> will help us to improve this service.</span>
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <div class="module title-block  ">
+        <div class="container">
+          <ol class="breadcrumbs">
+            <li class="crumb"><a href="#">Home</a></li>
+            <li class="crumb">Greenwood High School</li>
+          </ol>
+
+          <h1 class="heading--title title-block__heading">Greenwood High School</h1>
+          <p class="heading--main title-block__subheading">URN: 123456</p>
+          <address class="title-block__address">Cavendish Road, Bournemouth, Dorset, BH1 1QY</address>
+        </div>
+      </div>
+      <div class="provider provider--default">
+        <div class="container">
+          <div class="row">
+            <div class="col two-thirds-sm main-column">
+              <div class="module latest-rating">
+                <h2 class="latest-rating__title">
+                  <span class="nonvisual">Good</span>
+                </h2>
+                </p>
+              </div>
+              <div class="module">
+                <ol class="rating-scale list-unstyled clearfix">
+                  <li class="rating heading--sub"><span>Outstanding</span></li>
+                  <li class="rating rating--selected heading--sub" aria-current="true"><span>Good</span></li>
+                  <li class="rating heading--sub"><span>Requires Improvement</span></li>
+                  <li class="rating heading--sub"><span>Inadequate</span></li>
+                </ol>
+              </div>
+              <details class="module-next-inspection">
+                <summary><span class="expander-see-more btn-nostyle">How long until the next inspection?</span></summary>
+                <div class="next-inspection__content">
+                  <p dir="ltr">Schools that require improvement are normally inspected within 30 months of the latest inspection report. They may also receive monitoring visits.</p>
+                  <p>We can also inspect at any time if we have concerns.</p>
+                  <p>We normally give notice the afternoon of the working day before an inspection. We can also inspect schools without notice.</p>
+                </div>
+              </details>
+
+              <div class="module">
+                <h2 class="timeline__title heading__main">Activity, reports and ratings</h2>
+                <p><a href="#" class="email-alerts">Get email alerts</a> when we publish a new report</p>
+                <ol class="timeline">
+
+                  <li class="timeline__day">
+                    <div class="event">
+
+                      <p class="timeline__date">
+                        <time>20 May 2010</time>
+                      </p>
+
+                      <span class="event__title heading--sub"><a class="publication-link" target="_blank" href="#">
+                Full inspection: <strong>Satisfactory</strong><span class="nonvisual">Full inspection, PDF - 14 June 2010</span></a>
+                      <div class="event__metadata"><span class="filetype">PDF</span> &ndash;
+                        <!--<span class="filesize">10kb</span>-->Published
+                        <time pubdate>14 June 2010</time>
+                      </div>
+                      </span>
+
+                    </div>
+                  </li>
+
+                  <li class="timeline__day">
+                    <div class="event">
+
+                      <p class="timeline__date">
+                        <time>07 February 2007</time>
+                      </p>
+
+                      <span class="event__title heading--sub"><a class="publication-link" target="_blank" href="#">
+                Full inspection: <strong>Satisfactory</strong><span class="nonvisual">Full inspection, PDF - 08 March 2007</span></a>
+                      <div class="event__metadata"><span class="filetype">PDF</span> &ndash;
+                        <!--<span class="filesize">10kb</span>-->Published
+                        <time pubdate>08 March 2007</time>
+                      </div>
+                      </span>
+
+                    </div>
+                  </li>
+
+                  <li class="timeline__day">
+                    <div class="event">
+
+                      <p class="timeline__date">
+                        <time>17 November 2005</time>
+                      </p>
+
+                      <span class="event__title heading--sub"><a class="publication-link" target="_blank" href="#">
+                Full inspection: <strong>Inadequate</strong><span class="nonvisual">Full inspection, PDF - 19 January 2006</span></a>
+                      <div class="event__metadata"><span class="filetype">PDF</span> &ndash;
+                        <!--<span class="filesize">10kb</span>-->Published
+                        <time pubdate>19 January 2006</time>
+                      </div>
+                      </span>
+
+                    </div>
+                  </li>
+
+                  <li class="timeline__day">
+                    <div class="event">
+
+                      <p class="timeline__date">
+                        <time>30 October 2000</time>
+                      </p>
+
+                      <span class="event__title heading--sub"><a class="publication-link" target="_blank" href="#">
+                Full inspection                <span class="nonvisual">Full inspection, PDF - 07 February 2001</span></a>
+                      <div class="event__metadata"><span class="filetype">PDF</span> &ndash;
+                        <!--<span class="filesize">10kb</span>-->Published
+                        <time pubdate>07 February 2001</time>
+                      </div>
+                      </span>
+
+                    </div>
+                  </li>
+
+                  <li class="timeline__day   timeline__day--opened     ">
+                    <div class="event">
+
+                      <span class="event__title heading--sub">Opened</span>
+
+                    </div>
+                  </li>
+
+                </ol>
+              </div>
+            </div>
+            <h2 class="js-details-collapse heading--sub provider-details-header col full-width visible-xs" role="button">Details</h2>
+            <div class="col one-third-sm visible-sm visible-lg details-column">
+              <div class="module provider-map" aria-hidden="true">
+                <!-- <div id="providerMap" class="map" data-postcode="CO2 7RW"></div>
+                <div class="js-map-trigger map-overlay"><em class="heading--sub">Click to show map</em></div> -->
+                <div id="google-map">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2525.5724077106825!2d-1.8708955840861536!3d50.727871479514626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4873a1e7728aa9c3%3A0x42f287710ef8740!2sCavendish+Rd%2C+Bournemouth+BH1+1QY!5e0!3m2!1sen!2suk!4v1556018345397!5m2!1sen!2suk" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+              </div>
+
+              <div id="results-graph">
+                <h2 class="info-block__title">What parents say</h2>
+                <div class="question">
+                  <h4>I would recommend this school</h4>
+                  <h5>Yes: 75%</h5>
+                  <div class="graph-block">
+                    <span class="bar bar-1"></span>
+                  </div>
+                </div>
+                <div class="question">
+                  <h4>My child is happy at this school</h4>
+                  <h5>Strongly agree: 38%</h5>
+                  <div class="graph-block">
+                    <span class="bar bar-2"></span>
+                  </div>
+                  <h5>Agree: 45%</h5>
+                  <div class="graph-block">
+                    <span class="bar bar-3"></span>
+                  </div>
+                  <h5>Disagree: 8%</h5>
+                  <div class="graph-block">
+                    <span class="bar bar-4"></span>
+                  </div>
+                  <h5>Strongly disagree: 8%</h5>
+                  <div class="graph-block">
+                    <span class="bar bar-5"></span>
+                  </div>
+                  <h5>Don't know: 1%</h5>
+                  <div class="graph-block">
+                    <span class="bar bar-6"></span>
+                  </div>
+                </div>
+                <p>Based on the responses of 53 parents given on 28 March 2018. <a href="#">Read more from parents</a>.</p>
+              </div>
+
+
+              <div class="module info-block info-block--pupils">
+                <h3 class="info-block__title">Pupils</h3>
+                <ul class="info-block__items list-unstyled">
+                  <li class="info-block__item row">
+                    <span class="col half label">Age Range</span>
+                    <span class="col half">11 - 16</span>
+                  </li>
+                  <li class="info-block__item row">
+                    <span class="col half label">Gender</span>
+                    <span class="col half">Mixed</span>
+                  </li>
+                  <li class="info-block__item row">
+                    <span class="col half label">Number of pupils</span>
+                    <span class="col half">600</span>
+                  </li>
+                  <li class="info-block__item row">
+                    <span class="col half label">School capacity</span>
+                    <span class="col half">630</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="module info-block info-block--details">
+                <h3 class="info-block__title">Details</h3>
+                <ul class="info-block__items list-unstyled">
+                  <li class="info-block__item row">
+                    <span class="col half label">Principal</span>
+                    <span class="col half">Mrs Angela Richardson</span>
+                  </li>
+                  <li class="info-block__item row">
+                    <span class="col half label">Boarding provision</span>
+                    <span class="col half">No</span>
+                  </li>
+                  <li class="info-block__item row">
+                    <span class="col half label">Type</span>
+                    <span class="col half">Academy</span>
+                  </li>
+                  <li class="info-block__item row">
+                    <span class="col half label">Religious character</span>
+                    <span class="col half">Does Not Apply</span>
+                  </li>
+                  <li class="info-block__item row">
+                    <span class="col half label">Local authority</span>
+                    <span class="col half">Dorset</span>
+                  </li>
+                  <li class="info-block__item row">
+                    <span class="col half label">Region</span>
+                    <span class="col half">South West England</span>
+                  </li>
+                  <li class="info-block__item row">
+                    <span class="col half label">Telephone</span>
+                    <span class="col half">01202 578 080</span>
+                  </li>
+                  <li class="info-block__item row">
+                    <span class="col half label">Website</span>
+                    <span class="col half"><a href="#">http://www.greenwoodhigh.co.uk/</a></span>
+                  </li>
+                </ul>
+
+              </div>
+              <div class="module info-block info-block--elsewhere-on-the-web">
+                <h3 class="info-block__title">Elsewhere on the web</h3>
+                <ul class="info-block__list">
+                  <li><a href="#">More information about this school or college</a></li>
+                  <li><a href="#">Compare with other schools and colleges</a></li>
+                </ul>
+              </div>
+              <div class="visible-sm visible-lg">
+                <hr class="separator" />
+                <div class="module views-links">
+                  <h2 class="views-links__title heading--sub">Give us your views</h2>
+                  <a href="/" class="views-link">Parent view survey</a>
+                </div>
+                <div class="module sociables">
+                  <h2 class="sociables__title heading--sub">Share this page</h2>
+                  <ul class="sociables-links">
+                    <li class="col fullwidth"><a href="#" class="sociable sociable--email">Email this page</a></li>
+                    <li class="col half"><a href="#" class="sociable sociable--facebook">Facebook</a></li>
+                    <li class="col half"><a href="#" target="_blank" class="sociable sociable--twitter">Twitter</a></li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+            <div class="col full-width visible-xs">
+              <hr class="separator" />
+              <div class="module views-links">
+                <h2 class="views-links__title heading--sub">Give us your views</h2>
+                <a href="#" class="views-link" target="_blank">Parent view survey</a>
+              </div>
+              <div class="module sociables">
+                <h2 class="sociables__title heading--sub">Share this page</h2>
+                <ul class="sociables-links">
+                  <li class="col fullwidth"><a href="#" class="sociable sociable--email">Email this page</a></li>
+                  <li class="col half"><a href="#" class="sociable sociable--facebook">Facebook</a></li>
+                  <li class="col half"><a href="#" target="_blank" class="sociable sociable--twitter">Twitter</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <ul class="footer__links list-inline">
+        <li><a href="123456-greenwood-high-1">Timeline version</a></li>
+      </ul>
+      <div class="footer_crown-copyright">
+        <p class="footer__copy-right"><a href="#">&copy; Crown copyright</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://reports.ofsted.gov.uk/js/jquery-3.2.1.min.js"></script>
+  <script defer src="https://reports.ofsted.gov.uk/js/ofsted.core.js"></script>
+  <script defer src="https://reports.ofsted.gov.uk/js/ofsted.utils.js"></script>
+  <script defer src="https://reports.ofsted.gov.uk/js/ofsted.showhide.js"></script>
+  <script defer src="https://reports.ofsted.gov.uk/js/ofsted.option-select.js"></script>
+  <script defer src="https://reports.ofsted.gov.uk/js/ofsted.autocomplete.js"></script>
+  <script defer src="https://reports.ofsted.gov.uk/js/ofsted.cookies.js"></script>
+  <script defer src="https://reports.ofsted.gov.uk/js/details.polyfill.js"></script>
+  <script defer>
+  var showHideContent;
+  $(document).ready(function() {
+    showHideContent = new GOVUK.ShowHideContent();
+    showHideContent.init();
+    GOVUK.details.addDetailsPolyfill();
+  });
+  </script>
+  <script defer src="https://reports.ofsted.gov.uk/js/ofsted.map.js"></script>
+</body>
+
+</html>

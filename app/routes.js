@@ -168,4 +168,10 @@ router.post('/leave-feedback/confirmation-2', function(req, res) {
 
 });
 
+router.get('/leave-feedback/results/:school', function (req, res) {
+  res.render('leave-feedback/results/' + req.params.school, {
+    'questions': questions
+  });
+});
+
 module.exports = router
