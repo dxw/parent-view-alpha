@@ -4,12 +4,20 @@
 {% from "button/macro.njk" import govukButton %}
 {% from "back-link/macro.njk" import govukBackLink %}
 
-{% set pageTitle = "I’m confident that the school deals with bullying quickly and effectively" %}
-{% set questionNumber = "10" %}
-{% set questionText = "I’m confident that the school deals with bullying quickly and effectively" %}
-{% set questionSanitised = "my-child-bullied" %}
-{% set backLink = "school-good-behaviour" %}
-{% set nextPage = "school-updates-me" %}
+{% set pageTitle = "The school is well led and managed" %}
+{% set questionNumber = "5" %}
+{% set questionText = "The school is well led and managed" %}
+{% set questionSanitised = "school-well-managed" %}
+
+{% set backLink %}
+  {% if data["does-child-have-send"] == "Yes" %}
+    my-child-has-send
+  {% elseif data["does-child-have-send"] == "No" %}
+    does-child-have-send
+  {% endif %}
+{% endset %}
+
+{% set nextPage = "broad-range-subjects" %}
 
 {% block pageTitle %}
 {{ pageTitle }} — {{ serviceName }}
@@ -73,24 +81,6 @@
             checked: checked(questionSanitised, "Don‘t know")
           }
         ]
-      }) }}
-
-      {{ govukCharacterCount({
-        name: "bullying-explain",
-        id: "bullying-explain",
-        classes: "govuk-!-width-two-thirds",
-        maxlength: 250,
-
-        label: {
-          text: "Explain your answer (optional)",
-          classes: "govuk-label--m"
-        },
-        hint: {
-          html: "<p class='govuk-hint'>You can add more information about your answer here, if you like. Remember not to include names or other personal information.</p>",
-          classes: "govuk-!-width-two-thirds"
-        },
-        rows: 3,
-        value: data["bullying-explain"]
       }) }}
 
       {% if editing %}

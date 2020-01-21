@@ -4,12 +4,12 @@
 {% from "button/macro.njk" import govukButton %}
 {% from "back-link/macro.njk" import govukBackLink %}
 
-{% set pageTitle = "The school helps my child reach their full potential" %}
-{% set questionNumber = "3" %}
-{% set questionText = "The school helps my child reach their full potential" %}
-{% set questionSanitised = "my-child-can-reach-potential" %}
-{% set backLink = "my-child-feels-safe" %}
-{% set nextPage = "does-child-have-send" %}
+{% set pageTitle = "Does your child have special educational needs and/or disabilities (SEND)?" %}
+{% set questionNumber = "4" %}
+{% set questionText = "Does your child have special educational needs and/or disabilities (SEND)?" %}
+{% set questionSanitised = "does-child-have-send" %}
+{% set backLink = "my-child-can-reach-potential" %}
+{% set nextPage = "/leave-feedback/send-question" %}
 
 {% block pageTitle %}
 {{ pageTitle }} — {{ serviceName }}
@@ -34,7 +34,7 @@
 
     <span class="govuk-caption-xl"><strong>Child 1:</strong> Question {{ questionNumber }} of 13</span>
 
-    <form action="{{ '/leave-feedback/check-your-answers' if editing else nextPage }}" method="post" class="form">
+    <form action="{{ '/leave-feedback/check-your-answers' if editing else '/leave-feedback/questions/send-question' }}" method="post" class="form">
 
       {{ govukRadios({
         idPrefix: questionSanitised,
@@ -48,29 +48,14 @@
         },
         items: [
           {
-            text: "Strongly agree",
-            value: "Strongly agree",
-            checked: checked(questionSanitised, "Strongly agree")
+            text: "Yes",
+            value: "Yes",
+            checked: checked(questionSanitised, "Yes")
           },
           {
-            text: "Agree",
-            value: "Agree",
-            checked: checked(questionSanitised, "Agree")
-          },
-          {
-            text: "Disagree",
-            value: "Disagree",
-            checked: checked(questionSanitised, "Disagree")
-          },
-          {
-            text: "Strongly disagree",
-            value: "Strongly disagree",
-            checked: checked(questionSanitised, "Strongly disagree")
-          },
-          {
-            text: "Don‘t know",
-            value: "Don‘t know",
-            checked: checked(questionSanitised, "Don‘t know")
+            text: "No",
+            value: "No",
+            checked: checked(questionSanitised, "No")
           }
         ]
       }) }}

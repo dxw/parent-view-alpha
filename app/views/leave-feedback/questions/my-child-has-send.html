@@ -4,12 +4,12 @@
 {% from "button/macro.njk" import govukButton %}
 {% from "back-link/macro.njk" import govukBackLink %}
 
-{% set pageTitle = "My child has SEND (Special Educational Needs and Disabilities), and I believe they are being helped to succeed at the school" %}
+{% set pageTitle = "My child has SEND, and the school gives them the support they need to succeed" %}
 {% set questionNumber = "5" %}
-{% set questionText = "My child has SEND (Special Educational Needs and Disabilities), and I believe they are being helped to succeed at the school" %}
+{% set questionText = "My child has SEND, and the school gives them the support they need to succeed" %}
 {% set questionSanitised = "my-child-has-send" %}
-{% set backLink = "school-makes-me-aware" %}
-{% set nextPage = "school-staff-changes" %}
+{% set backLink = "does-child-have-send" %}
+{% set nextPage = "school-well-managed" %}
 
 {% block pageTitle %}
 {{ pageTitle }} — {{ serviceName }}
@@ -32,7 +32,7 @@
       }) }}
     {% endif %}
 
-    <span class="govuk-caption-xl"><strong>Child 1:</strong> Question {{ questionNumber }} of 13</span>
+    <span class="govuk-caption-xl"><strong>Child 1:</strong> Question 4a of 13</span>
 
     <form action="{{ '/leave-feedback/check-your-answers' if editing else nextPage }}" method="post" class="form">
 
@@ -71,14 +71,6 @@
             text: "Don‘t know",
             value: "Don‘t know",
             checked: checked(questionSanitised, "Don‘t know")
-          },
-          {
-            divider: "Or"
-          },
-          {
-            text: "My child does not have SEND",
-            value: "My child does not have SEND",
-            checked: checked(questionSanitised, "My child does not have SEND")
           }
         ]
       }) }}

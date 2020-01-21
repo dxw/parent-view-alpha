@@ -21,10 +21,17 @@
   <div class="govuk-grid-column-full">
 
     {% if editing %}
-      {{ govukBackLink({
-        text: "Back to your answers",
-        href: "/leave-feedback/check-your-answers"
-      }) }}
+      {% if data["multiple"] %}
+        {{ govukBackLink({
+          text: "Back to your answers",
+          href: "/leave-feedback/check-your-answers-2"
+        }) }}
+      {% else %}
+        {{ govukBackLink({
+          text: "Back to your answers",
+          href: "/leave-feedback/check-your-answers"
+        }) }}
+      {% endif %}
     {% else %}
       {{ govukBackLink({
         text: "Back",

@@ -4,12 +4,12 @@
 {% from "button/macro.njk" import govukButton %}
 {% from "back-link/macro.njk" import govukBackLink %}
 
-{% set pageTitle = "There have been a high number of teaching staff changes at the school over the last year" %}
+{% set pageTitle = "The school gives my child the opportunity to learn across a broad range of subjects" %}
 {% set questionNumber = "6" %}
-{% set questionText = "There have been a high number of teaching staff changes at the school over the last year" %}
-{% set questionSanitised = "school-staff-changes" %}
-{% set backLink = "my-child-has-send" %}
-{% set nextPage = "school-extracurricular-interests" %}
+{% set questionText = "The school gives my child the opportunity to learn across a broad range of subjects" %}
+{% set questionSanitised = "broad-range-subjects-2" %}
+{% set backLink = "school-well-managed-2" %}
+{% set nextPage = "school-extracurricular-interests-2" %}
 
 {% block pageTitle %}
 {{ pageTitle }} — {{ serviceName }}
@@ -32,7 +32,7 @@
       }) }}
     {% endif %}
 
-    <span class="govuk-caption-xl"><strong>Child 1:</strong> Question {{ questionNumber }} of 13</span>
+    <span class="govuk-caption-xl"><strong>Child 2:</strong> Question {{ questionNumber }} of 13</span>
 
     <form action="{{ '/leave-feedback/check-your-answers' if editing else nextPage }}" method="post" class="form">
 

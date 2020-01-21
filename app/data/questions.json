@@ -2,94 +2,59 @@
   "data": [
     {
       "id": 1,
-      "text": "My child is happy at Greenwood High School",
-      "page-url": "my-child-is-happy",
-      "backLink": "../multiple-children",
-      "next": "my-child-feels-safe"
+      "text": "My child is happy at Greenwood High School"
     },
     {
       "id": 2,
-      "text": "My child feels safe at Greenwood High School",
-      "page-url": "my-child-feels-safe",
-      "backLink": "my-child-is-happy",
-      "next": "my-child-can-reach-potential"
+      "text": "My child feels safe at Greenwood High School"
     },
     {
       "id": 3,
-      "text": "The school does its best to ensure that my child reaches their potential",
-      "page-url": "my-child-can-reach-potential",
-      "backLink": "my-child-feels-safe",
-      "next": "school-makes-me-aware"
+      "text": "The school helps my child reach their full potential"
     },
     {
       "id": 4,
-      "text": "The school tells me what my child will be learning in the forthcoming term or year",
-      "page-url": "school-makes-me-aware",
-      "backLink": "my-child-can-reach-potential",
-      "next": "my-child-has-send"
+      "text": "Does your child have special educational needs and/or disabilities (SEND)?"
     },
     {
       "id": 5,
-      "text": "My child has SEND (Special Educational Needs and Disabilities) and the school makes adequate provision for them",
-      "page-url": "my-child-has-send",
-      "backLink": "school-makes-me-aware",
-      "next": "school-staff-changes"
+      "text": "My child has SEND, and the school gives them the support they need to succeed."
     },
     {
       "id": 6,
-      "text": "There have been a high number of teaching staff changes at the school over the last year",
-      "page-url": "school-staff-changes",
-      "backLink": "my-child-has-send",
-      "next": "school-extracurricular-interests"
+      "text": "The school is well led and managed"
     },
     {
       "id": 7,
-      "text": "The school offers clubs and activities during lunchtime, before or after school",
-      "page-url": "school-extracurricular-interests",
-      "backLink": "school-staff-changes",
-      "next": "my-child-life-skills"
+      "text": "The school gives my child the opportunity to learn across a broad range of subjects"
     },
     {
       "id": 8,
-      "text": "The school is also helping them learn life skills, such as responsibility",
-      "page-url": "my-child-life-skills",
-      "backLink": "school-extracurricular-interests",
-      "next": "school-good-behaviour"
+      "text": "My child has the opportunity to attend clubs and activities during lunchtime, or before or after school"
     },
     {
       "id": 9,
-      "text": "The school is consistent in its approach to good behaviour",
-      "page-url": "school-good-behaviour",
-      "backLink": "my-child-life-skills",
-      "next": "my-child-bullied"
+      "text": "My child’s school helps them develop as a person"
     },
     {
       "id": 10,
-      "text": "I am confident that if my child was bullied, the school would stop it happening",
-      "page-url": "my-child-bullied",
-      "backLink": "school-good-behaviour",
-      "next": "school-my-concerns"
+      "text": "My child’s school deals fairly with children's behaviour"
     },
     {
       "id": 11,
-      "text": "The school makes it easy for me to talk to them if I have a concern",
-      "page-url": "school-my-concerns",
-      "backLink": "my-child-bullied",
-      "next": "school-updates-me"
+      "text": "I’m confident that the school deals with bullying quickly and effectively"
     },
     {
       "id": 12,
-      "text": "The school updates me regularly about how my child is getting on",
-      "page-url": "school-updates-me",
-      "backLink": "school-my-concerns",
-      "next": "school-i-would-recommend"
+      "text": "The school keeps me updated about my child’s progress"
     },
     {
       "id": 13,
-      "text": "I would recommend Greenwood High School to another parent",
-      "page-url": "school-i-would-recommend",
-      "backLink": "school-updates-me",
-      "next": "additional-feedback"
+      "text": "The school keeps me well informed about what my child will be learning throughout the year"
+    },
+    {
+      "id": 14,
+      "text": "I would recommend this school to another parent"
     }
   ]
 }

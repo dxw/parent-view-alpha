@@ -8,8 +8,8 @@
 {% set questionNumber = "5" %}
 {% set questionText = "My child has SEND (Special Educational Needs and Disabilities), and I believe they are being helped to succeed at the school" %}
 {% set questionSanitised = "my-child-has-send-2" %}
-{% set backLink = "school-makes-me-aware-2" %}
-{% set nextPage = "school-staff-changes-2" %}
+{% set backLink = "does-child-have-send-2" %}
+{% set nextPage = "school-well-managed-2" %}
 
 {% block pageTitle %}
 {{ pageTitle }} — {{ serviceName }}
@@ -32,7 +32,7 @@
       }) }}
     {% endif %}
 
-    <span class="govuk-caption-xl"><strong>Child 2:</strong> Question {{ questionNumber }} of 13</span>
+    <span class="govuk-caption-xl"><strong>Child 2:</strong> Question 4a of 13</span>
 
     <form action="{{ '/leave-feedback/check-your-answers-2' if editing else nextPage }}" method="post" class="form">
 
@@ -71,14 +71,6 @@
             text: "Don‘t know",
             value: "Don‘t know",
             checked: checked(questionSanitised, "Don‘t know")
-          },
-          {
-            divider: "Or"
-          },
-          {
-            text: "My child does not have SEND",
-            value: "My child does not have SEND",
-            checked: checked(questionSanitised, "My child does not have SEND")
           }
         ]
       }) }}

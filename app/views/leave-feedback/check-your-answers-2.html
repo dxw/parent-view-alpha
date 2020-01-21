@@ -33,7 +33,7 @@ Check your answers before sending your feedback — {{ serviceName }}
       rows: [
         {
           key: {
-            text: questions.data[0].text
+            text: "My child is happy at Greenwood High School"
           },
           value: {
             text: data["my-child-is-happy"]
@@ -50,7 +50,7 @@ Check your answers before sending your feedback — {{ serviceName }}
         },
         {
           key: {
-            text: questions.data[1].text
+            text: "My child feels safe at Greenwood High School"
           },
           value: {
             text: data["my-child-feels-safe"]
@@ -67,7 +67,7 @@ Check your answers before sending your feedback — {{ serviceName }}
         },
         {
           key: {
-            text: questions.data[2].text
+            text: "The school helps my child reach their full potential"
           },
           value: {
             text: data["my-child-can-reach-potential"]
@@ -84,15 +84,15 @@ Check your answers before sending your feedback — {{ serviceName }}
         },
         {
         key: {
-          text: questions.data[3].text
+          text: "Does your child have special educational needs and/or disabilities (SEND)?"
         },
         value: {
-          text: data["school-makes-me-aware"]
+          text: data["does-child-have-send"]
         },
         actions: {
           items: [
             {
-              href: "/leave-feedback/questions/school-makes-me-aware?edit=true&multiple=true",
+              href: "/leave-feedback/questions/does-child-have-send?edit=true&multiple=true",
               text: "Change",
               visuallyHiddenText: "name"
             }
@@ -101,7 +101,7 @@ Check your answers before sending your feedback — {{ serviceName }}
         },
         {
           key: {
-            text: questions.data[4].text
+            text: "My child has SEND, and the school gives them the support they need to succeed."
           },
           value: {
             text: data["my-child-has-send"]
@@ -118,15 +118,15 @@ Check your answers before sending your feedback — {{ serviceName }}
         },
         {
           key: {
-            text: questions.data[5].text
+            text: "The school is well led and managed"
           },
           value: {
-            text: data["school-staff-changes"]
+            text: data["school-well-managed"]
           },
           actions: {
             items: [
               {
-                href: "/leave-feedback/questions/school-staff-changes?edit=true&multiple=true",
+                href: "/leave-feedback/questions/school-well-managed?edit=true&multiple=true",
                 text: "Change",
                 visuallyHiddenText: "name"
               }
@@ -135,7 +135,24 @@ Check your answers before sending your feedback — {{ serviceName }}
         },
         {
           key: {
-            text: questions.data[6].text
+            text: "The school gives my child the opportunity to learn across a broad range of subjects"
+          },
+          value: {
+            text: data["broad-range-subjects"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/broad-range-subjects?edit=true&multiple=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "My child has the opportunity to attend clubs and activities during lunchtime, or before or after school"
           },
           value: {
             text: data["school-extracurricular-interests"]
@@ -152,7 +169,7 @@ Check your answers before sending your feedback — {{ serviceName }}
         },
         {
           key: {
-            text: questions.data[7].text
+            text: "My child’s school helps them develop as a person"
           },
           value: {
             text: data["my-child-life-skills"]
@@ -169,7 +186,7 @@ Check your answers before sending your feedback — {{ serviceName }}
         },
         {
           key: {
-            text: questions.data[8].text
+            text: "My child’s school deals fairly with children's behaviour"
           },
           value: {
             text: explainedAnswer(data["school-behaviour-explain"], data["school-good-behaviour"])
@@ -186,7 +203,7 @@ Check your answers before sending your feedback — {{ serviceName }}
         },
         {
           key: {
-            text: questions.data[9].text
+            text: "I’m confident that the school deals with bullying quickly and effectively"
           },
           value: {
             text: explainedAnswer(data["bullying-explain"], data["my-child-bullied"])
@@ -203,24 +220,7 @@ Check your answers before sending your feedback — {{ serviceName }}
         },
         {
           key: {
-            text: questions.data[10].text
-          },
-          value: {
-            text: data["school-my-concerns"]
-          },
-          actions: {
-            items: [
-              {
-                href: "/leave-feedback/questions/school-my-concerns?edit=true&multiple=true",
-                text: "Change",
-                visuallyHiddenText: "name"
-              }
-            ]
-          }
-        },
-        {
-          key: {
-            text: questions.data[11].text
+            text: "The school keeps me updated about my child’s progress"
           },
           value: {
             text: explainedAnswer(data["school-updates-explain"], data["school-updates-me"])
@@ -237,7 +237,24 @@ Check your answers before sending your feedback — {{ serviceName }}
         },
         {
           key: {
-            text: questions.data[12].text
+            text: "The school keeps me well informed about what my child will be learning throughout the year"
+          },
+          value: {
+            text: data["school-makes-me-aware"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/school-makes-me-aware?edit=true&multiple=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "I would recommend this school to another parent"
           },
           value: {
             text: data["school-i-would-recommend"]
@@ -286,7 +303,7 @@ Check your answers before sending your feedback — {{ serviceName }}
       rows: [
         {
           key: {
-            text: questions.data[0].text
+            text: "My child is happy at Greenwood High School"
           },
           value: {
             text: data["my-child-is-happy-2"]
@@ -303,7 +320,7 @@ Check your answers before sending your feedback — {{ serviceName }}
         },
         {
           key: {
-            text: questions.data[1].text
+            text: "My child feels safe at Greenwood High School"
           },
           value: {
             text: data["my-child-feels-safe-2"]
@@ -320,7 +337,7 @@ Check your answers before sending your feedback — {{ serviceName }}
         },
         {
           key: {
-            text: questions.data[2].text
+            text: "The school helps my child reach their full potential"
           },
           value: {
             text: data["my-child-can-reach-potential-2"]
@@ -337,15 +354,15 @@ Check your answers before sending your feedback — {{ serviceName }}
         },
         {
         key: {
-          text: questions.data[3].text
+          text: "Does your child have special educational needs and/or disabilities (SEND)?"
         },
         value: {
-          text: data["school-makes-me-aware-2"]
+          text: data["does-child-have-send-2"]
         },
         actions: {
           items: [
             {
-              href: "/leave-feedback/questions/school-makes-me-aware-2?edit=true&multiple=true",
+              href: "/leave-feedback/questions/does-child-have-send-2?edit=true&multiple=true",
               text: "Change",
               visuallyHiddenText: "name"
             }
@@ -354,7 +371,7 @@ Check your answers before sending your feedback — {{ serviceName }}
         },
         {
           key: {
-            text: questions.data[4].text
+            text: "My child has SEND, and the school gives them the support they need to succeed."
           },
           value: {
             text: data["my-child-has-send-2"]
@@ -371,15 +388,15 @@ Check your answers before sending your feedback — {{ serviceName }}
         },
         {
           key: {
-            text: questions.data[5].text
+            text: "The school is well led and managed"
           },
           value: {
-            text: data["school-staff-changes-2"]
+            text: data["school-well-managed-2"]
           },
           actions: {
             items: [
               {
-                href: "/leave-feedback/questions/school-staff-changes-2?edit=true&multiple=true",
+                href: "/leave-feedback/questions/school-well-managed-2?edit=true&multiple=true",
                 text: "Change",
                 visuallyHiddenText: "name"
               }
@@ -388,7 +405,24 @@ Check your answers before sending your feedback — {{ serviceName }}
         },
         {
           key: {
-            text: questions.data[6].text
+            text: "The school gives my child the opportunity to learn across a broad range of subjects"
+          },
+          value: {
+            text: data["broad-range-subjects-2"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/broad-range-subjects-2?edit=true&multiple=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "My child has the opportunity to attend clubs and activities during lunchtime, or before or after school"
           },
           value: {
             text: data["school-extracurricular-interests-2"]
@@ -405,7 +439,7 @@ Check your answers before sending your feedback — {{ serviceName }}
         },
         {
           key: {
-            text: questions.data[7].text
+            text: "My child’s school helps them develop as a person"
           },
           value: {
             text: data["my-child-life-skills-2"]
@@ -422,7 +456,7 @@ Check your answers before sending your feedback — {{ serviceName }}
         },
         {
           key: {
-            text: questions.data[8].text
+            text: "My child’s school deals fairly with children's behaviour"
           },
           value: {
             text: explainedAnswer(data["school-behaviour-explain-2"], data["school-good-behaviour-2"])
@@ -439,7 +473,7 @@ Check your answers before sending your feedback — {{ serviceName }}
         },
         {
           key: {
-            text: questions.data[9].text
+            text: "I’m confident that the school deals with bullying quickly and effectively"
           },
           value: {
             text: explainedAnswer(data["bullying-explain-2"], data["my-child-bullied-2"])
@@ -456,24 +490,7 @@ Check your answers before sending your feedback — {{ serviceName }}
         },
         {
           key: {
-            text: questions.data[10].text
-          },
-          value: {
-            text: data["school-my-concerns-2"]
-          },
-          actions: {
-            items: [
-              {
-                href: "/leave-feedback/questions/school-my-concerns-2?edit=true&multiple=true",
-                text: "Change",
-                visuallyHiddenText: "name"
-              }
-            ]
-          }
-        },
-        {
-          key: {
-            text: questions.data[11].text
+            text: "The school keeps me updated about my child’s progress"
           },
           value: {
             text: explainedAnswer(data["school-updates-explain-2"], data["school-updates-me-2"])
@@ -490,7 +507,24 @@ Check your answers before sending your feedback — {{ serviceName }}
         },
         {
           key: {
-            text: questions.data[12].text
+            text: "The school keeps me well informed about what my child will be learning throughout the year"
+          },
+          value: {
+            text: data["school-makes-me-aware-2"]
+          },
+          actions: {
+            items: [
+              {
+                href: "/leave-feedback/questions/school-makes-me-aware-2?edit=true&multiple=true",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "I would recommend this school to another parent"
           },
           value: {
             text: data["school-i-would-recommend-2"]
@@ -523,7 +557,7 @@ Check your answers before sending your feedback — {{ serviceName }}
         </div>
         {% endif %}
         <div class="govuk-summary-list__actions">
-          <a class="govuk-link" href="/leave-feedback/questions/additional-feedback?edit=true&multiple=true">
+          <a class="govuk-link" href="/leave-feedback/questions/additional-feedback-2?edit=true&multiple=true">
             Change
             <span class="govuk-visually-hidden"> additional feedback</span>
           </a>
