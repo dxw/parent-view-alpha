@@ -6,6 +6,7 @@
 {% from "button/macro.njk" import govukButton %}
 {% from "back-link/macro.njk" import govukBackLink %}
 {% from "warning-text/macro.njk" import govukWarningText %}
+{% from "inset-text/macro.njk" import govukInsetText %}
 
 {% block pageTitle %}
 What happens with your feedback — {{ serviceName }}
@@ -23,9 +24,14 @@ What happens with your feedback — {{ serviceName }}
 
     <h1 class="govuk-heading-l">What happens with your feedback</h1>
 
-    <p class="govuk-body">All feedback submitted during an inspection will be read by an Ofsted inspector to help them understand what your school is like. Ofsted will not publish any information in the report that identifies a child. More information is available in Ofsted’s privacy policy.</p>
+    {{ govukInsetText({
+      text: "By using this service you give your consent to Ofsted having access to your email address and responses. Individual complaints will not be handled through the feedback form."
+    }) }}
 
-    <p class="govuk-body">By using this service you give your consent to Ofsted and the school having access to your email address and responses.</p>
+    <p class="govuk-body">All feedback submitted during an inspection will be ready by an Ofsted inspector to help them understand what your school is like.</p>
+
+    <p class="govuk-body">Ofsted will not publish any information which would identify your child in Ofsted reports.More information is available in Ofsted’s privacy policy.</p>
+
 
     <form action="{{ '/leave-feedback/check-your-answers' if editing else '/leave-feedback/multiple-children' }}" method="post" class="form">
 
@@ -35,7 +41,7 @@ What happens with your feedback — {{ serviceName }}
           classes: "govuk-label--m"
         },
         hint: {
-          text: "We’ll ask you to verify this address by clicking a link in an email and use it to send you a copy of your feedback."
+          text: "We’ll ask you to verify this address by clicking a link in an email."
         },
         id: "email",
         name: "email",
