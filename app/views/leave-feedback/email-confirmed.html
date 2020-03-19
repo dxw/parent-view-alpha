@@ -5,21 +5,27 @@
 {% from "panel/macro.njk" import govukPanel %}
 
 {% block pageTitle %}
-Email confirmed — {{ serviceName }}
+Feedback submitted — {{ serviceName }}
 {% endblock %}
 
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     {{ govukPanel({
-        titleText: "Email confirmed"
+        titleText: "Feedback submitted"
       }) }}
 
-    <h2 class="govuk-heading-m">Thank you for providing feedback</h2>
+    <p class="govuk-body">We have sent you a confirmation email.</p>
 
-    <p class="govuk-body">By giving feedback you are helping schools raise their standards. It also helps parents and carers make more informed choices about where to send their children.</p>
+    <h2 class="govuk-heading-m">What happens next?</h2>
 
-    <p class="govuk-body">You can see <a href="/leave-feedback/results/123456-greenwood-high-1">{{ schoolName }}'s feedback</a>.</p>
+    <p class="govuk-body">We have sent your feedback to Ofsted which will be read by an Ofsted inspector.</p>
+
+    <p class="govuk-body">They may contact you to ask for more information.</p>
+
+    <p class="govuk-body">You can see results from other parents or carers for <a class="govuk-link" href="govuk-link">Greenwood High School's feedback.</a></p>
+
+    <p class="govuk-body"><a class="govuk-link" href="https://design-system.service.gov.uk/patterns/confirmation-pages/default/index.html#">What did you think of this service?</a> (takes 30 seconds)</p>
 
   </div>
 </div>
